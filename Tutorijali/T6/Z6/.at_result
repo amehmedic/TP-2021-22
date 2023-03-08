@@ -1,0 +1,643 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3424": {
+            "status": 6,
+            "run_result": {
+                "output": "",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3425": {
+            "status": 6,
+            "run_result": {
+                "output": "",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3426": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3426.cpp: In function ‘int main()’:\nbs_test_3426.cpp:28:4: error: ‘vector’ is not a member of ‘std’\n    std::vector<std::vector<int>> m {{3}, { 3, 3 }, {3,3,3}};\n    ^~~\nbs_test_3426.cpp:28:16: error: ‘vector’ is not a member of ‘std’\n    std::vector<std::vector<int>> m {{3}, { 3, 3 }, {3,3,3}};\n                ^~~\nbs_test_3426.cpp:28:28: error: expected primary-expression before ‘int’\n    std::vector<std::vector<int>> m {{3}, { 3, 3 }, {3,3,3}};\n                            ^~~\nbs_test_3426.cpp:29:38: error: ‘m’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                      ^\nbs_test_3426.cpp:29:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                       ^\nbs_test_3426.cpp:35:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n     delete[] m1;\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "4",
+                        "message": "'vector' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3426.cpp:28:4: error: ‘vector’ is not a member of ‘std’    std::vector<std::vector<int>> m {{3}, { 3, 3 }, {3,3,3}};    ^~~",
+                        "code": "std::vector<std::vector<int>> m {{3}, { 3, 3 }, {3,3,3}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "16",
+                        "message": "'vector' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3426.cpp:28:16: error: ‘vector’ is not a member of ‘std’    std::vector<std::vector<int>> m {{3}, { 3, 3 }, {3,3,3}};                ^~~",
+                        "code": "std::vector<std::vector<int>> m {{3}, { 3, 3 }, {3,3,3}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "28",
+                        "message": "expected primary-expression before 'int'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3426.cpp:28:28: error: expected primary-expression before ‘int’    std::vector<std::vector<int>> m {{3}, { 3, 3 }, {3,3,3}};                            ^~~",
+                        "code": "std::vector<std::vector<int>> m {{3}, { 3, 3 }, {3,3,3}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "38",
+                        "message": "'m' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3426.cpp:29:38: error: ‘m’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                      ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "39",
+                        "message": "'KreirajDinamickuKopiju2D' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3426.cpp:29:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                       ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "14",
+                        "message": "type '<type error>' argument given to 'delete', expected pointer",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3426.cpp:35:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer     delete[] m1;              ^~",
+                        "code": "delete[] m1;"
+                    }
+                ]
+            }
+        },
+        "3427": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3427.cpp: In function ‘int main()’:\nbs_test_3427.cpp:29:4: error: ‘vector’ is not a member of ‘std’\n    std::vector<std::vector<std::string>> m {{\"Ja\"}, { \"opet\", \"testiram\"}, {\"program\",\"na\",\"stringove\"}};\n    ^~~\nbs_test_3427.cpp:29:16: error: ‘vector’ is not a member of ‘std’\n    std::vector<std::vector<std::string>> m {{\"Ja\"}, { \"opet\", \"testiram\"}, {\"program\",\"na\",\"stringove\"}};\n                ^~~\nbs_test_3427.cpp:29:39: error: expected primary-expression before ‘>>’ token\n    std::vector<std::vector<std::string>> m {{\"Ja\"}, { \"opet\", \"testiram\"}, {\"program\",\"na\",\"stringove\"}};\n                                       ^~\nbs_test_3427.cpp:29:42: error: ‘m’ was not declared in this scope\n    std::vector<std::vector<std::string>> m {{\"Ja\"}, { \"opet\", \"testiram\"}, {\"program\",\"na\",\"stringove\"}};\n                                          ^\nbs_test_3427.cpp:30:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                       ^\nbs_test_3427.cpp:36:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n     delete[] m1;\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "4",
+                        "message": "'vector' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3427.cpp:29:4: error: ‘vector’ is not a member of ‘std’    std::vector<std::vector<std::string>> m {{\"Ja\"}, { \"opet\", \"testiram\"}, {\"program\",\"na\",\"stringove\"}};    ^~~",
+                        "code": "std::vector<std::vector<std::string>> m {{\"Ja\"}, { \"opet\", \"testiram\"}, {\"program\",\"na\",\"stringove\"}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "16",
+                        "message": "'vector' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3427.cpp:29:16: error: ‘vector’ is not a member of ‘std’    std::vector<std::vector<std::string>> m {{\"Ja\"}, { \"opet\", \"testiram\"}, {\"program\",\"na\",\"stringove\"}};                ^~~",
+                        "code": "std::vector<std::vector<std::string>> m {{\"Ja\"}, { \"opet\", \"testiram\"}, {\"program\",\"na\",\"stringove\"}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "39",
+                        "message": "expected primary-expression before '>>' token",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3427.cpp:29:39: error: expected primary-expression before ‘>>’ token    std::vector<std::vector<std::string>> m {{\"Ja\"}, { \"opet\", \"testiram\"}, {\"program\",\"na\",\"stringove\"}};                                       ^~",
+                        "code": "std::vector<std::vector<std::string>> m {{\"Ja\"}, { \"opet\", \"testiram\"}, {\"program\",\"na\",\"stringove\"}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "42",
+                        "message": "'m' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3427.cpp:29:42: error: ‘m’ was not declared in this scope    std::vector<std::vector<std::string>> m {{\"Ja\"}, { \"opet\", \"testiram\"}, {\"program\",\"na\",\"stringove\"}};                                          ^",
+                        "code": "std::vector<std::vector<std::string>> m {{\"Ja\"}, { \"opet\", \"testiram\"}, {\"program\",\"na\",\"stringove\"}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "39",
+                        "message": "'KreirajDinamickuKopiju2D' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3427.cpp:30:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                       ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 8,
+                        "col": "14",
+                        "message": "type '<type error>' argument given to 'delete', expected pointer",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3427.cpp:36:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer     delete[] m1;              ^~",
+                        "code": "delete[] m1;"
+                    }
+                ]
+            }
+        },
+        "3428": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3428.cpp: In function ‘int main()’:\nbs_test_3428.cpp:28:4: error: ‘deque’ is not a member of ‘std’\n    std::deque<std::vector<double>> m {{1.35, 2.45, -5}, {100, -50, 11.5}, {1.35, 2.45, -5}, {1.35, 2.45, -5}};\n    ^~~\nbs_test_3428.cpp:28:15: error: ‘vector’ is not a member of ‘std’\n    std::deque<std::vector<double>> m {{1.35, 2.45, -5}, {100, -50, 11.5}, {1.35, 2.45, -5}, {1.35, 2.45, -5}};\n               ^~~\nbs_test_3428.cpp:28:27: error: expected primary-expression before ‘double’\n    std::deque<std::vector<double>> m {{1.35, 2.45, -5}, {100, -50, 11.5}, {1.35, 2.45, -5}, {1.35, 2.45, -5}};\n                           ^~~~~~\nbs_test_3428.cpp:29:38: error: ‘m’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                      ^\nbs_test_3428.cpp:29:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                       ^\nbs_test_3428.cpp:35:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n     delete[] m1;\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "4",
+                        "message": "'deque' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3428.cpp:28:4: error: ‘deque’ is not a member of ‘std’    std::deque<std::vector<double>> m {{1.35, 2.45, -5}, {100, -50, 11.5}, {1.35, 2.45, -5}, {1.35, 2.45, -5}};    ^~~",
+                        "code": "std::deque<std::vector<double>> m {{1.35, 2.45, -5}, {100, -50, 11.5}, {1.35, 2.45, -5}, {1.35, 2.45, -5}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "15",
+                        "message": "'vector' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3428.cpp:28:15: error: ‘vector’ is not a member of ‘std’    std::deque<std::vector<double>> m {{1.35, 2.45, -5}, {100, -50, 11.5}, {1.35, 2.45, -5}, {1.35, 2.45, -5}};               ^~~",
+                        "code": "std::deque<std::vector<double>> m {{1.35, 2.45, -5}, {100, -50, 11.5}, {1.35, 2.45, -5}, {1.35, 2.45, -5}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "27",
+                        "message": "expected primary-expression before 'double'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3428.cpp:28:27: error: expected primary-expression before ‘double’    std::deque<std::vector<double>> m {{1.35, 2.45, -5}, {100, -50, 11.5}, {1.35, 2.45, -5}, {1.35, 2.45, -5}};                           ^~~~~~",
+                        "code": "std::deque<std::vector<double>> m {{1.35, 2.45, -5}, {100, -50, 11.5}, {1.35, 2.45, -5}, {1.35, 2.45, -5}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "38",
+                        "message": "'m' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3428.cpp:29:38: error: ‘m’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                      ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "39",
+                        "message": "'KreirajDinamickuKopiju2D' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3428.cpp:29:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                       ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "14",
+                        "message": "type '<type error>' argument given to 'delete', expected pointer",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3428.cpp:35:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer     delete[] m1;              ^~",
+                        "code": "delete[] m1;"
+                    }
+                ]
+            }
+        },
+        "3429": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3429.cpp: In function ‘int main()’:\nbs_test_3429.cpp:28:4: error: ‘deque’ is not a member of ‘std’\n    std::deque<std::deque<unsigned int>> m {{6,6,6,7}, {12,23,34,45}, {1000,1,2,30}};\n    ^~~\nbs_test_3429.cpp:28:15: error: ‘deque’ is not a member of ‘std’\n    std::deque<std::deque<unsigned int>> m {{6,6,6,7}, {12,23,34,45}, {1000,1,2,30}};\n               ^~~\nbs_test_3429.cpp:28:26: error: expected primary-expression before ‘unsigned’\n    std::deque<std::deque<unsigned int>> m {{6,6,6,7}, {12,23,34,45}, {1000,1,2,30}};\n                          ^~~~~~~~\nbs_test_3429.cpp:29:38: error: ‘m’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                      ^\nbs_test_3429.cpp:29:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                       ^\nbs_test_3429.cpp:35:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n     delete[] m1;\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "4",
+                        "message": "'deque' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3429.cpp:28:4: error: ‘deque’ is not a member of ‘std’    std::deque<std::deque<unsigned int>> m {{6,6,6,7}, {12,23,34,45}, {1000,1,2,30}};    ^~~",
+                        "code": "std::deque<std::deque<unsigned int>> m {{6,6,6,7}, {12,23,34,45}, {1000,1,2,30}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "15",
+                        "message": "'deque' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3429.cpp:28:15: error: ‘deque’ is not a member of ‘std’    std::deque<std::deque<unsigned int>> m {{6,6,6,7}, {12,23,34,45}, {1000,1,2,30}};               ^~~",
+                        "code": "std::deque<std::deque<unsigned int>> m {{6,6,6,7}, {12,23,34,45}, {1000,1,2,30}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "26",
+                        "message": "expected primary-expression before 'unsigned'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3429.cpp:28:26: error: expected primary-expression before ‘unsigned’    std::deque<std::deque<unsigned int>> m {{6,6,6,7}, {12,23,34,45}, {1000,1,2,30}};                          ^~~~~~~~",
+                        "code": "std::deque<std::deque<unsigned int>> m {{6,6,6,7}, {12,23,34,45}, {1000,1,2,30}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "38",
+                        "message": "'m' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3429.cpp:29:38: error: ‘m’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                      ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "39",
+                        "message": "'KreirajDinamickuKopiju2D' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3429.cpp:29:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                       ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "14",
+                        "message": "type '<type error>' argument given to 'delete', expected pointer",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3429.cpp:35:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer     delete[] m1;              ^~",
+                        "code": "delete[] m1;"
+                    }
+                ]
+            }
+        },
+        "3430": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3430.cpp: In function ‘int main()’:\nbs_test_3430.cpp:29:4: error: ‘vector’ is not a member of ‘std’\n    std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};\n    ^~~\nbs_test_3430.cpp:29:16: error: ‘deque’ is not a member of ‘std’\n    std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};\n                ^~~\nbs_test_3430.cpp:29:27: error: expected primary-expression before ‘long’\n    std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};\n                           ^~~~\nbs_test_3430.cpp:30:38: error: ‘m’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                      ^\nbs_test_3430.cpp:30:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                       ^\nbs_test_3430.cpp:36:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n     delete[] m1;\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "4",
+                        "message": "'vector' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3430.cpp:29:4: error: ‘vector’ is not a member of ‘std’    std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};    ^~~",
+                        "code": "std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "16",
+                        "message": "'deque' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3430.cpp:29:16: error: ‘deque’ is not a member of ‘std’    std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};                ^~~",
+                        "code": "std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "27",
+                        "message": "expected primary-expression before 'long'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3430.cpp:29:27: error: expected primary-expression before ‘long’    std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};                           ^~~~",
+                        "code": "std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "38",
+                        "message": "'m' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3430.cpp:30:38: error: ‘m’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                      ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "39",
+                        "message": "'KreirajDinamickuKopiju2D' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3430.cpp:30:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                       ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 8,
+                        "col": "14",
+                        "message": "type '<type error>' argument given to 'delete', expected pointer",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3430.cpp:36:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer     delete[] m1;              ^~",
+                        "code": "delete[] m1;"
+                    }
+                ]
+            }
+        },
+        "3431": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3431.cpp: In function ‘int main()’:\nbs_test_3431.cpp:28:3: error: ‘vector’ is not a member of ‘std’\n   std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};\n   ^~~\nbs_test_3431.cpp:28:15: error: ‘deque’ is not a member of ‘std’\n   std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};\n               ^~~\nbs_test_3431.cpp:28:26: error: expected primary-expression before ‘long’\n   std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};\n                          ^~~~\nbs_test_3431.cpp:29:38: error: ‘m’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                      ^\nbs_test_3431.cpp:29:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                       ^\nbs_test_3431.cpp:33:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n     delete[] m1;\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "3",
+                        "message": "'vector' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3431.cpp:28:3: error: ‘vector’ is not a member of ‘std’   std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};   ^~~",
+                        "code": "std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "15",
+                        "message": "'deque' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3431.cpp:28:15: error: ‘deque’ is not a member of ‘std’   std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};               ^~~",
+                        "code": "std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "26",
+                        "message": "expected primary-expression before 'long'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3431.cpp:28:26: error: expected primary-expression before ‘long’   std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};                          ^~~~",
+                        "code": "std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "38",
+                        "message": "'m' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3431.cpp:29:38: error: ‘m’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                      ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "39",
+                        "message": "'KreirajDinamickuKopiju2D' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3431.cpp:29:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                       ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 5,
+                        "col": "14",
+                        "message": "type '<type error>' argument given to 'delete', expected pointer",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3431.cpp:33:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer     delete[] m1;              ^~",
+                        "code": "delete[] m1;"
+                    }
+                ]
+            }
+        },
+        "3438": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3438.cpp: In function ‘int main()’:\nbs_test_3438.cpp:45:4: error: ‘vector’ is not a member of ‘std’\n    std::vector<std::deque<int>> m {{1,2,3}, {1,2,3}, {1,2,3}};\n    ^~~\nbs_test_3438.cpp:45:16: error: ‘deque’ is not a member of ‘std’\n    std::vector<std::deque<int>> m {{1,2,3}, {1,2,3}, {1,2,3}};\n                ^~~\nbs_test_3438.cpp:45:27: error: expected primary-expression before ‘int’\n    std::vector<std::deque<int>> m {{1,2,3}, {1,2,3}, {1,2,3}};\n                           ^~~\nbs_test_3438.cpp:46:38: error: ‘m’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                      ^\nbs_test_3438.cpp:46:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                       ^\nbs_test_3438.cpp:52:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n     delete[] m1;\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "4",
+                        "message": "'vector' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3438.cpp:45:4: error: ‘vector’ is not a member of ‘std’    std::vector<std::deque<int>> m {{1,2,3}, {1,2,3}, {1,2,3}};    ^~~",
+                        "code": "std::vector<std::deque<int>> m {{1,2,3}, {1,2,3}, {1,2,3}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "16",
+                        "message": "'deque' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3438.cpp:45:16: error: ‘deque’ is not a member of ‘std’    std::vector<std::deque<int>> m {{1,2,3}, {1,2,3}, {1,2,3}};                ^~~",
+                        "code": "std::vector<std::deque<int>> m {{1,2,3}, {1,2,3}, {1,2,3}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "27",
+                        "message": "expected primary-expression before 'int'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3438.cpp:45:27: error: expected primary-expression before ‘int’    std::vector<std::deque<int>> m {{1,2,3}, {1,2,3}, {1,2,3}};                           ^~~",
+                        "code": "std::vector<std::deque<int>> m {{1,2,3}, {1,2,3}, {1,2,3}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "38",
+                        "message": "'m' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3438.cpp:46:38: error: ‘m’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                      ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "39",
+                        "message": "'KreirajDinamickuKopiju2D' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3438.cpp:46:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                       ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "14",
+                        "message": "type '<type error>' argument given to 'delete', expected pointer",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3438.cpp:52:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer     delete[] m1;              ^~",
+                        "code": "delete[] m1;"
+                    }
+                ]
+            }
+        },
+        "3439": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3439.cpp: In function ‘int main()’:\nbs_test_3439.cpp:47:3: error: ‘vector’ is not a member of ‘std’\n   std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};\n   ^~~\nbs_test_3439.cpp:47:15: error: ‘deque’ is not a member of ‘std’\n   std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};\n               ^~~\nbs_test_3439.cpp:47:26: error: expected primary-expression before ‘double’\n   std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};\n                          ^~~~~~\nbs_test_3439.cpp:48:38: error: ‘m’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                      ^\nbs_test_3439.cpp:48:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                       ^\nbs_test_3439.cpp:54:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n     delete[] m1;\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "3",
+                        "message": "'vector' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3439.cpp:47:3: error: ‘vector’ is not a member of ‘std’   std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};   ^~~",
+                        "code": "std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "15",
+                        "message": "'deque' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3439.cpp:47:15: error: ‘deque’ is not a member of ‘std’   std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};               ^~~",
+                        "code": "std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "26",
+                        "message": "expected primary-expression before 'double'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3439.cpp:47:26: error: expected primary-expression before ‘double’   std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};                          ^~~~~~",
+                        "code": "std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "38",
+                        "message": "'m' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3439.cpp:48:38: error: ‘m’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                      ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "39",
+                        "message": "'KreirajDinamickuKopiju2D' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3439.cpp:48:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                       ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 8,
+                        "col": "14",
+                        "message": "type '<type error>' argument given to 'delete', expected pointer",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3439.cpp:54:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer     delete[] m1;              ^~",
+                        "code": "delete[] m1;"
+                    }
+                ]
+            }
+        },
+        "3445": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3445.cpp: In function ‘int main()’:\nbs_test_3445.cpp:46:3: error: ‘vector’ is not a member of ‘std’\n   std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};\n   ^~~\nbs_test_3445.cpp:46:15: error: ‘deque’ is not a member of ‘std’\n   std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};\n               ^~~\nbs_test_3445.cpp:46:26: error: expected primary-expression before ‘double’\n   std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};\n                          ^~~~~~\nbs_test_3445.cpp:47:38: error: ‘m’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                      ^\nbs_test_3445.cpp:47:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope\n     auto m1(KreirajDinamickuKopiju2D(m));\n                                       ^\nbs_test_3445.cpp:53:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer\n     delete[] m1;\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "3",
+                        "message": "'vector' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3445.cpp:46:3: error: ‘vector’ is not a member of ‘std’   std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};   ^~~",
+                        "code": "std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "15",
+                        "message": "'deque' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3445.cpp:46:15: error: ‘deque’ is not a member of ‘std’   std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};               ^~~",
+                        "code": "std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "26",
+                        "message": "expected primary-expression before 'double'",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3445.cpp:46:26: error: expected primary-expression before ‘double’   std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};                          ^~~~~~",
+                        "code": "std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "38",
+                        "message": "'m' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3445.cpp:47:38: error: ‘m’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                      ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "39",
+                        "message": "'KreirajDinamickuKopiju2D' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3445.cpp:47:39: error: ‘KreirajDinamickuKopiju2D’ was not declared in this scope     auto m1(KreirajDinamickuKopiju2D(m));                                       ^",
+                        "code": "auto m1(KreirajDinamickuKopiju2D(m));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "14",
+                        "message": "type '<type error>' argument given to 'delete', expected pointer",
+                        "output": "/tmp/buildservice/bs_7926/bs_test_3445.cpp:53:14: error: type ‘<type error>’ argument given to ‘delete’, expected pointer     delete[] m1;              ^~",
+                        "code": "delete[] m1;"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1555677520
+}

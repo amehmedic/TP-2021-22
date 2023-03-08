@@ -1,0 +1,5 @@
+/rhome/a/amehmedic1/workspace/TP/T8/Z6/main.cpp: In instantiation of ‘Cvor<TipElementa>* KreirajPovezanuListu(TipElementa) [with TipElementa = double]’:
+/rhome/a/amehmedic1/workspace/TP/T8/Z6/main.cpp:100:36:   required from here
+/rhome/a/amehmedic1/workspace/TP/T8/Z6/main.cpp:19:19: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         if(podatak==zavrsni)
+            ~~~~~~~^~~~~~~~~

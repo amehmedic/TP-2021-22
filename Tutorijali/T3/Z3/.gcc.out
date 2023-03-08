@@ -1,0 +1,4 @@
+/rhome/a/amehmedic1/workspace/TP/T3/Z3/main.cpp: In function ‘std::deque<int> IzdvojiElemente(std::deque<int>, bool)’:
+/rhome/a/amehmedic1/workspace/TP/T3/Z3/main.cpp:42:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^

@@ -1,0 +1,281 @@
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:84:7: error: ‘vector’ in namespace ‘std’ does not name a template type
+  std::vector<std::shared_ptr<Tim>> timovi;
+       ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp: In constructor ‘Liga::Liga(int)’:
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:86:37: error: class ‘Liga’ does not have any field named ‘max_broj_timova’
+  explicit Liga(int velicina_lige) : max_broj_timova(velicina_lige), broj_timova(0), timovi(new Tim*[velicina_lige]{}) {} 
+                                     ^~~~~~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:86:69: error: class ‘Liga’ does not have any field named ‘broj_timova’
+  explicit Liga(int velicina_lige) : max_broj_timova(velicina_lige), broj_timova(0), timovi(new Tim*[velicina_lige]{}) {} 
+                                                                     ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:86:85: error: class ‘Liga’ does not have any field named ‘timovi’
+  explicit Liga(int velicina_lige) : max_broj_timova(velicina_lige), broj_timova(0), timovi(new Tim*[velicina_lige]{}) {} 
+                                                                                     ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp: In constructor ‘Liga::Liga(std::initializer_list<Tim>)’:
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:98:55: error: class ‘Liga’ does not have any field named ‘max_broj_timova’
+ Liga::Liga(std::initializer_list<Tim> lista_timova) : max_broj_timova(lista_timova.size()), broj_timova(0)
+                                                       ^~~~~~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:98:93: error: class ‘Liga’ does not have any field named ‘broj_timova’
+ Liga::Liga(std::initializer_list<Tim> lista_timova) : max_broj_timova(lista_timova.size()), broj_timova(0)
+                                                                                             ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:100:2: error: ‘timovi’ was not declared in this scope
+  timovi=nullptr;
+  ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:100:2: note: suggested alternative: ‘remove’
+  timovi=nullptr;
+  ^~~~~~
+  remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:108:3: error: ‘broj_timova’ was not declared in this scope
+   broj_timova++;
+   ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:108:3: note: suggested alternative: ‘lista_timova’
+   broj_timova++;
+   ^~~~~~~~~~~
+   lista_timova
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp: In destructor ‘Liga::~Liga()’:
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:114:16: error: ‘broj_timova’ was not declared in this scope
+  for(int i=0;i<broj_timova;i++)
+                ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:116:10: error: ‘timovi’ was not declared in this scope
+   delete timovi[i];
+          ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:116:10: note: suggested alternative: ‘remove’
+   delete timovi[i];
+          ^~~~~~
+          remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:118:12: error: ‘timovi’ was not declared in this scope
+  delete [] timovi;
+            ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:118:12: note: suggested alternative: ‘remove’
+  delete [] timovi;
+            ^~~~~~
+            remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp: In copy constructor ‘Liga::Liga(const Liga&)’:
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:121:27: error: class ‘Liga’ does not have any field named ‘max_broj_timova’
+ Liga::Liga(const Liga &l):max_broj_timova(l.max_broj_timova)
+                           ^~~~~~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:121:45: error: ‘const class Liga’ has no member named ‘max_broj_timova’
+ Liga::Liga(const Liga &l):max_broj_timova(l.max_broj_timova)
+                                             ^~~~~~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:123:5: error: ‘max_broj_timova’ was not declared in this scope
+  if(max_broj_timova!=l.max_broj_timova)
+     ^~~~~~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:123:24: error: ‘const class Liga’ has no member named ‘max_broj_timova’
+  if(max_broj_timova!=l.max_broj_timova)
+                        ^~~~~~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:127:2: error: ‘timovi’ was not declared in this scope
+  timovi=new Tim*[l.broj_timova];
+  ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:127:2: note: suggested alternative: ‘remove’
+  timovi=new Tim*[l.broj_timova];
+  ^~~~~~
+  remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:127:20: error: ‘const class Liga’ has no member named ‘broj_timova’
+  timovi=new Tim*[l.broj_timova];
+                    ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:128:18: error: ‘const class Liga’ has no member named ‘broj_timova’
+  for(int i=0;i<l.broj_timova;i++)
+                  ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:131:15: error: ‘const class Liga’ has no member named ‘timovi’
+   Tim tim=*(l.timovi[i]);
+               ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:134:2: error: ‘broj_timova’ was not declared in this scope
+  broj_timova=l.broj_timova;
+  ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:134:16: error: ‘const class Liga’ has no member named ‘broj_timova’
+  broj_timova=l.broj_timova;
+                ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp: In constructor ‘Liga::Liga(Liga&&)’:
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:137:22: error: class ‘Liga’ does not have any field named ‘max_broj_timova’
+ Liga::Liga(Liga &&l):max_broj_timova(l.max_broj_timova)
+                      ^~~~~~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:137:40: error: ‘class Liga’ has no member named ‘max_broj_timova’
+ Liga::Liga(Liga &&l):max_broj_timova(l.max_broj_timova)
+                                        ^~~~~~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:139:2: error: ‘timovi’ was not declared in this scope
+  timovi=l.timovi;
+  ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:139:2: note: suggested alternative: ‘remove’
+  timovi=l.timovi;
+  ^~~~~~
+  remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:139:11: error: ‘class Liga’ has no member named ‘timovi’
+  timovi=l.timovi;
+           ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:140:18: error: ‘class Liga’ has no member named ‘broj_timova’
+  for(int i=0;i<l.broj_timova;i++)
+                  ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:142:15: error: ‘class Liga’ has no member named ‘timovi’
+   timovi[i]=l.timovi[i];
+               ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:143:5: error: ‘class Liga’ has no member named ‘timovi’
+   l.timovi[i]=nullptr;
+     ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:145:4: error: ‘class Liga’ has no member named ‘timovi’
+  l.timovi=nullptr;
+    ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:146:2: error: ‘broj_timova’ was not declared in this scope
+  broj_timova=l.broj_timova;
+  ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:146:16: error: ‘class Liga’ has no member named ‘broj_timova’
+  broj_timova=l.broj_timova;
+                ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp: In member function ‘Liga& Liga::operator=(const Liga&)’:
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:151:5: error: ‘max_broj_timova’ was not declared in this scope
+  if(max_broj_timova<l.max_broj_timova)
+     ^~~~~~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:151:23: error: ‘const class Liga’ has no member named ‘max_broj_timova’
+  if(max_broj_timova<l.max_broj_timova)
+                       ^~~~~~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:155:7: error: ‘const class Liga’ has no member named ‘broj_timova’
+  if(l.broj_timova>broj_timova)
+       ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:155:19: error: ‘broj_timova’ was not declared in this scope
+  if(l.broj_timova>broj_timova)
+                   ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:159:30: error: ‘const class Liga’ has no member named ‘broj_timova’
+    for(int i=broj_timova;i<l.broj_timova;i++)
+                              ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:161:5: error: ‘timovi’ was not declared in this scope
+     timovi[i]=new Tim(*l.timovi[i]);
+     ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:161:5: note: suggested alternative: ‘remove’
+     timovi[i]=new Tim(*l.timovi[i]);
+     ^~~~~~
+     remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:161:26: error: ‘const class Liga’ has no member named ‘timovi’
+     timovi[i]=new Tim(*l.timovi[i]);
+                          ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:166:30: error: ‘const class Liga’ has no member named ‘broj_timova’
+    for(int i=broj_timova;i<l.broj_timova;i++)
+                              ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:168:12: error: ‘timovi’ was not declared in this scope
+     delete timovi[i];
+            ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:168:12: note: suggested alternative: ‘remove’
+     delete timovi[i];
+            ^~~~~~
+            remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:176:15: error: ‘const class Liga’ has no member named ‘broj_timova’
+   for(int i=l.broj_timova;i<broj_timova;i++)
+               ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:178:11: error: ‘timovi’ was not declared in this scope
+    delete timovi[i];
+           ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:178:11: note: suggested alternative: ‘remove’
+    delete timovi[i];
+           ^~~~~~
+           remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:182:2: error: ‘broj_timova’ was not declared in this scope
+  broj_timova=l.broj_timova;
+  ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:182:16: error: ‘const class Liga’ has no member named ‘broj_timova’
+  broj_timova=l.broj_timova;
+                ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:183:18: error: ‘const class Liga’ has no member named ‘broj_timova’
+  for(int i=0;i<l.broj_timova;i++)
+                  ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:185:4: error: ‘timovi’ was not declared in this scope
+   *timovi[i]=*l.timovi[i];
+    ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:185:4: note: suggested alternative: ‘remove’
+   *timovi[i]=*l.timovi[i];
+    ^~~~~~
+    remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:185:17: error: ‘const class Liga’ has no member named ‘timovi’
+   *timovi[i]=*l.timovi[i];
+                 ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp: In member function ‘Liga& Liga::operator=(Liga&&)’:
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:192:5: error: ‘max_broj_timova’ was not declared in this scope
+  if(max_broj_timova<l.max_broj_timova)
+     ^~~~~~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:192:23: error: ‘class Liga’ has no member named ‘max_broj_timova’
+  if(max_broj_timova<l.max_broj_timova)
+                       ^~~~~~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:196:2: error: ‘timovi’ was not declared in this scope
+  timovi=l.timovi;
+  ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:196:2: note: suggested alternative: ‘remove’
+  timovi=l.timovi;
+  ^~~~~~
+  remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:196:11: error: ‘class Liga’ has no member named ‘timovi’
+  timovi=l.timovi;
+           ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:197:18: error: ‘class Liga’ has no member named ‘broj_timova’
+  for(int i=0;i<l.broj_timova;i++)
+                  ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:199:15: error: ‘class Liga’ has no member named ‘timovi’
+   timovi[i]=l.timovi[i];
+               ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:200:5: error: ‘class Liga’ has no member named ‘timovi’
+   l.timovi[i]=nullptr;
+     ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:202:4: error: ‘class Liga’ has no member named ‘timovi’
+  l.timovi=nullptr;
+    ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:203:2: error: ‘broj_timova’ was not declared in this scope
+  broj_timova=l.broj_timova;
+  ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:203:16: error: ‘class Liga’ has no member named ‘broj_timova’
+  broj_timova=l.broj_timova;
+                ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp: In member function ‘void Liga::DodajNoviTim(const char*)’:
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:209:5: error: ‘broj_timova’ was not declared in this scope
+  if(broj_timova>=max_broj_timova)
+     ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:209:18: error: ‘max_broj_timova’ was not declared in this scope
+  if(broj_timova>=max_broj_timova)
+                  ^~~~~~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:219:2: error: ‘timovi’ was not declared in this scope
+  timovi[broj_timova++]=tim;
+  ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:219:2: note: suggested alternative: ‘remove’
+  timovi[broj_timova++]=tim;
+  ^~~~~~
+  remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:219:9: error: ‘broj_timova’ was not declared in this scope
+  timovi[broj_timova++]=tim;
+         ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp: In member function ‘void Liga::RegistrirajUtakmicu(const char*, const char*, int, int)’:
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:229:12: error: ‘broj_timova’ was not declared in this scope
+  for(i=0;i<broj_timova;i++)
+            ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:231:13: error: ‘timovi’ was not declared in this scope
+   if(strcmp(timovi[i]->DajImeTima(),tim1)==0)
+             ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:231:13: note: suggested alternative: ‘remove’
+   if(strcmp(timovi[i]->DajImeTima(),tim1)==0)
+             ^~~~~~
+             remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:236:12: error: ‘broj_timova’ was not declared in this scope
+  for(j=0;j<broj_timova;j++)
+            ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:238:13: error: ‘timovi’ was not declared in this scope
+   if(strcmp(timovi[j]->DajImeTima(),tim2)==0)
+             ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:238:13: note: suggested alternative: ‘remove’
+   if(strcmp(timovi[j]->DajImeTima(),tim2)==0)
+             ^~~~~~
+             remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:243:8: error: ‘broj_timova’ was not declared in this scope
+  if(i==broj_timova || j==broj_timova)
+        ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:247:2: error: ‘timovi’ was not declared in this scope
+  timovi[i]->ObradiUtakmicu(rezultat_1, rezultat_2);
+  ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:247:2: note: suggested alternative: ‘remove’
+  timovi[i]->ObradiUtakmicu(rezultat_1, rezultat_2);
+  ^~~~~~
+  remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp: In member function ‘void Liga::IspisiTabelu()’:
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:253:12: error: ‘timovi’ was not declared in this scope
+  std::sort(timovi,timovi+broj_timova, [] (Tim *a, Tim *b)
+            ^~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:253:12: note: suggested alternative: ‘remove’
+  std::sort(timovi,timovi+broj_timova, [] (Tim *a, Tim *b)
+            ^~~~~~
+            remove
+/rhome/a/amehmedic1/workspace/TP2018/T11/Z5/main.cpp:253:26: error: ‘broj_timova’ was not declared in this scope
+  std::sort(timovi,timovi+broj_timova, [] (Tim *a, Tim *b)
+                          ^~~~~~~~~~~

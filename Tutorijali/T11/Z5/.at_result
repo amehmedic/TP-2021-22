@@ -1,0 +1,643 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 3,
+    "compile_result": {
+        "status": 2,
+        "output": "main.cpp:84:7: error: ‘vector’ in namespace ‘std’ does not name a template type\n  std::vector<std::shared_ptr<Tim> timovi;\n       ^~~~~~\nmain.cpp: In constructor ‘Liga::Liga(int)’:\nmain.cpp:86:37: error: class ‘Liga’ does not have any field named ‘max_broj_timova’\n  explicit Liga(int velicina_lige) : max_broj_timova(velicina_lige), broj_timova(0), timovi(new Tim*[velicina_lige]{}) {}\n                                     ^~~~~~~~~~~~~~~\nmain.cpp:86:69: error: class ‘Liga’ does not have any field named ‘broj_timova’\n  explicit Liga(int velicina_lige) : max_broj_timova(velicina_lige), broj_timova(0), timovi(new Tim*[velicina_lige]{}) {}\n                                                                     ^~~~~~~~~~~\nmain.cpp:86:85: error: class ‘Liga’ does not have any field named ‘timovi’\n  explicit Liga(int velicina_lige) : max_broj_timova(velicina_lige), broj_timova(0), timovi(new Tim*[velicina_lige]{}) {}\n                                                                                     ^~~~~~\nmain.cpp: In constructor ‘Liga::Liga(std::initializer_list<Tim>)’:\nmain.cpp:98:55: error: class ‘Liga’ does not have any field named ‘max_broj_timova’\n Liga::Liga(std::initializer_list<Tim> lista_timova) : max_broj_timova(lista_timova.size()), broj_timova(0)\n                                                       ^~~~~~~~~~~~~~~\nmain.cpp:98:93: error: class ‘Liga’ does not have any field named ‘broj_timova’\n Liga::Liga(std::initializer_list<Tim> lista_timova) : max_broj_timova(lista_timova.size()), broj_timova(0)\n                                                                                             ^~~~~~~~~~~\nmain.cpp:100:2: error: ‘timovi’ was not declared in this scope\n  timovi=nullptr;\n  ^~~~~~\nmain.cpp:108:3: error: ‘broj_timova’ was not declared in this scope\n   broj_timova++;\n   ^~~~~~~~~~~\nmain.cpp: In destructor ‘Liga::~Liga()’:\nmain.cpp:114:16: error: ‘broj_timova’ was not declared in this scope\n  for(int i=0;i<broj_timova;i++)\n                ^~~~~~~~~~~\nmain.cpp:116:10: error: ‘timovi’ was not declared in this scope\n   delete timovi[i];\n          ^~~~~~\nmain.cpp:118:12: error: ‘timovi’ was not declared in this scope\n  delete [] timovi;\n            ^~~~~~\nmain.cpp: In copy constructor ‘Liga::Liga(const Liga&)’:\nmain.cpp:121:27: error: class ‘Liga’ does not have any field named ‘max_broj_timova’\n Liga::Liga(const Liga &l):max_broj_timova(l.max_broj_timova)\n                           ^~~~~~~~~~~~~~~\nmain.cpp:121:45: error: ‘const class Liga’ has no member named ‘max_broj_timova’\n Liga::Liga(const Liga &l):max_broj_timova(l.max_broj_timova)\n                                             ^~~~~~~~~~~~~~~\nmain.cpp:123:5: error: ‘max_broj_timova’ was not declared in this scope\n  if(max_broj_timova!=l.max_broj_timova)\n     ^~~~~~~~~~~~~~~\nmain.cpp:123:24: error: ‘const class Liga’ has no member named ‘max_broj_timova’\n  if(max_broj_timova!=l.max_broj_timova)\n                        ^~~~~~~~~~~~~~~\nmain.cpp:127:2: error: ‘timovi’ was not declared in this scope\n  timovi=new Tim*[l.broj_timova];\n  ^~~~~~\nmain.cpp:127:20: error: ‘const class Liga’ has no member named ‘broj_timova’\n  timovi=new Tim*[l.broj_timova];\n                    ^~~~~~~~~~~\nmain.cpp:128:18: error: ‘const class Liga’ has no member named ‘broj_timova’\n  for(int i=0;i<l.broj_timova;i++)\n                  ^~~~~~~~~~~\nmain.cpp:131:15: error: ‘const class Liga’ has no member named ‘timovi’\n   Tim tim=*(l.timovi[i]);\n               ^~~~~~\nmain.cpp:134:2: error: ‘broj_timova’ was not declared in this scope\n  broj_timova=l.broj_timova;\n  ^~~~~~~~~~~\nmain.cpp:134:16: error: ‘const class Liga’ has no member named ‘broj_timova’\n  broj_timova=l.broj_timova;\n                ^~~~~~~~~~~\nmain.cpp: In constructor ‘Liga::Liga(Liga&&)’:\nmain.cpp:137:22: error: class ‘Liga’ does not have any field named ‘max_broj_timova’\n Liga::Liga(Liga &&l):max_broj_timova(l.max_broj_timova)\n                      ^~~~~~~~~~~~~~~\nmain.cpp:137:40: error: ‘class Liga’ has no member named ‘max_broj_timova’\n Liga::Liga(Liga &&l):max_broj_timova(l.max_broj_timova)\n                                        ^~~~~~~~~~~~~~~\nmain.cpp:139:2: error: ‘timovi’ was not declared in this scope\n  timovi=l.timovi;\n  ^~~~~~\nmain.cpp:139:11: error: ‘class Liga’ has no member named ‘timovi’\n  timovi=l.timovi;\n           ^~~~~~\nmain.cpp:140:18: error: ‘class Liga’ has no member named ‘broj_timova’\n  for(int i=0;i<l.broj_timova;i++)\n                  ^~~~~~~~~~~\nmain.cpp:142:15: error: ‘class Liga’ has no member named ‘timovi’\n   timovi[i]=l.timovi[i];\n               ^~~~~~\nmain.cpp:143:5: error: ‘class Liga’ has no member named ‘timovi’\n   l.timovi[i]=nullptr;\n     ^~~~~~\nmain.cpp:145:4: error: ‘class Liga’ has no member named ‘timovi’\n  l.timovi=nullptr;\n    ^~~~~~\nmain.cpp:146:2: error: ‘broj_timova’ was not declared in this scope\n  broj_timova=l.broj_timova;\n  ^~~~~~~~~~~\nmain.cpp:146:16: error: ‘class Liga’ has no member named ‘broj_timova’\n  broj_timova=l.broj_timova;\n                ^~~~~~~~~~~\nmain.cpp: In member function ‘Liga& Liga::operator=(const Liga&)’:\nmain.cpp:151:5: error: ‘max_broj_timova’ was not declared in this scope\n  if(max_broj_timova<l.max_broj_timova)\n     ^~~~~~~~~~~~~~~\nmain.cpp:151:23: error: ‘const class Liga’ has no member named ‘max_broj_timova’\n  if(max_broj_timova<l.max_broj_timova)\n                       ^~~~~~~~~~~~~~~\nmain.cpp:155:7: error: ‘const class Liga’ has no member named ‘broj_timova’\n  if(l.broj_timova>broj_timova)\n       ^~~~~~~~~~~\nmain.cpp:155:19: error: ‘broj_timova’ was not declared in this scope\n  if(l.broj_timova>broj_timova)\n                   ^~~~~~~~~~~\nmain.cpp:159:30: error: ‘const class Liga’ has no member named ‘broj_timova’\n    for(int i=broj_timova;i<l.broj_timova;i++)\n                              ^~~~~~~~~~~\nmain.cpp:161:5: error: ‘timovi’ was not declared in this scope\n     timovi[i]=new Tim(*l.timovi[i]);\n     ^~~~~~\nmain.cpp:161:26: error: ‘const class Liga’ has no member named ‘timovi’\n     timovi[i]=new Tim(*l.timovi[i]);\n                          ^~~~~~\nmain.cpp:166:30: error: ‘const class Liga’ has no member named ‘broj_timova’\n    for(int i=broj_timova;i<l.broj_timova;i++)\n                              ^~~~~~~~~~~\nmain.cpp:168:12: error: ‘timovi’ was not declared in this scope\n     delete timovi[i];\n            ^~~~~~\nmain.cpp:176:15: error: ‘const class Liga’ has no member named ‘broj_timova’\n   for(int i=l.broj_timova;i<broj_timova;i++)\n               ^~~~~~~~~~~\nmain.cpp:178:11: error: ‘timovi’ was not declared in this scope\n    delete timovi[i];\n           ^~~~~~\nmain.cpp:182:2: error: ‘broj_timova’ was not declared in this scope\n  broj_timova=l.broj_timova;\n  ^~~~~~~~~~~\nmain.cpp:182:16: error: ‘const class Liga’ has no member named ‘broj_timova’\n  broj_timova=l.broj_timova;\n                ^~~~~~~~~~~\nmain.cpp:183:18: error: ‘const class Liga’ has no member named ‘broj_timova’\n  for(int i=0;i<l.broj_timova;i++)\n                  ^~~~~~~~~~~\nmain.cpp:185:4: error: ‘timovi’ was not declared in this scope\n   *timovi[i]=*l.timovi[i];\n    ^~~~~~\nmain.cpp:185:17: error: ‘const class Liga’ has no member named ‘timovi’\n   *timovi[i]=*l.timovi[i];\n                 ^~~~~~\nmain.cpp: In member function ‘Liga& Liga::operator=(Liga&&)’:\nmain.cpp:192:5: error: ‘max_broj_timova’ was not declared in this scope\n  if(max_broj_timova<l.max_broj_timova)\n     ^~~~~~~~~~~~~~~\nmain.cpp:192:23: error: ‘class Liga’ has no member named ‘max_broj_timova’\n  if(max_broj_timova<l.max_broj_timova)\n                       ^~~~~~~~~~~~~~~\nmain.cpp:196:2: error: ‘timovi’ was not declared in this scope\n  timovi=l.timovi;\n  ^~~~~~\nmain.cpp:196:11: error: ‘class Liga’ has no member named ‘timovi’\n  timovi=l.timovi;\n           ^~~~~~\nmain.cpp:197:18: error: ‘class Liga’ has no member named ‘broj_timova’\n  for(int i=0;i<l.broj_timova;i++)\n                  ^~~~~~~~~~~\nmain.cpp:199:15: error: ‘class Liga’ has no member named ‘timovi’\n   timovi[i]=l.timovi[i];\n               ^~~~~~\nmain.cpp:200:5: error: ‘class Liga’ has no member named ‘timovi’\n   l.timovi[i]=nullptr;\n     ^~~~~~\nmain.cpp:202:4: error: ‘class Liga’ has no member named ‘timovi’\n  l.timovi=nullptr;\n    ^~~~~~\nmain.cpp:203:2: error: ‘broj_timova’ was not declared in this scope\n  broj_timova=l.broj_timova;\n  ^~~~~~~~~~~\nmain.cpp:203:16: error: ‘class Liga’ has no member named ‘broj_timova’\n  broj_timova=l.broj_timova;\n                ^~~~~~~~~~~\nmain.cpp: In member function ‘void Liga::DodajNoviTim(const char*)’:\nmain.cpp:209:5: error: ‘broj_timova’ was not declared in this scope\n  if(broj_timova>=max_broj_timova)\n     ^~~~~~~~~~~\nmain.cpp:209:18: error: ‘max_broj_timova’ was not declared in this scope\n  if(broj_timova>=max_broj_timova)\n                  ^~~~~~~~~~~~~~~\nmain.cpp:219:2: error: ‘timovi’ was not declared in this scope\n  timovi[broj_timova++]=tim;\n  ^~~~~~\nmain.cpp:219:9: error: ‘broj_timova’ was not declared in this scope\n  timovi[broj_timova++]=tim;\n         ^~~~~~~~~~~\nmain.cpp: In member function ‘void Liga::RegistrirajUtakmicu(const char*, const char*, int, int)’:\nmain.cpp:229:12: error: ‘broj_timova’ was not declared in this scope\n  for(i=0;i<broj_timova;i++)\n            ^~~~~~~~~~~\nmain.cpp:231:13: error: ‘timovi’ was not declared in this scope\n   if(strcmp(timovi[i]->DajImeTima(),tim1)==0)\n             ^~~~~~\nmain.cpp:236:12: error: ‘broj_timova’ was not declared in this scope\n  for(j=0;j<broj_timova;j++)\n            ^~~~~~~~~~~\nmain.cpp:238:13: error: ‘timovi’ was not declared in this scope\n   if(strcmp(timovi[j]->DajImeTima(),tim2)==0)\n             ^~~~~~\nmain.cpp:243:8: error: ‘broj_timova’ was not declared in this scope\n  if(i==broj_timova || j==broj_timova)\n        ^~~~~~~~~~~\nmain.cpp:247:2: error: ‘timovi’ was not declared in this scope\n  timovi[i]->ObradiUtakmicu(rezultat_1, rezultat_2);\n  ^~~~~~\nmain.cpp: In member function ‘void Liga::IspisiTabelu()’:\nmain.cpp:253:12: error: ‘timovi’ was not declared in this scope\n  std::sort(timovi,timovi+broj_timova, [] (Tim *a, Tim *b)\n            ^~~~~~\nmain.cpp:253:26: error: ‘broj_timova’ was not declared in this scope\n  std::sort(timovi,timovi+broj_timova, [] (Tim *a, Tim *b)\n                          ^~~~~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "84",
+                "col": "7",
+                "message": "'vector' in namespace 'std' does not name a template type",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:84:7: error: ‘vector’ in namespace ‘std’ does not name a template type  std::vector<std::shared_ptr<Tim> timovi;       ^~~~~~/tmp/buildservice/bs_2343/main.cpp: In constructor ‘Liga::Liga(int)’:",
+                "code": "std::vector<std::shared_ptr<Tim> timovi;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "86",
+                "col": "37",
+                "message": "class 'Liga' does not have any field named 'max_broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:86:37: error: class ‘Liga’ does not have any field named ‘max_broj_timova’  explicit Liga(int velicina_lige) : max_broj_timova(velicina_lige), broj_timova(0), timovi(new Tim*[velicina_lige]{}) {}                                     ^~~~~~~~~~~~~~~",
+                "code": "explicit Liga(int velicina_lige) : max_broj_timova(velicina_lige), broj_timova(0), timovi(new Tim*[velicina_lige]{}) {}"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "86",
+                "col": "69",
+                "message": "class 'Liga' does not have any field named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:86:69: error: class ‘Liga’ does not have any field named ‘broj_timova’  explicit Liga(int velicina_lige) : max_broj_timova(velicina_lige), broj_timova(0), timovi(new Tim*[velicina_lige]{}) {}                                                                     ^~~~~~~~~~~",
+                "code": "explicit Liga(int velicina_lige) : max_broj_timova(velicina_lige), broj_timova(0), timovi(new Tim*[velicina_lige]{}) {}"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "86",
+                "col": "85",
+                "message": "class 'Liga' does not have any field named 'timovi'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:86:85: error: class ‘Liga’ does not have any field named ‘timovi’  explicit Liga(int velicina_lige) : max_broj_timova(velicina_lige), broj_timova(0), timovi(new Tim*[velicina_lige]{}) {}                                                                                     ^~~~~~/tmp/buildservice/bs_2343/main.cpp: In constructor ‘Liga::Liga(std::initializer_list<Tim>)’:",
+                "code": "explicit Liga(int velicina_lige) : max_broj_timova(velicina_lige), broj_timova(0), timovi(new Tim*[velicina_lige]{}) {}"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "98",
+                "col": "55",
+                "message": "class 'Liga' does not have any field named 'max_broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:98:55: error: class ‘Liga’ does not have any field named ‘max_broj_timova’ Liga::Liga(std::initializer_list<Tim> lista_timova) : max_broj_timova(lista_timova.size()), broj_timova(0)                                                       ^~~~~~~~~~~~~~~",
+                "code": "Liga::Liga(std::initializer_list<Tim> lista_timova) : max_broj_timova(lista_timova.size()), broj_timova(0)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "98",
+                "col": "93",
+                "message": "class 'Liga' does not have any field named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:98:93: error: class ‘Liga’ does not have any field named ‘broj_timova’ Liga::Liga(std::initializer_list<Tim> lista_timova) : max_broj_timova(lista_timova.size()), broj_timova(0)                                                                                             ^~~~~~~~~~~",
+                "code": "Liga::Liga(std::initializer_list<Tim> lista_timova) : max_broj_timova(lista_timova.size()), broj_timova(0)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "100",
+                "col": "2",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:100:2: error: ‘timovi’ was not declared in this scope  timovi=nullptr;  ^~~~~~",
+                "code": "timovi=nullptr;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "108",
+                "col": "3",
+                "message": "'broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:108:3: error: ‘broj_timova’ was not declared in this scope   broj_timova++;   ^~~~~~~~~~~/tmp/buildservice/bs_2343/main.cpp: In destructor ‘Liga::~Liga()’:",
+                "code": "broj_timova++;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "114",
+                "col": "16",
+                "message": "'broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:114:16: error: ‘broj_timova’ was not declared in this scope  for(int i=0;i<broj_timova;i++)                ^~~~~~~~~~~",
+                "code": "for(int i=0;i<broj_timova;i++)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "116",
+                "col": "10",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:116:10: error: ‘timovi’ was not declared in this scope   delete timovi[i];          ^~~~~~",
+                "code": "delete timovi[i];"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "118",
+                "col": "12",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:118:12: error: ‘timovi’ was not declared in this scope  delete [] timovi;            ^~~~~~/tmp/buildservice/bs_2343/main.cpp: In copy constructor ‘Liga::Liga(const Liga&)’:",
+                "code": "delete [] timovi;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "121",
+                "col": "27",
+                "message": "class 'Liga' does not have any field named 'max_broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:121:27: error: class ‘Liga’ does not have any field named ‘max_broj_timova’ Liga::Liga(const Liga &l):max_broj_timova(l.max_broj_timova)                           ^~~~~~~~~~~~~~~",
+                "code": "Liga::Liga(const Liga &l):max_broj_timova(l.max_broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "121",
+                "col": "45",
+                "message": "'const class Liga' has no member named 'max_broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:121:45: error: ‘const class Liga’ has no member named ‘max_broj_timova’ Liga::Liga(const Liga &l):max_broj_timova(l.max_broj_timova)                                             ^~~~~~~~~~~~~~~",
+                "code": "Liga::Liga(const Liga &l):max_broj_timova(l.max_broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "123",
+                "col": "5",
+                "message": "'max_broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:123:5: error: ‘max_broj_timova’ was not declared in this scope  if(max_broj_timova!=l.max_broj_timova)     ^~~~~~~~~~~~~~~",
+                "code": "if(max_broj_timova!=l.max_broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "123",
+                "col": "24",
+                "message": "'const class Liga' has no member named 'max_broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:123:24: error: ‘const class Liga’ has no member named ‘max_broj_timova’  if(max_broj_timova!=l.max_broj_timova)                        ^~~~~~~~~~~~~~~",
+                "code": "if(max_broj_timova!=l.max_broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "127",
+                "col": "2",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:127:2: error: ‘timovi’ was not declared in this scope  timovi=new Tim*[l.broj_timova];  ^~~~~~",
+                "code": "timovi=new Tim*[l.broj_timova];"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "127",
+                "col": "20",
+                "message": "'const class Liga' has no member named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:127:20: error: ‘const class Liga’ has no member named ‘broj_timova’  timovi=new Tim*[l.broj_timova];                    ^~~~~~~~~~~",
+                "code": "timovi=new Tim*[l.broj_timova];"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "128",
+                "col": "18",
+                "message": "'const class Liga' has no member named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:128:18: error: ‘const class Liga’ has no member named ‘broj_timova’  for(int i=0;i<l.broj_timova;i++)                  ^~~~~~~~~~~",
+                "code": "for(int i=0;i<l.broj_timova;i++)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "131",
+                "col": "15",
+                "message": "'const class Liga' has no member named 'timovi'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:131:15: error: ‘const class Liga’ has no member named ‘timovi’   Tim tim=*(l.timovi[i]);               ^~~~~~",
+                "code": "Tim tim=*(l.timovi[i]);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "134",
+                "col": "2",
+                "message": "'broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:134:2: error: ‘broj_timova’ was not declared in this scope  broj_timova=l.broj_timova;  ^~~~~~~~~~~",
+                "code": "broj_timova=l.broj_timova;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "134",
+                "col": "16",
+                "message": "'const class Liga' has no member named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:134:16: error: ‘const class Liga’ has no member named ‘broj_timova’  broj_timova=l.broj_timova;                ^~~~~~~~~~~/tmp/buildservice/bs_2343/main.cpp: In constructor ‘Liga::Liga(Liga&&)’:",
+                "code": "broj_timova=l.broj_timova;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "137",
+                "col": "22",
+                "message": "class 'Liga' does not have any field named 'max_broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:137:22: error: class ‘Liga’ does not have any field named ‘max_broj_timova’ Liga::Liga(Liga &&l):max_broj_timova(l.max_broj_timova)                      ^~~~~~~~~~~~~~~",
+                "code": "Liga::Liga(Liga &&l):max_broj_timova(l.max_broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "137",
+                "col": "40",
+                "message": "'class Liga' has no member named 'max_broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:137:40: error: ‘class Liga’ has no member named ‘max_broj_timova’ Liga::Liga(Liga &&l):max_broj_timova(l.max_broj_timova)                                        ^~~~~~~~~~~~~~~",
+                "code": "Liga::Liga(Liga &&l):max_broj_timova(l.max_broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "139",
+                "col": "2",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:139:2: error: ‘timovi’ was not declared in this scope  timovi=l.timovi;  ^~~~~~",
+                "code": "timovi=l.timovi;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "139",
+                "col": "11",
+                "message": "'class Liga' has no member named 'timovi'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:139:11: error: ‘class Liga’ has no member named ‘timovi’  timovi=l.timovi;           ^~~~~~",
+                "code": "timovi=l.timovi;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "140",
+                "col": "18",
+                "message": "'class Liga' has no member named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:140:18: error: ‘class Liga’ has no member named ‘broj_timova’  for(int i=0;i<l.broj_timova;i++)                  ^~~~~~~~~~~",
+                "code": "for(int i=0;i<l.broj_timova;i++)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "142",
+                "col": "15",
+                "message": "'class Liga' has no member named 'timovi'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:142:15: error: ‘class Liga’ has no member named ‘timovi’   timovi[i]=l.timovi[i];               ^~~~~~",
+                "code": "timovi[i]=l.timovi[i];"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "143",
+                "col": "5",
+                "message": "'class Liga' has no member named 'timovi'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:143:5: error: ‘class Liga’ has no member named ‘timovi’   l.timovi[i]=nullptr;     ^~~~~~",
+                "code": "l.timovi[i]=nullptr;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "145",
+                "col": "4",
+                "message": "'class Liga' has no member named 'timovi'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:145:4: error: ‘class Liga’ has no member named ‘timovi’  l.timovi=nullptr;    ^~~~~~",
+                "code": "l.timovi=nullptr;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "146",
+                "col": "2",
+                "message": "'broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:146:2: error: ‘broj_timova’ was not declared in this scope  broj_timova=l.broj_timova;  ^~~~~~~~~~~",
+                "code": "broj_timova=l.broj_timova;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "146",
+                "col": "16",
+                "message": "'class Liga' has no member named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:146:16: error: ‘class Liga’ has no member named ‘broj_timova’  broj_timova=l.broj_timova;                ^~~~~~~~~~~/tmp/buildservice/bs_2343/main.cpp: In member function ‘Liga& Liga::operator=(const Liga&)’:",
+                "code": "broj_timova=l.broj_timova;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "151",
+                "col": "5",
+                "message": "'max_broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:151:5: error: ‘max_broj_timova’ was not declared in this scope  if(max_broj_timova<l.max_broj_timova)     ^~~~~~~~~~~~~~~",
+                "code": "if(max_broj_timova<l.max_broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "151",
+                "col": "23",
+                "message": "'const class Liga' has no member named 'max_broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:151:23: error: ‘const class Liga’ has no member named ‘max_broj_timova’  if(max_broj_timova<l.max_broj_timova)                       ^~~~~~~~~~~~~~~",
+                "code": "if(max_broj_timova<l.max_broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "155",
+                "col": "7",
+                "message": "'const class Liga' has no member named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:155:7: error: ‘const class Liga’ has no member named ‘broj_timova’  if(l.broj_timova>broj_timova)       ^~~~~~~~~~~",
+                "code": "if(l.broj_timova>broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "155",
+                "col": "19",
+                "message": "'broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:155:19: error: ‘broj_timova’ was not declared in this scope  if(l.broj_timova>broj_timova)                   ^~~~~~~~~~~",
+                "code": "if(l.broj_timova>broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "159",
+                "col": "30",
+                "message": "'const class Liga' has no member named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:159:30: error: ‘const class Liga’ has no member named ‘broj_timova’    for(int i=broj_timova;i<l.broj_timova;i++)                              ^~~~~~~~~~~",
+                "code": "for(int i=broj_timova;i<l.broj_timova;i++)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "161",
+                "col": "5",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:161:5: error: ‘timovi’ was not declared in this scope     timovi[i]=new Tim(*l.timovi[i]);     ^~~~~~",
+                "code": "timovi[i]=new Tim(*l.timovi[i]);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "161",
+                "col": "26",
+                "message": "'const class Liga' has no member named 'timovi'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:161:26: error: ‘const class Liga’ has no member named ‘timovi’     timovi[i]=new Tim(*l.timovi[i]);                          ^~~~~~",
+                "code": "timovi[i]=new Tim(*l.timovi[i]);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "166",
+                "col": "30",
+                "message": "'const class Liga' has no member named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:166:30: error: ‘const class Liga’ has no member named ‘broj_timova’    for(int i=broj_timova;i<l.broj_timova;i++)                              ^~~~~~~~~~~",
+                "code": "for(int i=broj_timova;i<l.broj_timova;i++)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "168",
+                "col": "12",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:168:12: error: ‘timovi’ was not declared in this scope     delete timovi[i];            ^~~~~~",
+                "code": "delete timovi[i];"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "176",
+                "col": "15",
+                "message": "'const class Liga' has no member named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:176:15: error: ‘const class Liga’ has no member named ‘broj_timova’   for(int i=l.broj_timova;i<broj_timova;i++)               ^~~~~~~~~~~",
+                "code": "for(int i=l.broj_timova;i<broj_timova;i++)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "178",
+                "col": "11",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:178:11: error: ‘timovi’ was not declared in this scope    delete timovi[i];           ^~~~~~",
+                "code": "delete timovi[i];"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "182",
+                "col": "2",
+                "message": "'broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:182:2: error: ‘broj_timova’ was not declared in this scope  broj_timova=l.broj_timova;  ^~~~~~~~~~~",
+                "code": "broj_timova=l.broj_timova;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "182",
+                "col": "16",
+                "message": "'const class Liga' has no member named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:182:16: error: ‘const class Liga’ has no member named ‘broj_timova’  broj_timova=l.broj_timova;                ^~~~~~~~~~~",
+                "code": "broj_timova=l.broj_timova;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "183",
+                "col": "18",
+                "message": "'const class Liga' has no member named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:183:18: error: ‘const class Liga’ has no member named ‘broj_timova’  for(int i=0;i<l.broj_timova;i++)                  ^~~~~~~~~~~",
+                "code": "for(int i=0;i<l.broj_timova;i++)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "185",
+                "col": "4",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:185:4: error: ‘timovi’ was not declared in this scope   *timovi[i]=*l.timovi[i];    ^~~~~~",
+                "code": "*timovi[i]=*l.timovi[i];"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "185",
+                "col": "17",
+                "message": "'const class Liga' has no member named 'timovi'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:185:17: error: ‘const class Liga’ has no member named ‘timovi’   *timovi[i]=*l.timovi[i];                 ^~~~~~/tmp/buildservice/bs_2343/main.cpp: In member function ‘Liga& Liga::operator=(Liga&&)’:",
+                "code": "*timovi[i]=*l.timovi[i];"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "192",
+                "col": "5",
+                "message": "'max_broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:192:5: error: ‘max_broj_timova’ was not declared in this scope  if(max_broj_timova<l.max_broj_timova)     ^~~~~~~~~~~~~~~",
+                "code": "if(max_broj_timova<l.max_broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "192",
+                "col": "23",
+                "message": "'class Liga' has no member named 'max_broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:192:23: error: ‘class Liga’ has no member named ‘max_broj_timova’  if(max_broj_timova<l.max_broj_timova)                       ^~~~~~~~~~~~~~~",
+                "code": "if(max_broj_timova<l.max_broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "196",
+                "col": "2",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:196:2: error: ‘timovi’ was not declared in this scope  timovi=l.timovi;  ^~~~~~",
+                "code": "timovi=l.timovi;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "196",
+                "col": "11",
+                "message": "'class Liga' has no member named 'timovi'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:196:11: error: ‘class Liga’ has no member named ‘timovi’  timovi=l.timovi;           ^~~~~~",
+                "code": "timovi=l.timovi;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "197",
+                "col": "18",
+                "message": "'class Liga' has no member named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:197:18: error: ‘class Liga’ has no member named ‘broj_timova’  for(int i=0;i<l.broj_timova;i++)                  ^~~~~~~~~~~",
+                "code": "for(int i=0;i<l.broj_timova;i++)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "199",
+                "col": "15",
+                "message": "'class Liga' has no member named 'timovi'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:199:15: error: ‘class Liga’ has no member named ‘timovi’   timovi[i]=l.timovi[i];               ^~~~~~",
+                "code": "timovi[i]=l.timovi[i];"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "200",
+                "col": "5",
+                "message": "'class Liga' has no member named 'timovi'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:200:5: error: ‘class Liga’ has no member named ‘timovi’   l.timovi[i]=nullptr;     ^~~~~~",
+                "code": "l.timovi[i]=nullptr;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "202",
+                "col": "4",
+                "message": "'class Liga' has no member named 'timovi'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:202:4: error: ‘class Liga’ has no member named ‘timovi’  l.timovi=nullptr;    ^~~~~~",
+                "code": "l.timovi=nullptr;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "203",
+                "col": "2",
+                "message": "'broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:203:2: error: ‘broj_timova’ was not declared in this scope  broj_timova=l.broj_timova;  ^~~~~~~~~~~",
+                "code": "broj_timova=l.broj_timova;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "203",
+                "col": "16",
+                "message": "'class Liga' has no member named 'broj_timova'",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:203:16: error: ‘class Liga’ has no member named ‘broj_timova’  broj_timova=l.broj_timova;                ^~~~~~~~~~~/tmp/buildservice/bs_2343/main.cpp: In member function ‘void Liga::DodajNoviTim(const char*)’:",
+                "code": "broj_timova=l.broj_timova;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "209",
+                "col": "5",
+                "message": "'broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:209:5: error: ‘broj_timova’ was not declared in this scope  if(broj_timova>=max_broj_timova)     ^~~~~~~~~~~",
+                "code": "if(broj_timova>=max_broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "209",
+                "col": "18",
+                "message": "'max_broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:209:18: error: ‘max_broj_timova’ was not declared in this scope  if(broj_timova>=max_broj_timova)                  ^~~~~~~~~~~~~~~",
+                "code": "if(broj_timova>=max_broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "219",
+                "col": "2",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:219:2: error: ‘timovi’ was not declared in this scope  timovi[broj_timova++]=tim;  ^~~~~~",
+                "code": "timovi[broj_timova++]=tim;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "219",
+                "col": "9",
+                "message": "'broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:219:9: error: ‘broj_timova’ was not declared in this scope  timovi[broj_timova++]=tim;         ^~~~~~~~~~~/tmp/buildservice/bs_2343/main.cpp: In member function ‘void Liga::RegistrirajUtakmicu(const char*, const char*, int, int)’:",
+                "code": "timovi[broj_timova++]=tim;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "229",
+                "col": "12",
+                "message": "'broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:229:12: error: ‘broj_timova’ was not declared in this scope  for(i=0;i<broj_timova;i++)            ^~~~~~~~~~~",
+                "code": "for(i=0;i<broj_timova;i++)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "231",
+                "col": "13",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:231:13: error: ‘timovi’ was not declared in this scope   if(strcmp(timovi[i]->DajImeTima(),tim1)==0)             ^~~~~~",
+                "code": "if(strcmp(timovi[i]->DajImeTima(),tim1)==0)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "236",
+                "col": "12",
+                "message": "'broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:236:12: error: ‘broj_timova’ was not declared in this scope  for(j=0;j<broj_timova;j++)            ^~~~~~~~~~~",
+                "code": "for(j=0;j<broj_timova;j++)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "238",
+                "col": "13",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:238:13: error: ‘timovi’ was not declared in this scope   if(strcmp(timovi[j]->DajImeTima(),tim2)==0)             ^~~~~~",
+                "code": "if(strcmp(timovi[j]->DajImeTima(),tim2)==0)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "243",
+                "col": "8",
+                "message": "'broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:243:8: error: ‘broj_timova’ was not declared in this scope  if(i==broj_timova || j==broj_timova)        ^~~~~~~~~~~",
+                "code": "if(i==broj_timova || j==broj_timova)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "247",
+                "col": "2",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:247:2: error: ‘timovi’ was not declared in this scope  timovi[i]->ObradiUtakmicu(rezultat_1, rezultat_2);  ^~~~~~/tmp/buildservice/bs_2343/main.cpp: In member function ‘void Liga::IspisiTabelu()’:",
+                "code": "timovi[i]->ObradiUtakmicu(rezultat_1, rezultat_2);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "253",
+                "col": "12",
+                "message": "'timovi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:253:12: error: ‘timovi’ was not declared in this scope  std::sort(timovi,timovi+broj_timova, [] (Tim *a, Tim *b)            ^~~~~~",
+                "code": "std::sort(timovi,timovi+broj_timova, [] (Tim *a, Tim *b)"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "253",
+                "col": "26",
+                "message": "'broj_timova' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_2343/main.cpp:253:26: error: ‘broj_timova’ was not declared in this scope  std::sort(timovi,timovi+broj_timova, [] (Tim *a, Tim *b)                          ^~~~~~~~~~~",
+                "code": "std::sort(timovi,timovi+broj_timova, [] (Tim *a, Tim *b)"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": [],
+    "queue_items": 0,
+    "time": 1593304881
+}

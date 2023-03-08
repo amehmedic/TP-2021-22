@@ -1,0 +1,15 @@
+==31062== Memcheck, a memory error detector
+==31062== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==31062== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==31062== Command: /rhome/a/amehmedic1/workspace/TP/T4/Z2/.runme
+==31062== Parent PID: 31016
+==31062== 
+==31062== 
+==31062== HEAP SUMMARY:
+==31062==     in use at exit: 0 bytes in 0 blocks
+==31062==   total heap usage: 2 allocs, 2 frees, 73,728 bytes allocated
+==31062== 
+==31062== All heap blocks were freed -- no leaks are possible
+==31062== 
+==31062== For counts of detected and suppressed errors, rerun with: -v
+==31062== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

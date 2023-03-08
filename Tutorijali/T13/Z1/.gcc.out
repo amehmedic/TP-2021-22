@@ -1,0 +1,8 @@
+/rhome/a/amehmedic1/workspace/TP/T13/Z1/main.cpp: In member function ‘virtual double Lik::DajObim() const’:
+/rhome/a/amehmedic1/workspace/TP/T13/Z1/main.cpp:21:34: warning: no return statement in function returning non-void [-Wreturn-type]
+  virtual double DajObim() const {};
+                                  ^
+/rhome/a/amehmedic1/workspace/TP/T13/Z1/main.cpp: In member function ‘virtual double Lik::DajPovrsinu() const’:
+/rhome/a/amehmedic1/workspace/TP/T13/Z1/main.cpp:22:38: warning: no return statement in function returning non-void [-Wreturn-type]
+  virtual double DajPovrsinu() const {};
+                                      ^

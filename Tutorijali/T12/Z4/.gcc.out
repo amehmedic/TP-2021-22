@@ -1,0 +1,29 @@
+/rhome/a/amehmedic1/workspace/TP2018/T12/Z4/main.cpp: In function ‘bool operator==(const Kompleksni&, const Kompleksni&)’:
+/rhome/a/amehmedic1/workspace/TP2018/T12/Z4/main.cpp:33:19: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  return a.re == b.re && a.im == b.im;
+                   ^~
+/rhome/a/amehmedic1/workspace/TP2018/T12/Z4/main.cpp:33:35: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  return a.re == b.re && a.im == b.im;
+                                   ^~
+/rhome/a/amehmedic1/workspace/TP2018/T12/Z4/main.cpp: In function ‘std::ostream& operator<<(std::ostream&, const Kompleksni&)’:
+/rhome/a/amehmedic1/workspace/TP2018/T12/Z4/main.cpp:60:12: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+   if(a.im==0 && a.re==0) { tok<<0; }
+            ^
+/rhome/a/amehmedic1/workspace/TP2018/T12/Z4/main.cpp:60:23: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+   if(a.im==0 && a.re==0) { tok<<0; }
+                       ^
+/rhome/a/amehmedic1/workspace/TP2018/T12/Z4/main.cpp:61:12: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+   if(a.re!=0) { tok<<a.re; }
+            ^
+/rhome/a/amehmedic1/workspace/TP2018/T12/Z4/main.cpp:62:25: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+   if(a.im>1 ) {if(a.re!=0){ tok<<"+"; } tok << a.im<<"i"; }
+                         ^
+/rhome/a/amehmedic1/workspace/TP2018/T12/Z4/main.cpp:64:17: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+   else if(a.im==1) { if(a.re!=0) {tok<<"+"; } tok<<"i"; }
+                 ^
+/rhome/a/amehmedic1/workspace/TP2018/T12/Z4/main.cpp:64:31: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+   else if(a.im==1) { if(a.re!=0) {tok<<"+"; } tok<<"i"; }
+                               ^
+/rhome/a/amehmedic1/workspace/TP2018/T12/Z4/main.cpp:65:18: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+   else if(a.im==-1) { tok<<"-i"; }
+                  ^

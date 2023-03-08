@@ -1,0 +1,36 @@
+/rhome/a/amehmedic1/workspace/TP/T2/Z5/main.cpp: In function ‘int main()’:
+/rhome/a/amehmedic1/workspace/TP/T2/Z5/main.cpp:22:115: error: no match for ‘operator*’ (operand types are ‘std::complex<double>’ and ‘int’)
+     std::cout << "Paralelna veza ovih elemenata ima Z = " << abs(1./Impedansa) << " i fi = " << arg((1./Impedansa)*180/4*atan(1)) << ".";
+                                                                                                     ~~~~~~~~~~~~~~^~~~
+In file included from /rhome/a/amehmedic1/workspace/TP/T2/Z5/main.cpp:3:0:
+/usr/include/c++/7/complex:404:5: note: candidate: template<class _Tp> std::complex<_Tp> std::operator*(const _Tp&, const std::complex<_Tp>&)
+     operator*(const _Tp& __x, const complex<_Tp>& __y)
+     ^~~~~~~~
+/usr/include/c++/7/complex:404:5: note:   template argument deduction/substitution failed:
+/rhome/a/amehmedic1/workspace/TP/T2/Z5/main.cpp:22:116: note:   mismatched types ‘const std::complex<_Tp>’ and ‘int’
+     std::cout << "Paralelna veza ovih elemenata ima Z = " << abs(1./Impedansa) << " i fi = " << arg((1./Impedansa)*180/4*atan(1)) << ".";
+                                                                                                                    ^~~
+In file included from /rhome/a/amehmedic1/workspace/TP/T2/Z5/main.cpp:3:0:
+/usr/include/c++/7/complex:395:5: note: candidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const _Tp&)
+     operator*(const complex<_Tp>& __x, const _Tp& __y)
+     ^~~~~~~~
+/usr/include/c++/7/complex:395:5: note:   template argument deduction/substitution failed:
+/rhome/a/amehmedic1/workspace/TP/T2/Z5/main.cpp:22:116: note:   deduced conflicting types for parameter ‘const _Tp’ (‘double’ and ‘int’)
+     std::cout << "Paralelna veza ovih elemenata ima Z = " << abs(1./Impedansa) << " i fi = " << arg((1./Impedansa)*180/4*atan(1)) << ".";
+                                                                                                                    ^~~
+In file included from /rhome/a/amehmedic1/workspace/TP/T2/Z5/main.cpp:3:0:
+/usr/include/c++/7/complex:386:5: note: candidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const std::complex<_Tp>&)
+     operator*(const complex<_Tp>& __x, const complex<_Tp>& __y)
+     ^~~~~~~~
+/usr/include/c++/7/complex:386:5: note:   template argument deduction/substitution failed:
+/rhome/a/amehmedic1/workspace/TP/T2/Z5/main.cpp:22:116: note:   mismatched types ‘const std::complex<_Tp>’ and ‘int’
+     std::cout << "Paralelna veza ovih elemenata ima Z = " << abs(1./Impedansa) << " i fi = " << arg((1./Impedansa)*180/4*atan(1)) << ".";
+                                                                                                                    ^~~
+/rhome/a/amehmedic1/workspace/TP/T2/Z5/main.cpp:22:97: error: ‘arg’ was not declared in this scope
+     std::cout << "Paralelna veza ovih elemenata ima Z = " << abs(1./Impedansa) << " i fi = " << arg((1./Impedansa)*180/4*atan(1)) << ".";
+                                                                                                 ^~~
+/rhome/a/amehmedic1/workspace/TP/T2/Z5/main.cpp:22:97: note: suggested alternative:
+In file included from /rhome/a/amehmedic1/workspace/TP/T2/Z5/main.cpp:3:0:
+/usr/include/c++/7/complex:1833:5: note:   ‘std::arg’
+     arg(_Tp __x)
+     ^~~

@@ -1,0 +1,121 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 3,
+    "compile_result": {
+        "status": 2,
+        "output": "main.cpp: In function \u2018bool DaLiJeKvadrat(int)\u2019:\nmain.cpp:26:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n  return(int(abs(x))==sqrt(x*x));\n                              ^\nmain.cpp: In lambda function:\nmain.cpp:38:93: error: expected \u2018;\u2019 before \u2018}\u2019 token\n  std::for_each(std::begin(niz),std::end(niz), [](int& x) {int broj; std::cin >> broj; x=broj});\n                                                                                             ^\nmain.cpp: In function \u2018int main()\u2019:\nmain.cpp:39:63: error: request for member \u2018begin\u2019 in \u2018niz\u2019, which is of non-class type \u2018int [1000]\u2019\n  std::cout << \"\\nNajveci element niza je \" << max_element(niz.begin(),niz.end());\n                                                               ^~~~~\nmain.cpp:39:75: error: request for member \u2018end\u2019 in \u2018niz\u2019, which is of non-class type \u2018int [1000]\u2019\n  std::cout << \"\\nNajveci element niza je \" << max_element(niz.begin(),niz.end());\n                                                                           ^~~\nmain.cpp:39:80: error: \u2018max_element\u2019 was not declared in this scope\n  std::cout << \"\\nNajveci element niza je \" << max_element(niz.begin(),niz.end());\n                                                                                ^\nmain.cpp:39:80: note: suggested alternative:\nIn file included from \/opt\/gcc-6.2.0\/include\/c++\/6.2.0\/algorithm:62:0,\n                 from main.cpp:16:\n\/opt\/gcc-6.2.0\/include\/c++\/6.2.0\/bits\/stl_algo.h:5564:5: note:   \u2018std::max_element\u2019\n     max_element(_ForwardIterator __first, _ForwardIterator __last,\n     ^~~~~~~~~~~\nmain.cpp:40:67: error: request for member \u2018begin\u2019 in \u2018niz\u2019, which is of non-class type \u2018int [1000]\u2019\n  std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\"\n                                                                   ^~~~~\nmain.cpp:40:79: error: request for member \u2018end\u2019 in \u2018niz\u2019, which is of non-class type \u2018int [1000]\u2019\n  std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\"\n                                                                               ^~~\nmain.cpp:40:101: error: request for member \u2018begin\u2019 in \u2018niz\u2019, which is of non-class type \u2018int [1000]\u2019\n  std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\"\n                                                                                                     ^~~~~\nmain.cpp:40:113: error: request for member \u2018end\u2019 in \u2018niz\u2019, which is of non-class type \u2018int [1000]\u2019\n  std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\"\n                                                                                                                 ^~~\nmain.cpp:40:118: error: \u2018min_element\u2019 was not declared in this scope\n  std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\"\n                                                                                                                      ^\nmain.cpp:40:118: note: suggested alternative:\nIn file included from \/opt\/gcc-6.2.0\/include\/c++\/6.2.0\/algorithm:62:0,\n                 from main.cpp:16:\n\/opt\/gcc-6.2.0\/include\/c++\/6.2.0\/bits\/stl_algo.h:5500:5: note:   \u2018std::min_element\u2019\n     min_element(_ForwardIterator __first, _ForwardIterator __last,\n     ^~~~~~~~~~~\nmain.cpp:40:119: error: \u2018count\u2019 was not declared in this scope\n  std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\"\n                                                                                                                       ^\nmain.cpp:40:119: note: suggested alternative:\nIn file included from \/opt\/gcc-6.2.0\/include\/c++\/6.2.0\/algorithm:62:0,\n                 from main.cpp:16:\n\/opt\/gcc-6.2.0\/include\/c++\/6.2.0\/bits\/stl_algo.h:3961:5: note:   \u2018std::count\u2019\n     count(_InputIterator __first, _InputIterator __last, const _Tp& __value)\n     ^~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "26",
+                "col": "30",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "\/tmp\/buildservice\/bs_4822\/main.cpp:26:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]  return(int(abs(x))==sqrt(x*x));                              ^\/tmp\/buildservice\/bs_4822\/main.cpp: In lambda function:",
+                "code": "return(int(abs(x))==sqrt(x*x));"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "38",
+                "col": "93",
+                "message": "expected ';' before '}' token",
+                "output": "\/tmp\/buildservice\/bs_4822\/main.cpp:38:93: error: expected \u2018;\u2019 before \u2018}\u2019 token  std::for_each(std::begin(niz),std::end(niz), [](int& x) {int broj; std::cin >> broj; x=broj});                                                                                             ^",
+                "code": "std::for_each(std::begin(niz),std::end(niz), [](int& x) {int broj; std::cin >> broj; x=broj});"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "39",
+                "col": "63",
+                "message": "request for member 'begin' in 'niz', which is of non-class type 'int [1000]'",
+                "output": "\/tmp\/buildservice\/bs_4822\/main.cpp:39:63: error: request for member \u2018begin\u2019 in \u2018niz\u2019, which is of non-class type \u2018int [1000]\u2019  std::cout << \"\\nNajveci element niza je \" << max_element(niz.begin(),niz.end());                                                               ^~~~~",
+                "code": "std::cout << \"\\nNajveci element niza je \" << max_element(niz.begin(),niz.end());"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "39",
+                "col": "75",
+                "message": "request for member 'end' in 'niz', which is of non-class type 'int [1000]'",
+                "output": "\/tmp\/buildservice\/bs_4822\/main.cpp:39:75: error: request for member \u2018end\u2019 in \u2018niz\u2019, which is of non-class type \u2018int [1000]\u2019  std::cout << \"\\nNajveci element niza je \" << max_element(niz.begin(),niz.end());                                                                           ^~~",
+                "code": "std::cout << \"\\nNajveci element niza je \" << max_element(niz.begin(),niz.end());"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "39",
+                "col": "80",
+                "message": "'max_element' was not declared in this scope",
+                "output": "\/tmp\/buildservice\/bs_4822\/main.cpp:39:80: error: \u2018max_element\u2019 was not declared in this scope  std::cout << \"\\nNajveci element niza je \" << max_element(niz.begin(),niz.end());                                                                                ^",
+                "code": "std::cout << \"\\nNajveci element niza je \" << max_element(niz.begin(),niz.end());"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "40",
+                "col": "67",
+                "message": "request for member 'begin' in 'niz', which is of non-class type 'int [1000]'",
+                "output": "\/tmp\/buildservice\/bs_4822\/main.cpp:40:67: error: request for member \u2018begin\u2019 in \u2018niz\u2019, which is of non-class type \u2018int [1000]\u2019  std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\"                                                                   ^~~~~",
+                "code": "std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\""
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "40",
+                "col": "79",
+                "message": "request for member 'end' in 'niz', which is of non-class type 'int [1000]'",
+                "output": "\/tmp\/buildservice\/bs_4822\/main.cpp:40:79: error: request for member \u2018end\u2019 in \u2018niz\u2019, which is of non-class type \u2018int [1000]\u2019  std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\"                                                                               ^~~",
+                "code": "std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\""
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "40",
+                "col": "101",
+                "message": "request for member 'begin' in 'niz', which is of non-class type 'int [1000]'",
+                "output": "\/tmp\/buildservice\/bs_4822\/main.cpp:40:101: error: request for member \u2018begin\u2019 in \u2018niz\u2019, which is of non-class type \u2018int [1000]\u2019  std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\"                                                                                                     ^~~~~",
+                "code": "std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\""
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "40",
+                "col": "113",
+                "message": "request for member 'end' in 'niz', which is of non-class type 'int [1000]'",
+                "output": "\/tmp\/buildservice\/bs_4822\/main.cpp:40:113: error: request for member \u2018end\u2019 in \u2018niz\u2019, which is of non-class type \u2018int [1000]\u2019  std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\"                                                                                                                 ^~~",
+                "code": "std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\""
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "40",
+                "col": "118",
+                "message": "'min_element' was not declared in this scope",
+                "output": "\/tmp\/buildservice\/bs_4822\/main.cpp:40:118: error: \u2018min_element\u2019 was not declared in this scope  std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\"                                                                                                                      ^",
+                "code": "std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\""
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "40",
+                "col": "119",
+                "message": "'count' was not declared in this scope",
+                "output": "\/tmp\/buildservice\/bs_4822\/main.cpp:40:119: error: \u2018count\u2019 was not declared in this scope  std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\"                                                                                                                       ^",
+                "code": "std::cout << \"Najmanji element niza se pojavljuje \" << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << \" puta u nizu\""
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": [],
+    "queue_items": 0,
+    "time": 1557834401
+}

@@ -1,0 +1,220 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 3,
+    "compile_result": {
+        "status": 2,
+        "output": "main.cpp:22:41: error: expected unqualified-id before numeric constant\n  void KopirajElemente(TipEl **elementi);98\n                                         ^~\nmain.cpp:189:2: error: prototype for ‘Matrica<TipEl>::Matrica(int, int, char)’ does not match any in class ‘Matrica<TipEl>’\n  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :\n  ^~~~~~~~~~~~~~\nmain.cpp:26:2: error: candidates are: Matrica<TipEl>::Matrica(Matrica<TipEl>&&)\n  Matrica(Matrica &&m);\n  ^~~~~~~\nmain.cpp:25:2: error:                 Matrica<TipEl>::Matrica(const Matrica<TipEl>&)\n  Matrica(const Matrica &m);\n  ^~~~~~~\nmain.cpp: In function ‘int main()’:\nmain.cpp:301:27: error: no matching function for call to ‘Matrica<double>::Matrica(int&, int&, char)’\n  Matrica<double> a(m,n,'A'), b(m,n,'B');\n                           ^\nmain.cpp:208:2: note: candidate: Matrica<TipEl>::Matrica(Matrica<TipEl>&&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(Matrica<TipEl> &&m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:208:2: note:   candidate expects 1 argument, 3 provided\nmain.cpp:201:2: note: candidate: Matrica<TipEl>::Matrica(const Matrica<TipEl>&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(const Matrica<TipEl> &m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:201:2: note:   candidate expects 1 argument, 3 provided\nmain.cpp:301:27: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context\n  Matrica<double> a(m,n,'A'), b(m,n,'B');\n                           ^\nmain.cpp:27:2: note: declared private here\n  ~Matrica() { DealocirajMemoriju(elementi, br_redova); }\n  ^\nmain.cpp:301:39: error: no matching function for call to ‘Matrica<double>::Matrica(int&, int&, char)’\n  Matrica<double> a(m,n,'A'), b(m,n,'B');\n                                       ^\nmain.cpp:208:2: note: candidate: Matrica<TipEl>::Matrica(Matrica<TipEl>&&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(Matrica<TipEl> &&m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:208:2: note:   candidate expects 1 argument, 3 provided\nmain.cpp:201:2: note: candidate: Matrica<TipEl>::Matrica(const Matrica<TipEl>&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(const Matrica<TipEl> &m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:201:2: note:   candidate expects 1 argument, 3 provided\nmain.cpp:301:39: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context\n  Matrica<double> a(m,n,'A'), b(m,n,'B');\n                                       ^\nmain.cpp:27:2: note: declared private here\n  ~Matrica() { DealocirajMemoriju(elementi, br_redova); }\n  ^\nmain.cpp:307:29: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context\n  std::cout<<std::setw(2)<<a+b<<\"\\n\";\n                             ^\nmain.cpp:27:2: note: declared private here\n  ~Matrica() { DealocirajMemoriju(elementi, br_redova); }\n  ^\nmain.cpp:308:29: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context\n  std::cout<<std::setw(2)<<a-b<<\"\\n\";\n                             ^\nmain.cpp:27:2: note: declared private here\n  ~Matrica() { DealocirajMemoriju(elementi, br_redova); }\n  ^\nmain.cpp:309:29: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context\n  std::cout<<std::setw(2)<<a*b<<\"\\n\";\n                             ^\nmain.cpp:27:2: note: declared private here\n  ~Matrica() { DealocirajMemoriju(elementi, br_redova); }\n  ^\nmain.cpp:310:29: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context\n  std::cout<<std::setw(2)<<2*a<<\"\\n\";\n                             ^\nmain.cpp:27:2: note: declared private here\n  ~Matrica() { DealocirajMemoriju(elementi, br_redova); }\n  ^\nmain.cpp:311:29: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context\n  std::cout<<std::setw(2)<<a*2<<\"\\n\";\n                             ^\nmain.cpp:27:2: note: declared private here\n  ~Matrica() { DealocirajMemoriju(elementi, br_redova); }\n  ^\nmain.cpp:312:30: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context\n  std::cout<<std::setw(2)<<(a+b)*a-b<<\"\\n\";\n                              ^\nmain.cpp:27:2: note: declared private here\n  ~Matrica() { DealocirajMemoriju(elementi, br_redova); }\n  ^\nmain.cpp:312:33: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context\n  std::cout<<std::setw(2)<<(a+b)*a-b<<\"\\n\";\n                                 ^\nmain.cpp:27:2: note: declared private here\n  ~Matrica() { DealocirajMemoriju(elementi, br_redova); }\n  ^\nmain.cpp:312:35: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context\n  std::cout<<std::setw(2)<<(a+b)*a-b<<\"\\n\";\n                                   ^\nmain.cpp:27:2: note: declared private here\n  ~Matrica() { DealocirajMemoriju(elementi, br_redova); }\n  ^\nmain.cpp:316:16: error: ‘Matrica<TipEl>::operator std::__cxx11::string() const [with TipEl = double; std::__cxx11::string = std::__cxx11::basic_string<char>]’ is private within this context\n  std::string u=a;\n                ^\nmain.cpp:41:2: note: declared private here\n  operator std::string() const {\n  ^~~~~~~~\nmain.cpp: In instantiation of ‘Matrica<double> operator+(const Matrica<double>&, const Matrica<double>&)’:\nmain.cpp:307:29:   required from here\nmain.cpp:87:45: error: no matching function for call to ‘Matrica<double>::Matrica(const int&, const int&)’\n  Matrica<TipEl> m3(m1.br_redova,m1.br_kolona);\n                                             ^\nmain.cpp:208:2: note: candidate: Matrica<TipEl>::Matrica(Matrica<TipEl>&&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(Matrica<TipEl> &&m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:208:2: note:   candidate expects 1 argument, 2 provided\nmain.cpp:201:2: note: candidate: Matrica<TipEl>::Matrica(const Matrica<TipEl>&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(const Matrica<TipEl> &m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:201:2: note:   candidate expects 1 argument, 2 provided\nmain.cpp: In instantiation of ‘Matrica<double> operator-(const Matrica<double>&, const Matrica<double>&)’:\nmain.cpp:308:29:   required from here\nmain.cpp:108:45: error: no matching function for call to ‘Matrica<double>::Matrica(const int&, const int&)’\n  Matrica<TipEl> m3(m1.br_redova,m2.br_kolona);\n                                             ^\nmain.cpp:208:2: note: candidate: Matrica<TipEl>::Matrica(Matrica<TipEl>&&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(Matrica<TipEl> &&m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:208:2: note:   candidate expects 1 argument, 2 provided\nmain.cpp:201:2: note: candidate: Matrica<TipEl>::Matrica(const Matrica<TipEl>&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(const Matrica<TipEl> &m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:201:2: note:   candidate expects 1 argument, 2 provided\nmain.cpp: In instantiation of ‘Matrica<double> operator*(const Matrica<double>&, const Matrica<double>&)’:\nmain.cpp:309:29:   required from here\nmain.cpp:127:45: error: no matching function for call to ‘Matrica<double>::Matrica(const int&, const int&)’\n  Matrica<TipEl> m3(m1.br_redova,m2.br_kolona);\n                                             ^\nmain.cpp:208:2: note: candidate: Matrica<TipEl>::Matrica(Matrica<TipEl>&&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(Matrica<TipEl> &&m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:208:2: note:   candidate expects 1 argument, 2 provided\nmain.cpp:201:2: note: candidate: Matrica<TipEl>::Matrica(const Matrica<TipEl>&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(const Matrica<TipEl> &m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:201:2: note:   candidate expects 1 argument, 2 provided\nmain.cpp: In instantiation of ‘Matrica<double> operator*(int, const Matrica<double>&)’:\nmain.cpp:310:29:   required from here\nmain.cpp:140:43: error: no matching function for call to ‘Matrica<double>::Matrica(const int&, const int&)’\n  Matrica<TipEl> m3(m.br_redova,m.br_kolona);\n                                           ^\nmain.cpp:208:2: note: candidate: Matrica<TipEl>::Matrica(Matrica<TipEl>&&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(Matrica<TipEl> &&m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:208:2: note:   candidate expects 1 argument, 2 provided\nmain.cpp:201:2: note: candidate: Matrica<TipEl>::Matrica(const Matrica<TipEl>&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(const Matrica<TipEl> &m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:201:2: note:   candidate expects 1 argument, 2 provided\nmain.cpp: In instantiation of ‘Matrica<double> operator*(const Matrica<double>&, int)’:\nmain.cpp:311:29:   required from here\nmain.cpp:149:43: error: no matching function for call to ‘Matrica<double>::Matrica(const int&, const int&)’\n  Matrica<TipEl> m3(m.br_redova,m.br_kolona);\n                                           ^\nmain.cpp:208:2: note: candidate: Matrica<TipEl>::Matrica(Matrica<TipEl>&&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(Matrica<TipEl> &&m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:208:2: note:   candidate expects 1 argument, 2 provided\nmain.cpp:201:2: note: candidate: Matrica<TipEl>::Matrica(const Matrica<TipEl>&) [with TipEl = double]\n  Matrica<TipEl>::Matrica(const Matrica<TipEl> &m) : br_redova(m.br_redova),\n  ^~~~~~~~~~~~~~\nmain.cpp:201:2: note:   candidate expects 1 argument, 2 provided",
+        "parsed_output": [
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "22",
+                "col": "41",
+                "message": "expected unqualified-id before numeric constant",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:22:41: error: expected unqualified-id before numeric constant  void KopirajElemente(TipEl **elementi);98                                         ^~",
+                "code": "void KopirajElemente(TipEl **elementi);98"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "189",
+                "col": "2",
+                "message": "prototype for 'Matrica<TipEl>::Matrica(int, int, char)' does not match any in class 'Matrica<TipEl>'",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:189:2: error: prototype for ‘Matrica<TipEl>::Matrica(int, int, char)’ does not match any in class ‘Matrica<TipEl>’  Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :  ^~~~~~~~~~~~~~",
+                "code": "Matrica<TipEl>::Matrica(int br_redova, int br_kolona, char ime) :"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "26",
+                "col": "2",
+                "message": "candidates are: Matrica<TipEl>::Matrica(Matrica<TipEl>&&)",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:26:2: error: candidates are: Matrica<TipEl>::Matrica(Matrica<TipEl>&&)  Matrica(Matrica &&m);  ^~~~~~~",
+                "code": "Matrica(Matrica &&m);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "25",
+                "col": "2",
+                "message": "Matrica<TipEl>::Matrica(const Matrica<TipEl>&)",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:25:2: error:                 Matrica<TipEl>::Matrica(const Matrica<TipEl>&)  Matrica(const Matrica &m);  ^~~~~~~",
+                "code": "Matrica(const Matrica &m);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "301",
+                "col": "27",
+                "message": "no matching function for call to 'Matrica<double>::Matrica(int&, int&, char)'",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:301:27: error: no matching function for call to ‘Matrica<double>::Matrica(int&, int&, char)’  Matrica<double> a(m,n,'A'), b(m,n,'B');                           ^",
+                "code": "Matrica<double> a(m,n,'A'), b(m,n,'B');"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "301",
+                "col": "27",
+                "message": "'Matrica<TipEl>::~Matrica() [with TipEl = double]' is private within this context",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:301:27: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context  Matrica<double> a(m,n,'A'), b(m,n,'B');                           ^",
+                "code": "Matrica<double> a(m,n,'A'), b(m,n,'B');"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "301",
+                "col": "39",
+                "message": "no matching function for call to 'Matrica<double>::Matrica(int&, int&, char)'",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:301:39: error: no matching function for call to ‘Matrica<double>::Matrica(int&, int&, char)’  Matrica<double> a(m,n,'A'), b(m,n,'B');                                       ^",
+                "code": "Matrica<double> a(m,n,'A'), b(m,n,'B');"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "301",
+                "col": "39",
+                "message": "'Matrica<TipEl>::~Matrica() [with TipEl = double]' is private within this context",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:301:39: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context  Matrica<double> a(m,n,'A'), b(m,n,'B');                                       ^",
+                "code": "Matrica<double> a(m,n,'A'), b(m,n,'B');"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "307",
+                "col": "29",
+                "message": "'Matrica<TipEl>::~Matrica() [with TipEl = double]' is private within this context",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:307:29: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context  std::cout<<std::setw(2)<<a+b<<\"\\n\";                             ^",
+                "code": "std::cout<<std::setw(2)<<a+b<<\"\\n\";"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "308",
+                "col": "29",
+                "message": "'Matrica<TipEl>::~Matrica() [with TipEl = double]' is private within this context",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:308:29: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context  std::cout<<std::setw(2)<<a-b<<\"\\n\";                             ^",
+                "code": "std::cout<<std::setw(2)<<a-b<<\"\\n\";"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "309",
+                "col": "29",
+                "message": "'Matrica<TipEl>::~Matrica() [with TipEl = double]' is private within this context",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:309:29: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context  std::cout<<std::setw(2)<<a*b<<\"\\n\";                             ^",
+                "code": "std::cout<<std::setw(2)<<a*b<<\"\\n\";"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "310",
+                "col": "29",
+                "message": "'Matrica<TipEl>::~Matrica() [with TipEl = double]' is private within this context",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:310:29: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context  std::cout<<std::setw(2)<<2*a<<\"\\n\";                             ^",
+                "code": "std::cout<<std::setw(2)<<2*a<<\"\\n\";"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "311",
+                "col": "29",
+                "message": "'Matrica<TipEl>::~Matrica() [with TipEl = double]' is private within this context",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:311:29: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context  std::cout<<std::setw(2)<<a*2<<\"\\n\";                             ^",
+                "code": "std::cout<<std::setw(2)<<a*2<<\"\\n\";"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "312",
+                "col": "30",
+                "message": "'Matrica<TipEl>::~Matrica() [with TipEl = double]' is private within this context",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:312:30: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context  std::cout<<std::setw(2)<<(a+b)*a-b<<\"\\n\";                              ^",
+                "code": "std::cout<<std::setw(2)<<(a+b)*a-b<<\"\\n\";"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "312",
+                "col": "33",
+                "message": "'Matrica<TipEl>::~Matrica() [with TipEl = double]' is private within this context",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:312:33: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context  std::cout<<std::setw(2)<<(a+b)*a-b<<\"\\n\";                                 ^",
+                "code": "std::cout<<std::setw(2)<<(a+b)*a-b<<\"\\n\";"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "312",
+                "col": "35",
+                "message": "'Matrica<TipEl>::~Matrica() [with TipEl = double]' is private within this context",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:312:35: error: ‘Matrica<TipEl>::~Matrica() [with TipEl = double]’ is private within this context  std::cout<<std::setw(2)<<(a+b)*a-b<<\"\\n\";                                   ^",
+                "code": "std::cout<<std::setw(2)<<(a+b)*a-b<<\"\\n\";"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "316",
+                "col": "16",
+                "message": "'Matrica<TipEl>::operator std::__cxx11::string() const [with TipEl = double; std::__cxx11::string = std::__cxx11::basic_string<char>]' is private within this context",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:316:16: error: ‘Matrica<TipEl>::operator std::__cxx11::string() const [with TipEl = double; std::__cxx11::string = std::__cxx11::basic_string<char>]’ is private within this context  std::string u=a;                ^",
+                "code": "std::string u=a;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "87",
+                "col": "45",
+                "message": "no matching function for call to 'Matrica<double>::Matrica(const int&, const int&)'",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:87:45: error: no matching function for call to ‘Matrica<double>::Matrica(const int&, const int&)’  Matrica<TipEl> m3(m1.br_redova,m1.br_kolona);                                             ^",
+                "code": "Matrica<TipEl> m3(m1.br_redova,m1.br_kolona);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "108",
+                "col": "45",
+                "message": "no matching function for call to 'Matrica<double>::Matrica(const int&, const int&)'",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:108:45: error: no matching function for call to ‘Matrica<double>::Matrica(const int&, const int&)’  Matrica<TipEl> m3(m1.br_redova,m2.br_kolona);                                             ^",
+                "code": "Matrica<TipEl> m3(m1.br_redova,m2.br_kolona);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "127",
+                "col": "45",
+                "message": "no matching function for call to 'Matrica<double>::Matrica(const int&, const int&)'",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:127:45: error: no matching function for call to ‘Matrica<double>::Matrica(const int&, const int&)’  Matrica<TipEl> m3(m1.br_redova,m2.br_kolona);                                             ^",
+                "code": "Matrica<TipEl> m3(m1.br_redova,m2.br_kolona);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "140",
+                "col": "43",
+                "message": "no matching function for call to 'Matrica<double>::Matrica(const int&, const int&)'",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:140:43: error: no matching function for call to ‘Matrica<double>::Matrica(const int&, const int&)’  Matrica<TipEl> m3(m.br_redova,m.br_kolona);                                           ^",
+                "code": "Matrica<TipEl> m3(m.br_redova,m.br_kolona);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "149",
+                "col": "43",
+                "message": "no matching function for call to 'Matrica<double>::Matrica(const int&, const int&)'",
+                "output": "/tmp/buildservice/bs_8356/main.cpp:149:43: error: no matching function for call to ‘Matrica<double>::Matrica(const int&, const int&)’  Matrica<TipEl> m3(m.br_redova,m.br_kolona);                                           ^",
+                "code": "Matrica<TipEl> m3(m.br_redova,m.br_kolona);"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": [],
+    "queue_items": 0,
+    "time": 1593305498
+}

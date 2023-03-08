@@ -1,0 +1,263 @@
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In member function ‘Fakultet& Fakultet::operator=(const Fakultet&)’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:96:37: error: no matching function for call to ‘swap(std::vector<ApstraktniStudent*>&, const std::vector<ApstraktniStudent*>&)’
+      std::swap(kolekcija,f.kolekcija);
+                                     ^
+In file included from /usr/include/c++/7/bits/nested_exception.h:40:0,
+                 from /usr/include/c++/7/exception:143,
+                 from /usr/include/c++/7/ios:39,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from /rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:8:
+/usr/include/c++/7/bits/move.h:187:5: note: candidate: template<class _Tp> typename std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<_Tp> >, std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&)
+     swap(_Tp& __a, _Tp& __b)
+     ^~~~
+/usr/include/c++/7/bits/move.h:187:5: note:   template argument deduction/substitution failed:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:96:37: note:   deduced conflicting types for parameter ‘_Tp’ (‘std::vector<ApstraktniStudent*>’ and ‘const std::vector<ApstraktniStudent*>’)
+      std::swap(kolekcija,f.kolekcija);
+                                     ^
+In file included from /usr/include/c++/7/bits/nested_exception.h:40:0,
+                 from /usr/include/c++/7/exception:143,
+                 from /usr/include/c++/7/ios:39,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from /rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:8:
+/usr/include/c++/7/bits/move.h:210:5: note: candidate: template<class _Tp, long unsigned int _Nm> typename std::enable_if<std::__is_swappable<_Tp>::value>::type std::swap(_Tp (&)[_Nm], _Tp (&)[_Nm])
+     swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])
+     ^~~~
+/usr/include/c++/7/bits/move.h:210:5: note:   template argument deduction/substitution failed:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:96:37: note:   mismatched types ‘_Tp [_Nm]’ and ‘std::vector<ApstraktniStudent*>’
+      std::swap(kolekcija,f.kolekcija);
+                                     ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from /rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:8:
+/usr/include/c++/7/bits/stl_pair.h:495:5: note: candidate: template<class _T1, class _T2> void std::swap(std::pair<_T1, _T2>&, std::pair<_T1, _T2>&)
+     swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+     ^~~~
+/usr/include/c++/7/bits/stl_pair.h:495:5: note:   template argument deduction/substitution failed:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:96:37: note:   ‘std::vector<ApstraktniStudent*>’ is not derived from ‘std::pair<_T1, _T2>’
+      std::swap(kolekcija,f.kolekcija);
+                                     ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from /rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:8:
+/usr/include/c++/7/bits/basic_string.h:6246:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> void std::swap(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     swap(basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~
+/usr/include/c++/7/bits/basic_string.h:6246:5: note:   template argument deduction/substitution failed:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:96:37: note:   ‘std::vector<ApstraktniStudent*>’ is not derived from ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+      std::swap(kolekcija,f.kolekcija);
+                                     ^
+In file included from /usr/include/c++/7/vector:64:0,
+                 from /rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:9:
+/usr/include/c++/7/bits/stl_vector.h:1649:5: note: candidate: template<class _Tp, class _Alloc> void std::swap(std::vector<_Tp, _Alloc>&, std::vector<_Tp, _Alloc>&)
+     swap(vector<_Tp, _Alloc>& __x, vector<_Tp, _Alloc>& __y)
+     ^~~~
+/usr/include/c++/7/bits/stl_vector.h:1649:5: note:   template argument deduction/substitution failed:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:96:37: note:   types ‘std::vector<_Tp, _Alloc>’ and ‘const std::vector<ApstraktniStudent*>’ have incompatible cv-qualifiers
+      std::swap(kolekcija,f.kolekcija);
+                                     ^
+In file included from /usr/include/c++/7/vector:65:0,
+                 from /rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:9:
+/usr/include/c++/7/bits/stl_bvector.h:112:3: note: candidate: void std::swap(std::_Bit_reference, std::_Bit_reference)
+   swap(_Bit_reference __x, _Bit_reference __y) noexcept
+   ^~~~
+/usr/include/c++/7/bits/stl_bvector.h:112:3: note:   no known conversion for argument 1 from ‘std::vector<ApstraktniStudent*>’ to ‘std::_Bit_reference’
+/usr/include/c++/7/bits/stl_bvector.h:120:3: note: candidate: void std::swap(std::_Bit_reference, bool&)
+   swap(_Bit_reference __x, bool& __y) noexcept
+   ^~~~
+/usr/include/c++/7/bits/stl_bvector.h:120:3: note:   no known conversion for argument 1 from ‘std::vector<ApstraktniStudent*>’ to ‘std::_Bit_reference’
+/usr/include/c++/7/bits/stl_bvector.h:128:3: note: candidate: void std::swap(bool&, std::_Bit_reference)
+   swap(bool& __x, _Bit_reference __y) noexcept
+   ^~~~
+/usr/include/c++/7/bits/stl_bvector.h:128:3: note:   no known conversion for argument 1 from ‘std::vector<ApstraktniStudent*>’ to ‘bool&’
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In lambda function:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:153:47: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+             if(a->DajProsjek()!=b->DajProsjek()) { return a->DajProsjek()>b->DajProsjek(); }
+                                               ^
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: At global scope:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:165:5: error: ‘shared_ptr’ does not name a type; did you mean ‘char16_t’?
+     shared_ptr<ApstraktniStudent> student;
+     ^~~~~~~~~~
+     char16_t
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:167:33: error: expected unqualified-id before ‘{’ token
+     Student(): student=nullptr; {}
+                                 ^
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:198:2: error: expected ‘;’ after class definition
+ }
+  ^
+  ;
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In constructor ‘Student::Student()’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:167:16: error: class ‘Student’ does not have any field named ‘student’
+     Student(): student=nullptr; {}
+                ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:167:23: error: expected ‘(’ before ‘=’ token
+     Student(): student=nullptr; {}
+                       ^
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:167:23: error: expected ‘{’ before ‘=’ token
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In destructor ‘Student::~Student()’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:168:18: error: ‘student’ was not declared in this scope
+     ~Student() { student=nullptr; }
+                  ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:168:18: note: suggested alternative: ‘Student’
+     ~Student() { student=nullptr; }
+                  ^~~~~~~
+                  Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In constructor ‘Student::Student(const ApstraktniStudent&)’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:169:42: error: class ‘Student’ does not have any field named ‘student’
+     Student(const ApstraktniStudent &s): student(s.DajKopiju()) {}
+                                          ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:169:62: error: passing ‘const ApstraktniStudent’ as ‘this’ argument discards qualifiers [-fpermissive]
+     Student(const ApstraktniStudent &s): student(s.DajKopiju()) {}
+                                                              ^
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:40:32: note:   in call to ‘virtual ApstraktniStudent* ApstraktniStudent::DajKopiju()’
+     virtual ApstraktniStudent* DajKopiju() { /*ApstraktniStudent a(ime,prezime,br_indeksa); a.br_polozenih=br_polozenih;
+                                ^~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In copy constructor ‘Student::Student(const Student&)’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:171:12: error: ‘const class Student’ has no member named ‘student’; did you mean ‘Student’?
+      if(!s.student) { student=nullptr; }
+            ^~~~~~~
+            Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:171:23: error: ‘student’ was not declared in this scope
+      if(!s.student) { student=nullptr; }
+                       ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:171:23: note: suggested alternative: ‘Student’
+      if(!s.student) { student=nullptr; }
+                       ^~~~~~~
+                       Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:172:13: error: ‘student’ was not declared in this scope
+      else { student=s.student->DajKopiju(); }
+             ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:172:13: note: suggested alternative: ‘Student’
+      else { student=s.student->DajKopiju(); }
+             ^~~~~~~
+             Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:172:23: error: ‘const class Student’ has no member named ‘student’; did you mean ‘Student’?
+      else { student=s.student->DajKopiju(); }
+                       ^~~~~~~
+                       Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In constructor ‘Student::Student(ApstraktniStudent&&)’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:175:6: error: ‘student’ was not declared in this scope
+      student=s.student; s.student=nullptr;
+      ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:175:6: note: suggested alternative: ‘Student’
+      student=s.student; s.student=nullptr;
+      ^~~~~~~
+      Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:175:16: error: ‘class ApstraktniStudent’ has no member named ‘student’
+      student=s.student; s.student=nullptr;
+                ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:175:27: error: ‘class ApstraktniStudent’ has no member named ‘student’
+      student=s.student; s.student=nullptr;
+                           ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In member function ‘Student& Student::operator=(const Student&)’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:178:11: error: ‘shared_ptr’ is not a member of ‘std’
+      std::shared_ptr<ApstraktniStudent> novi=nullptr;
+           ^~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:178:39: error: expected primary-expression before ‘>’ token
+      std::shared_ptr<ApstraktniStudent> novi=nullptr;
+                                       ^
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:178:41: error: ‘novi’ was not declared in this scope
+      std::shared_ptr<ApstraktniStudent> novi=nullptr;
+                                         ^~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:179:11: error: ‘const class Student’ has no member named ‘student’; did you mean ‘Student’?
+      if(s.student != nullptr) { novi=s.student->DajKopiju(); }
+           ^~~~~~~
+           Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:179:40: error: ‘const class Student’ has no member named ‘student’; did you mean ‘Student’?
+      if(s.student != nullptr) { novi=s.student->DajKopiju(); }
+                                        ^~~~~~~
+                                        Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:180:6: error: ‘student’ was not declared in this scope
+      student=nullptr;
+      ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:180:6: note: suggested alternative: ‘Student’
+      student=nullptr;
+      ^~~~~~~
+      Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In member function ‘Student& Student::operator=(Student&&)’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:185:16: error: ‘student’ was not declared in this scope
+      std::swap(student,s.student);
+                ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:185:16: note: suggested alternative: ‘Student’
+      std::swap(student,s.student);
+                ^~~~~~~
+                Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:185:26: error: ‘class Student’ has no member named ‘student’; did you mean ‘Student’?
+      std::swap(student,s.student);
+                          ^~~~~~~
+                          Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In member function ‘std::__cxx11::string Student::DajIme() const’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:188:41: error: ‘student’ was not declared in this scope
+     std::string DajIme() const { return student->ime; }
+                                         ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:188:41: note: suggested alternative: ‘Student’
+     std::string DajIme() const { return student->ime; }
+                                         ^~~~~~~
+                                         Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In member function ‘std::__cxx11::string Student::DajPrezime() const’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:189:45: error: ‘student’ was not declared in this scope
+     std::string DajPrezime() const { return student->prezime; }
+                                             ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:189:45: note: suggested alternative: ‘Student’
+     std::string DajPrezime() const { return student->prezime; }
+                                             ^~~~~~~
+                                             Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In member function ‘int Student::DajBrojIndeksa() const’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:190:41: error: ‘student’ was not declared in this scope
+     int DajBrojIndeksa() const { return student->br_indeksa; }
+                                         ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:190:41: note: suggested alternative: ‘Student’
+     int DajBrojIndeksa() const { return student->br_indeksa; }
+                                         ^~~~~~~
+                                         Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In member function ‘int Student::DajBrojPolozenih() const’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:191:43: error: ‘student’ was not declared in this scope
+     int DajBrojPolozenih() const { return student->br_polozenih; }
+                                           ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:191:43: note: suggested alternative: ‘Student’
+     int DajBrojPolozenih() const { return student->br_polozenih; }
+                                           ^~~~~~~
+                                           Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In member function ‘double Student::DajProsjek() const’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:192:40: error: ‘student’ was not declared in this scope
+     double DajProsjek() const { return student->prosjek; }
+                                        ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:192:40: note: suggested alternative: ‘Student’
+     double DajProsjek() const { return student->prosjek; }
+                                        ^~~~~~~
+                                        Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In member function ‘void Student::RegistrirajIspit(int)’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:193:41: error: ‘student’ was not declared in this scope
+     void RegistrirajIspit(int ocjena) { student->RegistrirajIspit(int ocjena); }
+                                         ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:193:41: note: suggested alternative: ‘Student’
+     void RegistrirajIspit(int ocjena) { student->RegistrirajIspit(int ocjena); }
+                                         ^~~~~~~
+                                         Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:193:67: error: expected primary-expression before ‘int’
+     void RegistrirajIspit(int ocjena) { student->RegistrirajIspit(int ocjena); }
+                                                                   ^~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In member function ‘void Student::PonistiOcjene()’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:194:28: error: ‘student’ was not declared in this scope
+     void PonistiOcjene() { student->PonistiOcjene(); }
+                            ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:194:28: note: suggested alternative: ‘Student’
+     void PonistiOcjene() { student->PonistiOcjene(); }
+                            ^~~~~~~
+                            Student
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp: In member function ‘void Student::IspisiPodatke() const’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:195:34: error: ‘student’ was not declared in this scope
+     void IspisiPodatke() const { student->IspisiPodatke(); }
+                                  ^~~~~~~
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z4/main.cpp:195:34: note: suggested alternative: ‘Student’
+     void IspisiPodatke() const { student->IspisiPodatke(); }
+                                  ^~~~~~~
+                                  Student

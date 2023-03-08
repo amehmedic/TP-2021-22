@@ -1,0 +1,54 @@
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp: In function ‘bool DaLiJeKvadrat(int)’:
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:26:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+  return(int(abs(x))==sqrt(x*x));
+                              ^
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp: In lambda function:
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:38:93: error: expected ‘;’ before ‘}’ token
+  std::for_each(std::begin(niz),std::end(niz), [](int& x) {int broj; std::cin >> broj; x=broj});
+                                                                                             ^
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp: In function ‘int main()’:
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:39:63: error: request for member ‘begin’ in ‘niz’, which is of non-class type ‘int [1000]’
+  std::cout << "\nNajveci element niza je " << max_element(niz.begin(),niz.end());
+                                                               ^~~~~
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:39:75: error: request for member ‘end’ in ‘niz’, which is of non-class type ‘int [1000]’
+  std::cout << "\nNajveci element niza je " << max_element(niz.begin(),niz.end());
+                                                                           ^~~
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:39:47: error: ‘max_element’ was not declared in this scope
+  std::cout << "\nNajveci element niza je " << max_element(niz.begin(),niz.end());
+                                               ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:39:47: note: suggested alternative:
+In file included from /usr/include/c++/7/algorithm:62:0,
+                 from /rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:16:
+/usr/include/c++/7/bits/stl_algo.h:5693:5: note:   ‘std::max_element’
+     max_element(_ForwardIterator __first, _ForwardIterator __last,
+     ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:40:67: error: request for member ‘begin’ in ‘niz’, which is of non-class type ‘int [1000]’
+  std::cout << "Najmanji element niza se pojavljuje " << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << " puta u nizu"
+                                                                   ^~~~~
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:40:79: error: request for member ‘end’ in ‘niz’, which is of non-class type ‘int [1000]’
+  std::cout << "Najmanji element niza se pojavljuje " << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << " puta u nizu"
+                                                                               ^~~
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:40:101: error: request for member ‘begin’ in ‘niz’, which is of non-class type ‘int [1000]’
+  std::cout << "Najmanji element niza se pojavljuje " << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << " puta u nizu"
+                                                                                                     ^~~~~
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:40:113: error: request for member ‘end’ in ‘niz’, which is of non-class type ‘int [1000]’
+  std::cout << "Najmanji element niza se pojavljuje " << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << " puta u nizu"
+                                                                                                                 ^~~
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:40:85: error: ‘min_element’ was not declared in this scope
+  std::cout << "Najmanji element niza se pojavljuje " << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << " puta u nizu"
+                                                                                     ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:40:85: note: suggested alternative:
+In file included from /usr/include/c++/7/algorithm:62:0,
+                 from /rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:16:
+/usr/include/c++/7/bits/stl_algo.h:5629:5: note:   ‘std::min_element’
+     min_element(_ForwardIterator __first, _ForwardIterator __last,
+     ^~~~~~~~~~~
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:40:57: error: ‘count’ was not declared in this scope
+  std::cout << "Najmanji element niza se pojavljuje " << count(niz.begin(),niz.end(),min_element(niz.begin(),niz.end())) << " puta u nizu"
+                                                         ^~~~~
+/rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:40:57: note: suggested alternative:
+In file included from /usr/include/c++/7/algorithm:62:0,
+                 from /rhome/a/amehmedic1/workspace/TP/T5/Z3/main.cpp:16:
+/usr/include/c++/7/bits/stl_algo.h:4076:5: note:   ‘std::count’
+     count(_InputIterator __first, _InputIterator __last, const _Tp& __value)
+     ^~~~~

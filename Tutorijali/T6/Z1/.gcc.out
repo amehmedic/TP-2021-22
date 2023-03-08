@@ -1,0 +1,4 @@
+/rhome/a/amehmedic1/workspace/TP/T6/Z1/main.cpp: In function ‘int main()’:
+/rhome/a/amehmedic1/workspace/TP/T6/Z1/main.cpp:59:2: error: expected ‘;’ before ‘}’ token
+  }
+  ^

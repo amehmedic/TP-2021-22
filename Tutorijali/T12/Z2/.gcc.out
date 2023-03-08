@@ -1,0 +1,4 @@
+/rhome/a/amehmedic1/workspace/TP/T12/Z2/main.cpp: In function ‘std::ostream& operator<<(std::ostream&, std::set<std::pair<_T1, _T2> >)’:
+/rhome/a/amehmedic1/workspace/TP/T12/Z2/main.cpp:123:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^

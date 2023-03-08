@@ -1,0 +1,84 @@
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp: In member function ‘Fakultet& Fakultet::operator=(const Fakultet&)’:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp:96:37: error: no matching function for call to ‘swap(std::vector<ApstraktniStudent*>&, const std::vector<ApstraktniStudent*>&)’
+      std::swap(kolekcija,f.kolekcija);
+                                     ^
+In file included from /usr/include/c++/7/bits/nested_exception.h:40:0,
+                 from /usr/include/c++/7/exception:143,
+                 from /usr/include/c++/7/ios:39,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from /rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp:8:
+/usr/include/c++/7/bits/move.h:187:5: note: candidate: template<class _Tp> typename std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<_Tp> >, std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&)
+     swap(_Tp& __a, _Tp& __b)
+     ^~~~
+/usr/include/c++/7/bits/move.h:187:5: note:   template argument deduction/substitution failed:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp:96:37: note:   deduced conflicting types for parameter ‘_Tp’ (‘std::vector<ApstraktniStudent*>’ and ‘const std::vector<ApstraktniStudent*>’)
+      std::swap(kolekcija,f.kolekcija);
+                                     ^
+In file included from /usr/include/c++/7/bits/nested_exception.h:40:0,
+                 from /usr/include/c++/7/exception:143,
+                 from /usr/include/c++/7/ios:39,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from /rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp:8:
+/usr/include/c++/7/bits/move.h:210:5: note: candidate: template<class _Tp, long unsigned int _Nm> typename std::enable_if<std::__is_swappable<_Tp>::value>::type std::swap(_Tp (&)[_Nm], _Tp (&)[_Nm])
+     swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])
+     ^~~~
+/usr/include/c++/7/bits/move.h:210:5: note:   template argument deduction/substitution failed:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp:96:37: note:   mismatched types ‘_Tp [_Nm]’ and ‘std::vector<ApstraktniStudent*>’
+      std::swap(kolekcija,f.kolekcija);
+                                     ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from /rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp:8:
+/usr/include/c++/7/bits/stl_pair.h:495:5: note: candidate: template<class _T1, class _T2> void std::swap(std::pair<_T1, _T2>&, std::pair<_T1, _T2>&)
+     swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+     ^~~~
+/usr/include/c++/7/bits/stl_pair.h:495:5: note:   template argument deduction/substitution failed:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp:96:37: note:   ‘std::vector<ApstraktniStudent*>’ is not derived from ‘std::pair<_T1, _T2>’
+      std::swap(kolekcija,f.kolekcija);
+                                     ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from /rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp:8:
+/usr/include/c++/7/bits/basic_string.h:6246:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> void std::swap(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     swap(basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~
+/usr/include/c++/7/bits/basic_string.h:6246:5: note:   template argument deduction/substitution failed:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp:96:37: note:   ‘std::vector<ApstraktniStudent*>’ is not derived from ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+      std::swap(kolekcija,f.kolekcija);
+                                     ^
+In file included from /usr/include/c++/7/vector:64:0,
+                 from /rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp:9:
+/usr/include/c++/7/bits/stl_vector.h:1649:5: note: candidate: template<class _Tp, class _Alloc> void std::swap(std::vector<_Tp, _Alloc>&, std::vector<_Tp, _Alloc>&)
+     swap(vector<_Tp, _Alloc>& __x, vector<_Tp, _Alloc>& __y)
+     ^~~~
+/usr/include/c++/7/bits/stl_vector.h:1649:5: note:   template argument deduction/substitution failed:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp:96:37: note:   types ‘std::vector<_Tp, _Alloc>’ and ‘const std::vector<ApstraktniStudent*>’ have incompatible cv-qualifiers
+      std::swap(kolekcija,f.kolekcija);
+                                     ^
+In file included from /usr/include/c++/7/vector:65:0,
+                 from /rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp:9:
+/usr/include/c++/7/bits/stl_bvector.h:112:3: note: candidate: void std::swap(std::_Bit_reference, std::_Bit_reference)
+   swap(_Bit_reference __x, _Bit_reference __y) noexcept
+   ^~~~
+/usr/include/c++/7/bits/stl_bvector.h:112:3: note:   no known conversion for argument 1 from ‘std::vector<ApstraktniStudent*>’ to ‘std::_Bit_reference’
+/usr/include/c++/7/bits/stl_bvector.h:120:3: note: candidate: void std::swap(std::_Bit_reference, bool&)
+   swap(_Bit_reference __x, bool& __y) noexcept
+   ^~~~
+/usr/include/c++/7/bits/stl_bvector.h:120:3: note:   no known conversion for argument 1 from ‘std::vector<ApstraktniStudent*>’ to ‘std::_Bit_reference’
+/usr/include/c++/7/bits/stl_bvector.h:128:3: note: candidate: void std::swap(bool&, std::_Bit_reference)
+   swap(bool& __x, _Bit_reference __y) noexcept
+   ^~~~
+/usr/include/c++/7/bits/stl_bvector.h:128:3: note:   no known conversion for argument 1 from ‘std::vector<ApstraktniStudent*>’ to ‘bool&’
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp: In lambda function:
+/rhome/a/amehmedic1/workspace/TP2018/T13/Z3/main.cpp:153:47: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+             if(a->DajProsjek()!=b->DajProsjek()) { return a->DajProsjek()>b->DajProsjek(); }
+                                               ^

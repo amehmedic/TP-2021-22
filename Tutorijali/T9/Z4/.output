@@ -1,0 +1,16 @@
+Unesite sate minute i sekunde prvog 'sata': Prvi 'sat': 02:03:04
+Unesite sate minute i sekunde drugog 'sata': Drugi 'sat': 05:06:07
+Broj sekundi izmedju prvog i drugog 'sata': -10983
+Broj sekundi izmedju drugog i prvog 'sata': 10983
+Sati prvog 2
+Minute prvog 3
+Sekunde prvog 4
+Sati drugog 5
+Minute drugog 6
+Sekunde drugog 7
+Prvi pomjereni za jednu sekundu 'naprijed' a drugi jednu 'nazad'
+02:03:05
+05:06:06
+Za koliko pomjeramo? (prvi naprijed drugi nazad) 
+02:03:09
+05:06:02

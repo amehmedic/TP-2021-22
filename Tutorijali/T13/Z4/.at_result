@@ -1,0 +1,337 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 3,
+    "compile_result": {
+        "status": 2,
+        "output": "main.cpp: In member function ‘Fakultet& Fakultet::operator=(const Fakultet&)’:\nmain.cpp:96:37: error: no matching function for call to ‘swap(std::vector<ApstraktniStudent*>&, const std::vector<ApstraktniStudent*>&)’\n      std::swap(kolekcija,f.kolekcija);\n                                     ^\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/nested_exception.h:40:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/exception:171,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:39,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from main.cpp:8:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: note: candidate: template<class _Tp> typename std::enable_if<std::__and_<std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&)\n     swap(_Tp& __a, _Tp& __b)\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: note:   template argument deduction/substitution failed:\nmain.cpp:96:37: note:   deduced conflicting types for parameter ‘_Tp’ (‘std::vector<ApstraktniStudent*>’ and ‘const std::vector<ApstraktniStudent*>’)\n      std::swap(kolekcija,f.kolekcija);\n                                     ^\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/nested_exception.h:40:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/exception:171,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:39,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from main.cpp:8:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:202:5: note: candidate: template<class _Tp, long unsigned int _Nm> typename std::enable_if<std::__is_swappable<_Tp>::value>::type std::swap(_Tp (&)[_Nm], _Tp (&)[_Nm])\n     swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:202:5: note:   template argument deduction/substitution failed:\nmain.cpp:96:37: note:   mismatched types ‘_Tp [_Nm]’ and ‘std::vector<ApstraktniStudent*>’\n      std::swap(kolekcija,f.kolekcija);\n                                     ^\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:64:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from main.cpp:8:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_pair.h:403:5: note: candidate: template<class _T1, class _T2> void std::swap(std::pair<_T1, _T2>&, std::pair<_T1, _T2>&)\n     swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_pair.h:403:5: note:   template argument deduction/substitution failed:\nmain.cpp:96:37: note:   ‘std::vector<ApstraktniStudent*>’ is not derived from ‘std::pair<_T1, _T2>’\n      std::swap(kolekcija,f.kolekcija);\n                                     ^\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/string:52:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/bits/locale_classes.h:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/bits/ios_base.h:41,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:42,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from main.cpp:8:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/basic_string.h:5287:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> void std::swap(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)\n     swap(basic_string<_CharT, _Traits, _Alloc>& __lhs,\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/basic_string.h:5287:5: note:   template argument deduction/substitution failed:\nmain.cpp:96:37: note:   ‘std::vector<ApstraktniStudent*>’ is not derived from ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’\n      std::swap(kolekcija,f.kolekcija);\n                                     ^\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/vector:64:0,\n                 from main.cpp:9:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_vector.h:1557:5: note: candidate: template<class _Tp, class _Alloc> void std::swap(std::vector<_Tp, _Alloc>&, std::vector<_Tp, _Alloc>&)\n     swap(vector<_Tp, _Alloc>& __x, vector<_Tp, _Alloc>& __y)\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_vector.h:1557:5: note:   template argument deduction/substitution failed:\nmain.cpp:96:37: note:   types ‘std::vector<_Tp, _Alloc>’ and ‘const std::vector<ApstraktniStudent*>’ have incompatible cv-qualifiers\n      std::swap(kolekcija,f.kolekcija);\n                                     ^\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/vector:65:0,\n                 from main.cpp:9:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_bvector.h:112:3: note: candidate: void std::swap(std::_Bit_reference, std::_Bit_reference)\n   swap(_Bit_reference __x, _Bit_reference __y) noexcept\n   ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_bvector.h:112:3: note:   no known conversion for argument 1 from ‘std::vector<ApstraktniStudent*>’ to ‘std::_Bit_reference’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_bvector.h:120:3: note: candidate: void std::swap(std::_Bit_reference, bool&)\n   swap(_Bit_reference __x, bool& __y) noexcept\n   ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_bvector.h:120:3: note:   no known conversion for argument 1 from ‘std::vector<ApstraktniStudent*>’ to ‘std::_Bit_reference’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_bvector.h:128:3: note: candidate: void std::swap(bool&, std::_Bit_reference)\n   swap(bool& __x, _Bit_reference __y) noexcept\n   ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_bvector.h:128:3: note:   no known conversion for argument 1 from ‘std::vector<ApstraktniStudent*>’ to ‘bool&’\nmain.cpp: In lambda function:\nmain.cpp:153:47: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n             if(a->DajProsjek()!=b->DajProsjek()) { return a->DajProsjek()>b->DajProsjek(); }\n                                               ^\nmain.cpp: At global scope:\nmain.cpp:165:5: error: ‘shared_ptr’ does not name a type\n     shared_ptr<ApstraktniStudent> student;\n     ^~~~~~~~~~\nmain.cpp:167:33: error: expected unqualified-id before ‘{’ token\n     Student(): student=nullptr; {}\n                                 ^\nmain.cpp:198:1: error: expected ‘;’ after class definition\n }\n ^\nmain.cpp: In constructor ‘Student::Student()’:\nmain.cpp:167:16: error: class ‘Student’ does not have any field named ‘student’\n     Student(): student=nullptr; {}\n                ^~~~~~~\nmain.cpp:167:23: error: expected ‘(’ before ‘=’ token\n     Student(): student=nullptr; {}\n                       ^\nmain.cpp:167:23: error: expected ‘{’ before ‘=’ token\nmain.cpp: In destructor ‘Student::~Student()’:\nmain.cpp:168:18: error: ‘student’ was not declared in this scope\n     ~Student() { student=nullptr; }\n                  ^~~~~~~\nmain.cpp: In constructor ‘Student::Student(const ApstraktniStudent&)’:\nmain.cpp:169:42: error: class ‘Student’ does not have any field named ‘student’\n     Student(const ApstraktniStudent &s): student(s.DajKopiju()) {}\n                                          ^~~~~~~\nmain.cpp:169:62: error: passing ‘const ApstraktniStudent’ as ‘this’ argument discards qualifiers [-fpermissive]\n     Student(const ApstraktniStudent &s): student(s.DajKopiju()) {}\n                                                              ^\nmain.cpp:40:32: note:   in call to ‘virtual ApstraktniStudent* ApstraktniStudent::DajKopiju()’\n     virtual ApstraktniStudent* DajKopiju() { /*ApstraktniStudent a(ime,prezime,br_indeksa); a.br_polozenih=br_polozenih;\n                                ^~~~~~~~~\nmain.cpp: In copy constructor ‘Student::Student(const Student&)’:\nmain.cpp:171:12: error: ‘const class Student’ has no member named ‘student’; did you mean ‘Student’?\n      if(!s.student) { student=nullptr; }\n            ^~~~~~~\nmain.cpp:171:23: error: ‘student’ was not declared in this scope\n      if(!s.student) { student=nullptr; }\n                       ^~~~~~~\nmain.cpp:172:13: error: ‘student’ was not declared in this scope\n      else { student=s.student->DajKopiju(); }\n             ^~~~~~~\nmain.cpp:172:23: error: ‘const class Student’ has no member named ‘student’; did you mean ‘Student’?\n      else { student=s.student->DajKopiju(); }\n                       ^~~~~~~\nmain.cpp: In constructor ‘Student::Student(ApstraktniStudent&&)’:\nmain.cpp:175:6: error: ‘student’ was not declared in this scope\n      student=s.student; s.student=nullptr;\n      ^~~~~~~\nmain.cpp:175:16: error: ‘class ApstraktniStudent’ has no member named ‘student’\n      student=s.student; s.student=nullptr;\n                ^~~~~~~\nmain.cpp:175:27: error: ‘class ApstraktniStudent’ has no member named ‘student’\n      student=s.student; s.student=nullptr;\n                           ^~~~~~~\nmain.cpp: In member function ‘Student& Student::operator=(const Student&)’:\nmain.cpp:178:6: error: ‘shared_ptr’ is not a member of ‘std’\n      std::shared_ptr<ApstraktniStudent> novi=nullptr;\n      ^~~\nmain.cpp:178:39: error: expected primary-expression before ‘>’ token\n      std::shared_ptr<ApstraktniStudent> novi=nullptr;\n                                       ^\nmain.cpp:178:41: error: ‘novi’ was not declared in this scope\n      std::shared_ptr<ApstraktniStudent> novi=nullptr;\n                                         ^~~~\nmain.cpp:179:11: error: ‘const class Student’ has no member named ‘student’; did you mean ‘Student’?\n      if(s.student != nullptr) { novi=s.student->DajKopiju(); }\n           ^~~~~~~\nmain.cpp:179:40: error: ‘const class Student’ has no member named ‘student’; did you mean ‘Student’?\n      if(s.student != nullptr) { novi=s.student->DajKopiju(); }\n                                        ^~~~~~~\nmain.cpp:180:6: error: ‘student’ was not declared in this scope\n      student=nullptr;\n      ^~~~~~~\nmain.cpp: In member function ‘Student& Student::operator=(Student&&)’:\nmain.cpp:185:16: error: ‘student’ was not declared in this scope\n      std::swap(student,s.student);\n                ^~~~~~~\nmain.cpp:185:26: error: ‘class Student’ has no member named ‘student’; did you mean ‘Student’?\n      std::swap(student,s.student);\n                          ^~~~~~~\nmain.cpp: In member function ‘std::__cxx11::string Student::DajIme() const’:\nmain.cpp:188:41: error: ‘student’ was not declared in this scope\n     std::string DajIme() const { return student->ime; }\n                                         ^~~~~~~\nmain.cpp: In member function ‘std::__cxx11::string Student::DajPrezime() const’:\nmain.cpp:189:45: error: ‘student’ was not declared in this scope\n     std::string DajPrezime() const { return student->prezime; }\n                                             ^~~~~~~\nmain.cpp: In member function ‘int Student::DajBrojIndeksa() const’:\nmain.cpp:190:41: error: ‘student’ was not declared in this scope\n     int DajBrojIndeksa() const { return student->br_indeksa; }\n                                         ^~~~~~~\nmain.cpp: In member function ‘int Student::DajBrojPolozenih() const’:\nmain.cpp:191:43: error: ‘student’ was not declared in this scope\n     int DajBrojPolozenih() const { return student->br_polozenih; }\n                                           ^~~~~~~\nmain.cpp: In member function ‘double Student::DajProsjek() const’:\nmain.cpp:192:40: error: ‘student’ was not declared in this scope\n     double DajProsjek() const { return student->prosjek; }\n                                        ^~~~~~~\nmain.cpp: In member function ‘void Student::RegistrirajIspit(int)’:\nmain.cpp:193:41: error: ‘student’ was not declared in this scope\n     void RegistrirajIspit(int ocjena) { student->RegistrirajIspit(int ocjena); }\n                                         ^~~~~~~\nmain.cpp:193:67: error: expected primary-expression before ‘int’\n     void RegistrirajIspit(int ocjena) { student->RegistrirajIspit(int ocjena); }\n                                                                   ^~~\nmain.cpp: In member function ‘void Student::PonistiOcjene()’:\nmain.cpp:194:28: error: ‘student’ was not declared in this scope\n     void PonistiOcjene() { student->PonistiOcjene(); }\n                            ^~~~~~~\nmain.cpp: In member function ‘void Student::IspisiPodatke() const’:\nmain.cpp:195:34: error: ‘student’ was not declared in this scope\n     void IspisiPodatke() const { student->IspisiPodatke(); }\n                                  ^~~~~~~",
+        "parsed_output": [
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "96",
+                "col": "37",
+                "message": "no matching function for call to 'swap(std::vector<ApstraktniStudent*>&, const std::vector<ApstraktniStudent*>&)'",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:96:37: error: no matching function for call to ‘swap(std::vector<ApstraktniStudent*>&, const std::vector<ApstraktniStudent*>&)’      std::swap(kolekcija,f.kolekcija);                                     ^In file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/nested_exception.h:40:0,                 from /opt/gcc-6.2.0/include/c++/6.2.0/exception:171,                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:39,                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,                 from /tmp/buildservice/bs_1314/main.cpp:8:",
+                "code": "std::swap(kolekcija,f.kolekcija);"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "153",
+                "col": "47",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:153:47: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]             if(a->DajProsjek()!=b->DajProsjek()) { return a->DajProsjek()>b->DajProsjek(); }                                               ^/tmp/buildservice/bs_1314/main.cpp: At global scope:",
+                "code": "if(a->DajProsjek()!=b->DajProsjek()) { return a->DajProsjek()>b->DajProsjek(); }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "165",
+                "col": "5",
+                "message": "'shared_ptr' does not name a type",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:165:5: error: ‘shared_ptr’ does not name a type     shared_ptr<ApstraktniStudent> student;     ^~~~~~~~~~",
+                "code": "shared_ptr<ApstraktniStudent> student;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "167",
+                "col": "33",
+                "message": "expected unqualified-id before '{' token",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:167:33: error: expected unqualified-id before ‘{’ token     Student(): student=nullptr; {}                                 ^",
+                "code": "Student(): student=nullptr; {}"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "198",
+                "col": "1",
+                "message": "expected ';' after class definition",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:198:1: error: expected ‘;’ after class definition } ^/tmp/buildservice/bs_1314/main.cpp: In constructor ‘Student::Student()’:",
+                "code": "}"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "167",
+                "col": "16",
+                "message": "class 'Student' does not have any field named 'student'",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:167:16: error: class ‘Student’ does not have any field named ‘student’     Student(): student=nullptr; {}                ^~~~~~~",
+                "code": "Student(): student=nullptr; {}"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "167",
+                "col": "23",
+                "message": "expected '(' before '=' token",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:167:23: error: expected ‘(’ before ‘=’ token     Student(): student=nullptr; {}                       ^",
+                "code": "Student(): student=nullptr; {}"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "167",
+                "col": "23",
+                "message": "expected '{' before '=' token",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:167:23: error: expected ‘{’ before ‘=’ token/tmp/buildservice/bs_1314/main.cpp: In destructor ‘Student::~Student()’:",
+                "code": "/tmp/buildservice/bs_1314/main.cpp: In destructor ‘Student::~Student()’:"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "168",
+                "col": "18",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:168:18: error: ‘student’ was not declared in this scope     ~Student() { student=nullptr; }                  ^~~~~~~/tmp/buildservice/bs_1314/main.cpp: In constructor ‘Student::Student(const ApstraktniStudent&)’:",
+                "code": "~Student() { student=nullptr; }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "169",
+                "col": "42",
+                "message": "class 'Student' does not have any field named 'student'",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:169:42: error: class ‘Student’ does not have any field named ‘student’     Student(const ApstraktniStudent &s): student(s.DajKopiju()) {}                                          ^~~~~~~",
+                "code": "Student(const ApstraktniStudent &s): student(s.DajKopiju()) {}"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "169",
+                "col": "62",
+                "message": "passing 'const ApstraktniStudent' as 'this' argument discards qualifiers [-fpermissive]",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:169:62: error: passing ‘const ApstraktniStudent’ as ‘this’ argument discards qualifiers [-fpermissive]     Student(const ApstraktniStudent &s): student(s.DajKopiju()) {}                                                              ^",
+                "code": "Student(const ApstraktniStudent &s): student(s.DajKopiju()) {}"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "171",
+                "col": "12",
+                "message": "'const class Student' has no member named 'student'; did you mean 'Student'?",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:171:12: error: ‘const class Student’ has no member named ‘student’; did you mean ‘Student’?      if(!s.student) { student=nullptr; }            ^~~~~~~",
+                "code": "if(!s.student) { student=nullptr; }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "171",
+                "col": "23",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:171:23: error: ‘student’ was not declared in this scope      if(!s.student) { student=nullptr; }                       ^~~~~~~",
+                "code": "if(!s.student) { student=nullptr; }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "172",
+                "col": "13",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:172:13: error: ‘student’ was not declared in this scope      else { student=s.student->DajKopiju(); }             ^~~~~~~",
+                "code": "else { student=s.student->DajKopiju(); }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "172",
+                "col": "23",
+                "message": "'const class Student' has no member named 'student'; did you mean 'Student'?",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:172:23: error: ‘const class Student’ has no member named ‘student’; did you mean ‘Student’?      else { student=s.student->DajKopiju(); }                       ^~~~~~~/tmp/buildservice/bs_1314/main.cpp: In constructor ‘Student::Student(ApstraktniStudent&&)’:",
+                "code": "else { student=s.student->DajKopiju(); }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "175",
+                "col": "6",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:175:6: error: ‘student’ was not declared in this scope      student=s.student; s.student=nullptr;      ^~~~~~~",
+                "code": "student=s.student; s.student=nullptr;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "175",
+                "col": "16",
+                "message": "'class ApstraktniStudent' has no member named 'student'",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:175:16: error: ‘class ApstraktniStudent’ has no member named ‘student’      student=s.student; s.student=nullptr;                ^~~~~~~",
+                "code": "student=s.student; s.student=nullptr;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "175",
+                "col": "27",
+                "message": "'class ApstraktniStudent' has no member named 'student'",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:175:27: error: ‘class ApstraktniStudent’ has no member named ‘student’      student=s.student; s.student=nullptr;                           ^~~~~~~/tmp/buildservice/bs_1314/main.cpp: In member function ‘Student& Student::operator=(const Student&)’:",
+                "code": "student=s.student; s.student=nullptr;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "178",
+                "col": "6",
+                "message": "'shared_ptr' is not a member of 'std'",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:178:6: error: ‘shared_ptr’ is not a member of ‘std’      std::shared_ptr<ApstraktniStudent> novi=nullptr;      ^~~",
+                "code": "std::shared_ptr<ApstraktniStudent> novi=nullptr;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "178",
+                "col": "39",
+                "message": "expected primary-expression before '>' token",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:178:39: error: expected primary-expression before ‘>’ token      std::shared_ptr<ApstraktniStudent> novi=nullptr;                                       ^",
+                "code": "std::shared_ptr<ApstraktniStudent> novi=nullptr;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "178",
+                "col": "41",
+                "message": "'novi' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:178:41: error: ‘novi’ was not declared in this scope      std::shared_ptr<ApstraktniStudent> novi=nullptr;                                         ^~~~",
+                "code": "std::shared_ptr<ApstraktniStudent> novi=nullptr;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "179",
+                "col": "11",
+                "message": "'const class Student' has no member named 'student'; did you mean 'Student'?",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:179:11: error: ‘const class Student’ has no member named ‘student’; did you mean ‘Student’?      if(s.student != nullptr) { novi=s.student->DajKopiju(); }           ^~~~~~~",
+                "code": "if(s.student != nullptr) { novi=s.student->DajKopiju(); }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "179",
+                "col": "40",
+                "message": "'const class Student' has no member named 'student'; did you mean 'Student'?",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:179:40: error: ‘const class Student’ has no member named ‘student’; did you mean ‘Student’?      if(s.student != nullptr) { novi=s.student->DajKopiju(); }                                        ^~~~~~~",
+                "code": "if(s.student != nullptr) { novi=s.student->DajKopiju(); }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "180",
+                "col": "6",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:180:6: error: ‘student’ was not declared in this scope      student=nullptr;      ^~~~~~~/tmp/buildservice/bs_1314/main.cpp: In member function ‘Student& Student::operator=(Student&&)’:",
+                "code": "student=nullptr;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "185",
+                "col": "16",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:185:16: error: ‘student’ was not declared in this scope      std::swap(student,s.student);                ^~~~~~~",
+                "code": "std::swap(student,s.student);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "185",
+                "col": "26",
+                "message": "'class Student' has no member named 'student'; did you mean 'Student'?",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:185:26: error: ‘class Student’ has no member named ‘student’; did you mean ‘Student’?      std::swap(student,s.student);                          ^~~~~~~/tmp/buildservice/bs_1314/main.cpp: In member function ‘std::__cxx11::string Student::DajIme() const’:",
+                "code": "std::swap(student,s.student);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "188",
+                "col": "41",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:188:41: error: ‘student’ was not declared in this scope     std::string DajIme() const { return student->ime; }                                         ^~~~~~~/tmp/buildservice/bs_1314/main.cpp: In member function ‘std::__cxx11::string Student::DajPrezime() const’:",
+                "code": "std::string DajIme() const { return student->ime; }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "189",
+                "col": "45",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:189:45: error: ‘student’ was not declared in this scope     std::string DajPrezime() const { return student->prezime; }                                             ^~~~~~~/tmp/buildservice/bs_1314/main.cpp: In member function ‘int Student::DajBrojIndeksa() const’:",
+                "code": "std::string DajPrezime() const { return student->prezime; }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "190",
+                "col": "41",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:190:41: error: ‘student’ was not declared in this scope     int DajBrojIndeksa() const { return student->br_indeksa; }                                         ^~~~~~~/tmp/buildservice/bs_1314/main.cpp: In member function ‘int Student::DajBrojPolozenih() const’:",
+                "code": "int DajBrojIndeksa() const { return student->br_indeksa; }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "191",
+                "col": "43",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:191:43: error: ‘student’ was not declared in this scope     int DajBrojPolozenih() const { return student->br_polozenih; }                                           ^~~~~~~/tmp/buildservice/bs_1314/main.cpp: In member function ‘double Student::DajProsjek() const’:",
+                "code": "int DajBrojPolozenih() const { return student->br_polozenih; }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "192",
+                "col": "40",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:192:40: error: ‘student’ was not declared in this scope     double DajProsjek() const { return student->prosjek; }                                        ^~~~~~~/tmp/buildservice/bs_1314/main.cpp: In member function ‘void Student::RegistrirajIspit(int)’:",
+                "code": "double DajProsjek() const { return student->prosjek; }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "193",
+                "col": "41",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:193:41: error: ‘student’ was not declared in this scope     void RegistrirajIspit(int ocjena) { student->RegistrirajIspit(int ocjena); }                                         ^~~~~~~",
+                "code": "void RegistrirajIspit(int ocjena) { student->RegistrirajIspit(int ocjena); }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "193",
+                "col": "67",
+                "message": "expected primary-expression before 'int'",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:193:67: error: expected primary-expression before ‘int’     void RegistrirajIspit(int ocjena) { student->RegistrirajIspit(int ocjena); }                                                                   ^~~/tmp/buildservice/bs_1314/main.cpp: In member function ‘void Student::PonistiOcjene()’:",
+                "code": "void RegistrirajIspit(int ocjena) { student->RegistrirajIspit(int ocjena); }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "194",
+                "col": "28",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:194:28: error: ‘student’ was not declared in this scope     void PonistiOcjene() { student->PonistiOcjene(); }                            ^~~~~~~/tmp/buildservice/bs_1314/main.cpp: In member function ‘void Student::IspisiPodatke() const’:",
+                "code": "void PonistiOcjene() { student->PonistiOcjene(); }"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "195",
+                "col": "34",
+                "message": "'student' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_1314/main.cpp:195:34: error: ‘student’ was not declared in this scope     void IspisiPodatke() const { student->IspisiPodatke(); }                                  ^~~~~~~",
+                "code": "void IspisiPodatke() const { student->IspisiPodatke(); }"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": [],
+    "queue_items": 0,
+    "time": 1593305631
+}
