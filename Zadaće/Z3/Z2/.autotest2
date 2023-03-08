@@ -1,0 +1,135 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2020\/2021), Zada\u0107a 3, Zadatak 2",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 3 - Zadatak 2\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 1, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 1: Test main funkcije - 1\n    {\n        _main();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "abc qwe stsda abc abc dhi qwe hrkw dhi\nabc\nhrkw\nxyzzy\n.\n"
+                },
+                "expect": [
+                    "Unesite tekst: abc: 0,14,18\ndhi: 22,35\nhrkw: 30\nqwe: 4,26\nstsda: 8\nUnesite rijec: 0 14 18\nUnesite rijec: 30\nUnesite rijec: Unesena rijec nije nadjena!\nUnesite rijec: "
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "abc qwe stsda abc abc dhi qwe hrkw dhi\nabc\nhrkw\nxyzzy\n.\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "abc qwe stsda abc abc dhi qwe hrkw dhi\nabc\nhrkw\nxyzzy\n.\n"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 3 - Zadatak 2\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 1, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 2: Test main funkcije - 2\n    {        \n        _main();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "tp je najbolji predmet u ii semestru prve godine etfa da da tp cijelog etfa\ntp\nje\nii\nda\netfa\nu\n.\n"
+                },
+                "expect": [
+                    "Unesite tekst: cijelog: 63\nda: 54,57\netfa: 49,71\ngodine: 42\nii: 25\nje: 3\nnajbolji: 6\npredmet: 15\nprve: 37\nsemestru: 28\ntp: 0,60\nu: 23\nUnesite rijec: 0 60\nUnesite rijec: 3\nUnesite rijec: 25\nUnesite rijec: 54 57\nUnesite rijec: 49 71\nUnesite rijec: 23\nUnesite rijec: "
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "tp je najbolji predmet u ii semestru prve godine etfa da da tp cijelog etfa\ntp\nje\nii\nda\netfa\nu\n.\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "tp je najbolji predmet u ii semestru prve godine etfa da da tp cijelog etfa\ntp\nje\nii\nda\netfa\nu\n.\n"
+                }
+            }
+        }
+    ]
+}

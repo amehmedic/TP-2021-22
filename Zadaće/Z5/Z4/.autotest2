@@ -1,0 +1,113 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2020\/2021), Zada\u0107a 5, Zadatak 4",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 5 - Zadatak 4\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 4, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 1: Test iz postavke zadatka\n    {\n        try\n        {\n\n            PolimorfniSpremnik s1(Bure(5,\"Benzin\", 930, 70));\n            PolimorfniSpremnik s2, s3, s4;\n            s2 = Sanduk(3, \"Tepsije\", {0.5, 0.8, 0.6, 0.5});\n            s3 = Vreca(0.1, \"Patak\", 15.5);\n            std::cout << s1.DajTezinu() << std::endl;\n            std::cout << s2.DajUkupnuTezinu() << std::endl;\n            s3.Ispisi();\n            s1 = s2;\n            s1.Ispisi();\n            s4.DajTezinu();\n        }\n        catch(std::logic_error le)\n        {\n            std::cout << le.what();\n        }\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "5\n5.4\nVrsta spremnika: Vreca\nSadrzaj: Patak\nVlastita tezina: 0.1 (kg)\nTezina pohranjene materije: 15.5 (kg)\nUkupna tezina: 15.6 (kg)\nVrsta spremnika: Sanduk\nSadrzaj: Tepsije\nTezine predmeta: 0.5 0.8 0.6 0.5 (kg)\nVlastita tezina: 3 (kg)\nUkupna tezina: 5.4 (kg)\nNespecificiran spremnik"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 5 - Zadatak 4\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 4, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 2: Test da li bacen izuzetak ako je nespecificiran spremnik\n    {\n        try\n        {\n            PolimorfniSpremnik s1;\n            std::cout << s1.DajTezinu() << std::endl;\n        }\n        catch(std::logic_error le)\n        {\n            std::cout << le.what();\n        }\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Nespecificiran spremnik"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}

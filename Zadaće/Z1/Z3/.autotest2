@@ -1,0 +1,286 @@
+{
+    "id": 0,
+    "name": "",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 1 - Zadatak 3\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/AT1: Provjera main funkcije\n{\n      _main();\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "Q-------\n----Q---\n-------Q\n-----Q--\n\n"
+                },
+                "expect": [
+                    "Unesite opis sahovske ploce:\n(Q za kraljicu, bilo sta drugo za prazno polje, ENTER naprazno za kraj unosa):\nDame se medjusobno ne napadaju."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "Q-------\n----Q---\n-------Q\n-----Q--"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "Q-------\n----Q---\n-------Q\n-----Q--"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 1 - Zadatak 3\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/AT2: Provjera main funkcije na ploci dimenzija 7x7\n\/\/Dvije dame se nalaze na glavnoj dijagonali \n{\n     _main();\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "-------\n-Q-----\n---Q---\nQ------\n-------\n----Q--\n------Q\n\n"
+                },
+                "expect": [
+                    "Unesite opis sahovske ploce:\n(Q za kraljicu, bilo sta drugo za prazno polje, ENTER naprazno za kraj unosa):\nDame se medjusobno napadaju."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "-------\n-Q-----\n---Q---\nQ------\n-------\n----Q--\n------Q"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "-------\n-Q-----\n---Q---\nQ------\n-------\n----Q--\n------Q"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 1 - Zadatak 3\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/AT3: Provjera main funkcije na ploci dimenzija 8x7\n\/\/Postoje dame koje se nalaze u istoj koloni\n{\n      _main();\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "----Q--\n--Q----\nQ------\n---Q---\n------Q\n--Q----\n-----Q-\n-Q-----\n\n"
+                },
+                "expect": [
+                    "Unesite opis sahovske ploce:\n(Q za kraljicu, bilo sta drugo za prazno polje, ENTER naprazno za kraj unosa):\nDame se medjusobno napadaju."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "----Q--\n--Q----\nQ------\n---Q---\n------Q\n--Q----\n-----Q-\n-Q-----"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "----Q--\n--Q----\nQ------\n---Q---\n------Q\n--Q----\n-----Q-\n-Q-----"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 1 - Zadatak 3\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/AT4: Provjera main funkcije na ploci dimenzija 5x5\n\/\/Postoje dame koje se nalaze u istom redu\n{\n      _main();\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "---Q-\n-----\n-----\n--Q--\nQ---Q\n\n"
+                },
+                "expect": [
+                    "Unesite opis sahovske ploce:\n(Q za kraljicu, bilo sta drugo za prazno polje, ENTER naprazno za kraj unosa):\nDame se medjusobno napadaju."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "---Q-\n-----\n-----\n--Q--\nQ---Q"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "---Q-\n-----\n-----\n--Q--\nQ---Q"
+                }
+            }
+        },
+        {
+            "id": 6,
+            "name": "Test 6",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 1 - Zadatak 3\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/AT5: Provjera main funkcije na ploci dimenzija 9x9 sa legalnim rasporedom dama\n\/\/Inace problem devet dama ima 352 razlicita rjesenja\n{\n      _main();\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "********Q\n******Q**\n**Q******\n*******Q*\n*Q*******\n****Q****\nQ********\n*****Q***\n***Q*****\n\n"
+                },
+                "expect": [
+                    "Unesite opis sahovske ploce:\n(Q za kraljicu, bilo sta drugo za prazno polje, ENTER naprazno za kraj unosa):\nDame se medjusobno ne napadaju."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "********Q\n******Q**\n**Q******\n*******Q*\n*Q*******\n****Q****\nQ********\n*****Q***\n***Q*****"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "********Q\n******Q**\n**Q******\n*******Q*\n*Q*******\n****Q****\nQ********\n*****Q***\n***Q*****"
+                }
+            }
+        },
+        {
+            "id": 7,
+            "name": "Test 7",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 1 - Zadatak 3\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/AT6: Provjera main funkcije na \"grbavoj\" sahovskoj ploci\n{\n      _main();\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "----Q--\nQ-\n--Q-\n----\n---Q--\n\n"
+                },
+                "expect": [
+                    "Unesite opis sahovske ploce:\n(Q za kraljicu, bilo sta drugo za prazno polje, ENTER naprazno za kraj unosa):\nDame se medjusobno napadaju."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "----Q--\nQ-\n--Q-\n----\n---Q--"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "----Q--\nQ-\n--Q-\n----\n---Q--"
+                }
+            }
+        }
+    ]
+}

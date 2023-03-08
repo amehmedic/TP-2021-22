@@ -1,0 +1,246 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2020\/2021), Zada\u0107a 4, Zadatak 5",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 5\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 5, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 1: Testira da li je Student struktura (i da li su varijable ispravno nazvane)\n    {\n        Student s;\n        s.ime = \"Haris\";\n        s.prezime = \"Capelj\";\n        s.telefon = \"+38761439918\";\n        s.adresa = \"Zmaja od Bosne bb (ETF)\";\n        s.broj_indeksa = 16985;\n        s.godina_studija = 6;\n\n        std::cout << s.ime << \" \" << s.prezime << std::endl;\n        std::cout << s.adresa << \" | \" << s.telefon << std::endl;\n        std::cout << s.broj_indeksa << \" | \" << s.godina_studija;\n    }\n",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Haris Capelj\nZmaja od Bosne bb (ETF) | +38761439918\n16985 | 6"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 5\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 5, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 2: Test velicine strukture (da li ima viska \/ manjka elemenata)\n    {\n        std::cout << sizeof(Student);\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "104",
+                    "136"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 5\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 5, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 3: Test velicine klase Knjiga (da li se slaze prema postavci)\n    {\n        std::cout << sizeof(Knjiga);\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "80",
+                    "112"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 5\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 5, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 4: Test konstruktora klase Knjiga, inspektora, te metode DaLiJeZaducena\n    {\n        Knjiga knj1(\"Vlak u snijegu\", \"Mato Lovrak\", \"Roman\", 1931);\n        std::cout << knj1.DajNaslov() << \" \" << knj1.DajAutora() << \" \" << knj1.DajZanr() << \" \" << knj1.DajGodinuIzdavanja();\n        if(!knj1.DaLiJeZaduzena())\n            std::cout << \"\\nKnjiga je slobodna\";\n        else\n            std::cout << \"\\nKnjiga je zaduzena\";\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Vlak u snijegu Mato Lovrak Roman 1931\nKnjiga je slobodna"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 6,
+            "name": "Test 6",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 5\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 5, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 9: Test getera metoda klase Knjiga\n    {\n        Knjiga knj(\"Da Vinci-ev kod\", \"Dan Brown\", \"Triler\", 2003);\n        std::cout << knj.DajNaslov() << std::endl;\n        std::cout << knj.DajAutora() << std::endl;\n        std::cout << knj.DajZanr() << std::endl;\n        std::cout << knj.DajGodinuIzdavanja();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Da Vinci-ev kod\nDan Brown\nTriler\n2003"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 7,
+            "name": "Test 7",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 5\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 5, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 11: Test velicine klase Bilblioteka\n    {\n        std::cout << sizeof(Biblioteka);\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "48",
+                    "96"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 8,
+            "name": "Test 8",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 5\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 5, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 14: Test metoda za pronalazak studenta i knjige\n    {\n        Biblioteka bib5;\n        bib5.RegistrirajNovogStudenta(1234, \"Niko\", \"Nikic\", 3, \"Zmaja od Bosne bb\", \"123 456\");\n        bib5.RegistrirajNovuKnjigu(2, \"Vlak u snijegu\", \"Mato Lovrak\", \"Roman\", 1931);\n\n        std::cout << \"Student:\" << std::endl;\n        std::cout << bib5.NadjiStudenta(1234).ime << \" \" << bib5.NadjiStudenta(1234).prezime << std::endl;\n        std::cout << bib5.NadjiStudenta(1234).adresa << \" | \" << bib5.NadjiStudenta(1234).telefon << std::endl;\n        std::cout << bib5.NadjiStudenta(1234).broj_indeksa << \" | \" << bib5.NadjiStudenta(1234).godina_studija;\n\n        std::cout << std::endl << std::endl << \"Knjiga:\"<<std::endl;\n\n        std::cout << bib5.NadjiKnjigu(2).DajNaslov() << std::endl;\n        std::cout << bib5.NadjiKnjigu(2).DajAutora() << std::endl;\n        std::cout << bib5.NadjiKnjigu(2).DajZanr() << std::endl;\n        std::cout << bib5.NadjiKnjigu(2).DajGodinuIzdavanja();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Student:\nNiko Nikic\nZmaja od Bosne bb | 123 456\n1234 | 3\n\nKnjiga:\nVlak u snijegu\nMato Lovrak\nRoman\n1931"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}

@@ -1,0 +1,283 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2020\/2021), Zada\u0107a 2, Zadatak 5",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 2 - Zadatak 5\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 5, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 1: Test main funkcije - postavka\n    {\n        \/\/ Unos:\n        \/\/ 3\n        \/\/ 5 2 8\n        \/\/ 4\n        \/\/ 1 3 6 2\n        _main();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "3\n5 2 8\n4\n1 3 6 2\n"
+                },
+                "expect": [
+                    "Duzina prve sekvence: Elementi prve sekvence: Duzina druge sekvence: Elementi druge sekvence: Generalizirani spoljasnji proizvod uz f(x,y)=x+2y:\n7 11 17 9\n4 8 14 6\n10 14 20 12\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "3\n5 2 8\n4\n1 3 6 2\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "3\n5 2 8\n4\n1 3 6 2\n"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 2 - Zadatak 5\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 5, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 2: Test main funkcije - da li se koriste double tipovi parametara kao sto je navedeno!\n    {\n        \/\/ Unos:\n        \/\/ 3\n        \/\/ 5.5 2.2 8.8\n        \/\/ 4\n        \/\/ 1.1 3.3 6.6 2.2\n        _main();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "3\n5.5 2.2 8.8\n4\n1.1 3.3 6.6 2.2\n"
+                },
+                "expect": [
+                    "Duzina prve sekvence: Elementi prve sekvence: Duzina druge sekvence: Elementi druge sekvence: Generalizirani spoljasnji proizvod uz f(x,y)=x+2y:\n7.7 12.1 18.7 9.9\n4.4 8.8 15.4 6.6\n11 15.4 22 13.2\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "3\n5.5 2.2 8.8\n4\n1.1 3.3 6.6 2.2\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "3\n5.5 2.2 8.8\n4\n1.1 3.3 6.6 2.2\n"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 2 - Zadatak 5\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 5, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 3: Test main funkcije - unos po jedan element (i negativan broj)\n    {\n        \/\/ Unos:\n        \/\/ 1\n        \/\/ 2.2\n        \/\/ 1\n        \/\/ -1.1\n        _main();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "1\n2.2\n1\n-1.1\n"
+                },
+                "expect": [
+                    "Duzina prve sekvence: Elementi prve sekvence: Duzina druge sekvence: Elementi druge sekvence: Generalizirani spoljasnji proizvod uz f(x,y)=x+2y:\n0\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "1\n2.2\n1\n-1.1\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "1\n2.2\n1\n-1.1\n"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 2 - Zadatak 5\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 5, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 4: Test main funkcije - stabilnost rada sa praznim kontejnerima\n    {\n        \/\/ Unos:\n        \/\/ 0\n        \/\/ 0\n        _main();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "0\n0\n"
+                },
+                "expect": [
+                    "Duzina prve sekvence: Elementi prve sekvence: Duzina druge sekvence: Elementi druge sekvence: Generalizirani spoljasnji proizvod uz f(x,y)=x+2y:\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "0\n0\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "0\n0\n"
+                }
+            }
+        },
+        {
+            "id": 6,
+            "name": "Test 6",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 2 - Zadatak 5\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 5, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "static size_t alocirano(0);\nstatic int brojac_new(0);\nstatic int brojac_deleteniz(0);\nstatic size_t alokacije[20];\n\nvoid *operator new[] (size_t vel)\n{\n    alokacije[brojac_new]=vel;\n    brojac_new++;\n    alocirano+=vel;\n    return std::malloc (vel);\n}\n\nvoid operator delete [] ( void* ptr)\n{\n    brojac_deleteniz++;\n    free(ptr);\n}",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "int Funkcija_mnozenja (int x, int y)\n{\n    return x * y;\n}",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 5: ELIMINATORAN AT - Provjera da li je koristena fragmentirana alokacija 1\/2\n    {\n        \/\/ Prema postavci je definirano da se koristi fragmentirana alokacija.\n        \/\/ Ukoliko ista nije implementirana, vjerovatno ce se oduzeti AT na zadatak!\n\n        int niz[5] = {1, 2, 3, 4, 5};\n        int drugi_niz[3] = {6, 7, 8};\n\n        int** c = GeneraliziraniSpoljasnjiProizvod(niz, niz + 5, drugi_niz, drugi_niz + 3, Funkcija_mnozenja);\n\n        \/\/ Ispis rezultata:\n        std::cout << \"Rezultat:\"<<std::endl;\n\n        for (int i{}; i<5; i++)\n        {\n            for (int j{}; j < 3; j++)\n                std::cout << c[i][j] << \" \";\n            std::cout << std::endl;\n        }\n\n        \/\/ Dealokacija\n        for(int i = 0; i < 5; i++)\n            delete[] c[i];\n        delete[] c;\n\n        std::cout<<\"----------------------------------------------------\" << std::endl << \"Alokacije:\" << std::endl;\n\n        std::cout << \"New pozvan \" << brojac_new << \" puta,  delete [] pozvan \" << brojac_deleteniz << \" puta, a alocirano ukupno \" << alocirano << \" bajta i to redom: \";\n        for (int i=0; i<brojac_new; i++)\n            std::cout << alokacije[i] << \" \";\n\n        \/\/ Ciscenje brojaca\n        alocirano = 0;\n        brojac_new = 0;\n        brojac_deleteniz = 0;\n        for (int i{}; i < 20; i++)\n            alokacije[i] = 0;\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Rezultat:\n6 7 8\n12 14 16\n18 21 24\n24 28 32\n30 35 40\n----------------------------------------------------\nAlokacije:\nNew pozvan 6 puta,  delete [] pozvan 6 puta, a alocirano ukupno 80 bajta i to redom: 20 12 12 12 12 12",
+                    "Rezultat:\n6 7 8\n12 14 16\n18 21 24\n24 28 32\n30 35 40\n----------------------------------------------------\nAlokacije:\nNew pozvan 6 puta,  delete [] pozvan 6 puta, a alocirano ukupno 100 bajta i to redom: 40 12 12 12 12 12"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 7,
+            "name": "Test 7",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 2 - Zadatak 5\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 5, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "static size_t alocirano(0);\nstatic int brojac_new(0);\nstatic int brojac_deleteniz(0);\nstatic size_t alokacije[20];\n\nvoid *operator new[] (size_t vel)\n{\n    alokacije[brojac_new]=vel;\n    brojac_new++;\n    alocirano+=vel;\n    return std::malloc (vel);\n}\n\nvoid operator delete [] ( void* ptr)\n{\n    brojac_deleteniz++;\n    free(ptr);\n}",
+                    "use_markers": true
+                },
+                {
+                    "position": "above_main",
+                    "code": "double Funkcija_mnozenja (double x, double y)\n{\n    return x * y;\n}",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 6: ELIMINATORAN AT - Provjera da li je koristena fragmentirana alokacija 2\/2\n    {\n        \/\/ Prema postavci je definirano da se koristi fragmentirana alokacija.\n        \/\/ Ukoliko ista nije implementirana, vjerovatno ce se oduzeti AT na zadatak!\n\n        std::vector<double> niz {1.1, 2.2, 3.3, 4.4, 5.5};\n        std::deque<double> drugi_niz {6.6, 7.7, 8.8};\n\n        double** c = GeneraliziraniSpoljasnjiProizvod(niz.begin(), niz.end(), drugi_niz.begin(), drugi_niz.end(), Funkcija_mnozenja);\n\n        \/\/ Ispis rezultata:\n        std::cout << \"Rezultat:\"<<std::endl;\n\n        for (int i{}; i<5; i++)\n        {\n            for (int j{}; j < 3; j++)\n                std::cout << c[i][j] << \" \";\n            std::cout << std::endl;\n        }\n\n        \/\/ Dealokacija\n        for(int i = 0; i < 5; i++)\n            delete[] c[i];\n        delete[] c;\n\n        std::cout<<\"----------------------------------------------------\" << std::endl << \"Alokacije:\" << std::endl;\n\n        std::cout << \"New pozvan \" << brojac_new << \" puta,  delete [] pozvan \" << brojac_deleteniz << \" puta, a alocirano ukupno \" << alocirano << \" bajta i to redom: \";\n        for (int i=0; i<brojac_new; i++)\n            std::cout << alokacije[i] << \" \";\n\n        \/\/ Ciscenje brojaca\n        alocirano = 0;\n        brojac_new = 0;\n        brojac_deleteniz = 0;\n        for (int i{}; i < 20; i++)\n            alokacije[i] = 0;\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Rezultat:\n7.26 8.47 9.68\n14.52 16.94 19.36\n21.78 25.41 29.04\n29.04 33.88 38.72\n36.3 42.35 48.4\n----------------------------------------------------\nAlokacije:\nNew pozvan 6 puta,  delete [] pozvan 6 puta, a alocirano ukupno 140 bajta i to redom: 20 24 24 24 24 24",
+                    "Rezultat:\n7.26 8.47 9.68\n14.52 16.94 19.36\n21.78 25.41 29.04\n29.04 33.88 38.72\n36.3 42.35 48.4\n----------------------------------------------------\nAlokacije:\nNew pozvan 6 puta,  delete [] pozvan 6 puta, a alocirano ukupno 160 bajta i to redom: 40 24 24 24 24 24"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}

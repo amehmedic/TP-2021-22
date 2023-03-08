@@ -1,0 +1,187 @@
+{
+    "id": 0,
+    "name": "",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ probleme sa testovima prijaviti na mail kerim.hodzic@etf.unsa.ba\n\/\/ AT1 primjer iz postavke\n_main();\n"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "Kisa pada, trava raste, a gora zeleni!"
+                },
+                "expect": [
+                    "Unesite recenicu: \nDuzina 1: A\nDuzina 4: KISA PADA GORA\nDuzina 5: TRAVA RASTE\nDuzina 6: ZELENI"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "Kisa pada, trava raste, a gora zeleni!"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "Kisa pada, trava raste, a gora zeleni!"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ probleme sa testovima prijaviti na mail kerim.hodzic@etf.unsa.ba\n\/\/ AT2 primjer iz postavke sa izuzetkom\n_main();"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "Kazu da je starogrcki pisac Aristofan sastavio rijec od 183 slova lopadotemachoselachogaleokranioleipsanodrimhupotrimmatosilphiokarabomelitokatakechumenokichlepikossuphophattoperisteralektruonoptokephalliokigklopeleiolagoiosiraiobaphetraganopterugon, tako da ima (nerazumnih) rijeci koje su duze od 100 znakova..."
+                },
+                "expect": [
+                    "Unesite recenicu:\nGreska: Recenica sadrzi predugacku rijec!"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "Kazu da je starogrcki pisac Aristofan sastavio rijec od 183 slova lopadotemachoselachogaleokranioleipsanodrimhupotrimmatosilphiokarabomelitokatakechumenokichlepikossuphophattoperisteralektruonoptokephalliokigklopeleiolagoiosiraiobaphetraganopterugon, tako da ima (nerazumnih) rijeci koje su duze od 100 znakova..."
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "Kazu da je starogrcki pisac Aristofan sastavio rijec od 183 slova lopadotemachoselachogaleokranioleipsanodrimhupotrimmatosilphiokarabomelitokatakechumenokichlepikossuphophattoperisteralektruonoptokephalliokigklopeleiolagoiosiraiobaphetraganopterugon, tako da ima (nerazumnih) rijeci koje su duze od 100 znakova..."
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT3 prazan string + re\u010denica\nauto niz2=RazvrstajRijeciPoDuzini(\"\");\nstd::cout<<std::endl<<\"Kraj\";\nauto niz=RazvrstajRijeciPoDuzini(\"Recimo, u njemackom jeziku postoji rijec (duzine 63 slova) 'Rindfleischetikettierungsuberwachungsaufgabenubertragungsgesetz' (koja u prevodu znaci 'zakon o delegaciji duznosti nadzora obiljezavanja i oznacavanja govedjeg mesa', dok u turskom jeziku postoji rije\u010d 'Muvaffakiyetsizlestiricilestiriveremeyebileceklerimizdenmissinizcesine' (u prevodu 'kao da ste jedan od onih koje mozda necemo moci uciniti neuspjesnim').\");\n    \n    for(int i=1;i<100;i++){\n        if(niz.at(i).size()==0){\n            continue;\n        }\n        std::cout<<std::endl<<\"Duzina \"<<i<<\": \";\n        for(std::string a:niz.at(i)){\n            std::cout<<a<<\" \";\n        }\n    }\n"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Kraj\nDuzina 1: U U O I U U \nDuzina 2: 63 DA OD \nDuzina 3: DOK KAO STE \nDuzina 4: KOJA MESA RIJE ONIH KOJE MOCI \nDuzina 5: RIJEC SLOVA ZNACI ZAKON JEDAN MOZDA \nDuzina 6: RECIMO JEZIKU DUZINE JEZIKU NECEMO \nDuzina 7: POSTOJI PREVODU NADZORA TURSKOM POSTOJI PREVODU UCINITI \nDuzina 8: DUZNOSTI GOVEDJEG \nDuzina 9: NJEMACKOM \nDuzina 10: DELEGACIJI \nDuzina 11: OZNACAVANJA NEUSPJESNIM \nDuzina 13: OBILJEZAVANJA \nDuzina 63: RINDFLEISCHETIKETTIERUNGSUBERWACHUNGSAUFGABENUBERTRAGUNGSGESETZ \nDuzina 70: MUVAFFAKIYETSIZLESTIRICILESTIRIVEREMEYEBILECEKLERIMIZDENMISSINIZCESINE"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT4 funkcija i re\u010denica\nauto niz=RazvrstajRijeciPoDuzini(\"Zaustavice te na svakom koraku, ogadice ti svaki pokusaj, ponudice ti bezbroj dokaza da je najbolje sutjeti, mirovati, gledati iz prikrajka.\");\n    for(int i=1;i<100;i++){\n        if(niz.at(i).size()==0){\n            continue;\n        }\n        std::cout<<std::endl<<\"Duzina \"<<i<<\": \";\n        for(std::string a:niz.at(i)){\n            std::cout<<a<<\" \";\n        }\n    }"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Duzina 2: TE NA TI TI DA JE IZ \nDuzina 5: SVAKI \nDuzina 6: SVAKOM KORAKU DOKAZA \nDuzina 7: OGADICE POKUSAJ BEZBROJ SUTJETI GLEDATI \nDuzina 8: PONUDICE NAJBOLJE MIROVATI \nDuzina 9: PRIKRAJKA \nDuzina 10: ZAUSTAVICE"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 6,
+            "name": "Test 6",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT5 funkcija string + izuzetak\n\n\n    try{\n\n    auto niz=RazvrstajRijeciPoDuzini(\"Sto drustvo vise upada u laz, to ljudi vise mrze one koji govore istinu.\");\n    for(int i=1;i<100;i++){\n        if(niz.at(i).size()==0){\n            continue;\n        }\n        std::cout<<std::endl<<\"Duzina \"<<i<<\": \";\n        for(std::string a:niz.at(i)){\n            std::cout<<a<<\" \";\n        }\n    }\n    std::cout<<std::endl;\n        auto niz2=RazvrstajRijeciPoDuzini(\"Kazu da je profesor rekao da je starogrcki pisac Aristofan sastavio rijec od 183 slova lopadotemachoselachogaleokranioleipsanodrimhupotrimmatosilphiokarabomelitokatakechumenokichlepikossuphophattoperisteralektruonoptokephalliokigklopeleiolagoiosiraiobaphetraganopterugon, tako da ima (nerazumnih) rijeci koje su duze od 100 znakova...\");\n        for(int i=1;i<100;i++){\n        if(niz2.at(i).size()==0){\n            continue;\n        }\n        std::cout<<std::endl<<\"Duzina \"<<i<<\": \";\n        for(std::string a:niz2.at(i)){\n            std::cout<<a<<\" \";\n        }\n    }\n    }\n    catch(std::range_error e){\n        std::cout<<e.what();\n        return 0;\n    }"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Duzina 1: U \nDuzina 2: TO \nDuzina 3: STO LAZ ONE \nDuzina 4: VISE VISE MRZE KOJI \nDuzina 5: UPADA LJUDI \nDuzina 6: GOVORE ISTINU \nDuzina 7: DRUSTVO \nPredugacka rijec!"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}

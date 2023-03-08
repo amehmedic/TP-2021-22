@@ -1,0 +1,214 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2020\/2021), Zada\u0107a 2, Zadatak 2",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/at1, main i rastava, gre\u0161ke u testovima javiti na kerim.hodzic@etf.unsa.ba\n_main();"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "24"
+                },
+                "expect": [
+                    "Unesi broj: \n24 je zbir prostih brojeva 5 i 19"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "24"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "24"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/at2, main uspje\u0161no\n_main();"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "15"
+                },
+                "expect": [
+                    "Unesi broj: \n15 je zbir prostih brojeva 2 i 13"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "15"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "15"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/at3, main izuzetak\n_main();"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "37"
+                },
+                "expect": [
+                    "Unesi broj: \n37 nije zbir dva prosta broja!"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "37"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "37"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/at4, funkcija + izuzetak\n  int n,p, q;\n try {\n    n=500;\n    Goldbach(n, p, q);\n    std::cout << n << \" je zbir prostih brojeva \" << p << \" i \" << q << std::endl;\n    n=126;\n     Goldbach(n, p, q);\n    std::cout << n << \" je zbir prostih brojeva \" << p << \" i \" << q << std::endl;\n    n=123456;\n     Goldbach(n, p, q);\n    std::cout << n << \" je zbir prostih brojeva \" << p << \" i \" << q << std::endl;\n    n=65432;\n     Goldbach(n, p, q);\n    std::cout << n << \" je zbir prostih brojeva \" << p << \" i \" << q << std::endl;\n    n=2;\n    Goldbach(n, p, q);\n    std::cout << n << \" je zbir prostih brojeva \" << p << \" i \" << q << std::endl;\n  }\n  catch(const std::exception & ex) {\n   std::cout<<ex.what()<< std::endl;;\n  }"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "500 je zbir prostih brojeva 13 i 487\n126 je zbir prostih brojeva 13 i 113\n123456 je zbir prostih brojeva 7 i 123449\n65432 je zbir prostih brojeva 13 i 65419\nRastava ne postoji"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 6,
+            "name": "Test 6",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/at5 razne uspje\u0161ne varijante\n    int n,p, q;\nfor (n=100;n<=120;n=n+2) {\n try {\n    Goldbach(n, p, q);\n    std::cout << n << \" je zbir prostih brojeva \" << p << \" i \" << q << std::endl;\n  }\n  catch(const std::exception & ex) {\n   std::cout<<ex.what()<< std::endl;;\n  }\n}"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "100 je zbir prostih brojeva 3 i 97\n102 je zbir prostih brojeva 5 i 97\n104 je zbir prostih brojeva 3 i 101\n106 je zbir prostih brojeva 3 i 103\n108 je zbir prostih brojeva 5 i 103\n110 je zbir prostih brojeva 3 i 107\n112 je zbir prostih brojeva 3 i 109\n114 je zbir prostih brojeva 5 i 109\n116 je zbir prostih brojeva 3 i 113\n118 je zbir prostih brojeva 5 i 113\n120 je zbir prostih brojeva 7 i 113"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 7,
+            "name": "Test 7",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/at6 funkcija, neparni + izuzeci\n    int n,p, q;\nfor (n=1001;n<1021;n=n+2) {\n try {\n    Goldbach(n, p, q);\n    std::cout << n << \" je zbir prostih brojeva \" << p << \" i \" << q << std::endl;\n  }\n  catch(const std::exception & ex) {\n   std::cout<<ex.what()<< std::endl;;\n  }\n}\n"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Rastava ne postoji\nRastava ne postoji\nRastava ne postoji\nRastava ne postoji\nRastava ne postoji\n1011 je zbir prostih brojeva 2 i 1009\nRastava ne postoji\n1015 je zbir prostih brojeva 2 i 1013\nRastava ne postoji\nRastava ne postoji"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}

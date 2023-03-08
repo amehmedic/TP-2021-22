@@ -1,0 +1,347 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2020\/2021), Zada\u0107a 4, Zadatak 4",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 4\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/Testiranje klase Polazak\n\/\/AT1: Testiranje metoda DajOcekivanoVrijemePolaska()\n\/\/i DajOcekivanoVrijemeDolaska()\n{\n    Polazak polazak(\"Odrediste\", 2, 4, false, 5, 20, 45);\n    auto pomocna = polazak.DajOcekivanoVrijemePolaska();\n    std::cout << pomocna.first << \", \" << pomocna.second <<\", \";\n    pomocna = polazak.DajOcekivanoVrijemeDolaska();\n    std::cout << pomocna.first << \", \" << pomocna.second << std::endl;\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "5, 20, 6, 5\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 4\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 2: Test kasnjenja\n{  \n  Polazak polazak(\"Odrediste\", 2, 4, false, 1, 15, 400);\n  polazak.PostaviKasnjenje(55);\n\n  std::cout << (polazak.DaLiKasni() ? \"kasni, \" : \"ne kasni, \");\n  auto pomocna = polazak.DajOcekivanoVrijemePolaska();\n  std::cout << pomocna.first << \", \" << pomocna.second << \", \";\n  pomocna = polazak.DajOcekivanoVrijemeDolaska();\n  std::cout << pomocna.first << \", \" << pomocna.second << std::endl;\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "kasni, 2, 10, 8, 50\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 4\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/AT3: Test kasnjenja 2\n{\n      Polazak polazak(\"Odrediste\", 2, 4, false, 23, 45, 200);\n      polazak.PostaviKasnjenje(55);\n      std::cout << (polazak.DaLiKasni() ? \"kasni, \" : \"ne kasni, \");\n      auto pomocna = polazak.DajOcekivanoVrijemePolaska();\n      std::cout << pomocna.first << \", \" << pomocna.second << \", \";\n      pomocna = polazak.DajOcekivanoVrijemeDolaska();\n      std::cout << pomocna.first << \", \" << pomocna.second << std::endl;\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "kasni, 0, 40, 4, 0\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 4\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": " \/\/AT9 - Test metode Ispisi\n{     \n      Polazak polazak(\"Sarajevo\", 123, 5, true, 10, 2, 125);\n      polazak.Ispisi();\n      std::cout << std::endl;\n\n      Polazak polazak2(\"Bihac\", 124, 1, false, 9, 2, 125);\n      polazak2.Ispisi();\n      std::cout << std::endl;\n\n      Polazak polazak3(\"Mostar\", 125, 2, true, 15, 2, 600);\n      polazak3.PostaviKasnjenje(90);\n      polazak3.Ispisi();\n      std::cout << std::endl;\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Brzi voz broj 123, odrediste Sarajevo, polazi sa perona 5 u 10:02, a na odrediste stize u 12:07. Putnicima i voznom osoblju zelimo ugodno putovanje.\nLokalni voz broj 124, odrediste Bihac, polazi sa perona 1 u 09:02, a na odrediste stize u 11:07. Putnicima i voznom osoblju zelimo ugodno putovanje.\nBrzi voz broj 125, odrediste Mostar, sa predvidjenim vremenom polaska u 15:02, kasni oko 90 minuta, te ce poci oko 16:32. Ocekuje se da voz stigne na odrediste oko 02:32. Izvinjavamo se putnicima zbog eventualnih neugodnosti.\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 6,
+            "name": "Test 6",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 4\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 10: Registriranje polaska\n{\n    RedVoznje voznje;\n    voznje.RegistrirajPolazak(\"Sarajevo\", 123, true, 2, 1, 15, 400);\n\n    int h, m;\n    auto pomocna = voznje.DajPrviPolazak().DajOcekivanoVrijemePolaska();\n    h = pomocna.first;\n    m = pomocna.second;\n    std::cout << h << \", \" << m << \", \";\n    pomocna = voznje.DajPosljednjiPolazak().DajOcekivanoVrijemeDolaska();\n    h = pomocna.first;\n    m = pomocna.second;\n    std::cout << h << \", \" << m << std::endl;\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "1, 15, 7, 55\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 7,
+            "name": "Test 7",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 4\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "    \/\/ AT 11: Metode klase RedVoznje\n{\n    RedVoznje voznje;\n    voznje.RegistrirajPolazak(\"Sarajevo\", 123, true, 2, 0, 0, 100);\n    voznje.IsprazniRedVoznje();\n\n    std::shared_ptr<Polazak> p(std::make_shared<Polazak>(\"Odrediste\", 123, 2, false, 0, 0, 200));\n    p->PostaviKasnjenje(100);\n    voznje.RegistrirajPolazak(p);\n    voznje.RegistrirajPolazak(\"Odrediste\", 124, false, 3, 0, 0, 300);\n\n    std::cout << voznje.DajBrojPolazaka() << \", \"\n              << voznje.DajBrojPolazakaKojiKasne() << \", \"\n              << voznje.DajProsjecnoTrajanjeVoznji() << std::endl;\n\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "2, 1, 250\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 8,
+            "name": "Test 8",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 4\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT12: Test metode IsprazniRedVoznje()\n{\n    RedVoznje voznje;\n    voznje.RegistrirajPolazak(\"Sarajevo\", 123, true, 2, 0, 0, 100);\n    std::cout << voznje.DajBrojPolazaka() << \" \";\n    voznje.IsprazniRedVoznje();\n    voznje.RegistrirajPolazak(\"Sarajevo\", 123, true, 2, 0, 0, 100);\n    voznje.RegistrirajPolazak(\"Sarajevo\", 123, true, 2, 0, 0, 100);\n    std::cout << voznje.DajBrojPolazaka() << \" \";\n    voznje.IsprazniRedVoznje();\n    std::cout << voznje.DajBrojPolazaka() << std::endl;\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "1 2 0\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 9,
+            "name": "Test 9",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 4\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 13: Test kopirajuceg konstruktora i operatora dodjele\n{\n    RedVoznje voznje;\n    for (int i = 1; i <= 10; i++)\n        voznje.RegistrirajPolazak(\"O\", 123, false, 4, i, 1, 60);\n\n    for (int i = 1; i <= 10; i++)\n    {\n        std::shared_ptr<Polazak> polazak(std::make_shared<Polazak>(\"P\",123, 1, true, i, 1, 1));\n        polazak->PostaviKasnjenje(1);\n        voznje.RegistrirajPolazak(polazak);\n    }\n   \n    {\n        \/\/ Destruktivna samododjela\n        voznje = voznje;\n        \/\/ Kopirajuci konstruktor\n        RedVoznje voznje2(voznje);\n        RedVoznje voznje3;\n        \/\/ Kopirajuci operator dodjele\n        voznje3 = voznje;\n\n        \/\/ Modificiramo klase\n        voznje2.RegistrirajPolazak(\"A\", 125, false, 1, 1, 1, 1);\n        voznje3.RegistrirajPolazak(\"B\", 126, true, 1, 2, 2, 2);\n        voznje2.RegistrirajPolazak(\"C\", 127, false, 3, 3, 3, 3);\n        std::cout<<voznje2.DajBrojPolazaka()<<\" \"<<voznje2.DajBrojPolazakaKojiKasne()<<\" \"<<voznje3.DajBrojPolazaka()<<\" \"<<voznje3.DajBrojPolazakaKojiKasne()<<\" \";\n    }\n\/\/ Da li je original ok?\n    std::cout<<voznje.DajBrojPolazaka()<<\" \"<<voznje.DajBrojPolazakaKojiKasne();\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "22 10 21 10 20 10"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 10,
+            "name": "Test 10",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 4\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 14: Test pomjerajuceg konstruktora i operatora dodjele \n{\n    RedVoznje voznje;\n    for (int i = 1; i <= 10; i++)\n        voznje.RegistrirajPolazak(\"O\", 123, false, 4, i, 1, 60);\n\n\n     for (int i = 1; i <= 10; i++)\n    {\n        std::shared_ptr<Polazak> polazak(std::make_shared<Polazak>(\"P\",123, 1, true, i, 1, 1));\n        polazak->PostaviKasnjenje(1);\n        voznje.RegistrirajPolazak(polazak);\n    }\n\n    {\n        \/\/ Destruktivna samododjela\n       voznje = std::move(voznje);\n        \/\/ Kopirajuci konstruktor\n        RedVoznje voznje2(std::move(voznje));\n        RedVoznje voznje3;\n        \/\/ Kopirajuci operator dodjele\n        voznje3=std::move(voznje2);\n\n        \/\/ Modificiramo klase\n        std::shared_ptr<Polazak> polazak(std::make_shared<Polazak>(\"P\",123, 1, true, 1, 1, 1));\n        voznje3.RegistrirajPolazak(polazak);\n        std::cout<<voznje3.DajBrojPolazaka()<<\" \"<<voznje3.DajBrojPolazakaKojiKasne();\n    }\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "21 10"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 11,
+            "name": "Test 11",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 4\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "  \/\/ AT 17: Test metode Ispisi klase RedVoznje\n{\n    RedVoznje v;\n    v.RegistrirajPolazak(\"A\", 122, true, 1, 6, 8, 100);\n    v.IsprazniRedVoznje();\n\n    v.RegistrirajPolazak(\"B\", 124, false, 1, 12, 12, 250);\n    std::shared_ptr<Polazak> p(std::make_shared<Polazak>(\"Odrediste\", 125, 1, true, 10, 10, 300));\n    p->PostaviKasnjenje(100);\n    v.RegistrirajPolazak(p);\n    v.RegistrirajPolazak(\"A\", 123, true, 1, 0, 55, 100);\n    v.Ispisi(5,5);\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Brzi voz broj 125, odrediste Odrediste, sa predvidjenim vremenom polaska u 10:10, kasni oko 100 minuta, te ce poci oko 11:50. Ocekuje se da voz stigne na odrediste oko 16:50. Izvinjavamo se putnicima zbog eventualnih neugodnosti.\nLokalni voz broj 124, odrediste B, polazi sa perona 1 u 12:12, a na odrediste stize u 16:22. Putnicima i voznom osoblju zelimo ugodno putovanje.\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 12,
+            "name": "Test 12",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 4 - Zadatak 4\n\/\/ Odgovorni demostrator za testove: Samra Behi\u0107 - sbehic2@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 3, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 18: Test sekvencijskog konstruktora\n{\n    Polazak a(\"New York\", 123, 1, true, 12,50,122),\n            b(\"Sarajevo\", 124, 2, false, 14, 45, 200),\n            c(\"Minhen\", 125, 3, true, 14, 15, 92);\n    a.PostaviKasnjenje(5);\n    RedVoznje x{a,b,a,b,c};\n    std::cout<<x.DajBrojPolazakaKojiKasne()<<\" \";\n    std::cout<<x.DajBrojPolazaka()<<\" \";\n    std::cout<<x.DajProsjecnoTrajanjeVoznji()<<std::endl;\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "2 5 147\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}

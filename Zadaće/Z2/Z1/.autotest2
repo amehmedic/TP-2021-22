@@ -1,0 +1,360 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2020\/2021), Zada\u0107a 2, Zadatak 1",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT1 main iz postavke, gre\u0161ke u testovima prijaviti na kerim.hodzic@etf.unsa.ba\n_main();"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "D\nD\nI\nI5\nA-\nI3\n        D\nA+\nD\nI 4\nD\nS\nIXY2\nD\nD\nI2XY\nI0\nI-1\nI3\nL2\nL\nKK\nK\n"
+                },
+                "expect": [
+                    "Robot je aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (0,0) i gleda na sjeveroistok.\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (0,0) i gleda na istok.\nUnesi komandu: \nKomanda trazi parametar koji nije naveden!\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (5,0) i gleda na istok.\nUnesi komandu: \nRobot je neaktivan, nalazi se na poziciji (5,0) i gleda na istok.\nUnesi komandu: \nRobot je neaktivan, nalazi se na poziciji (5,0) i gleda na istok.\nUnesi komandu: \nRobot je neaktivan, nalazi se na poziciji (5,0) i gleda na istok.\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (5,0) i gleda na istok.\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (5,0) i gleda na jugoistok.\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (9,-4) i gleda na jugoistok.\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (9,-4) i gleda na jug.\nUnesi komandu: \nNerazumljiva komanda!\nUnesi komandu: \nParametar komande nije ispravan!\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (9,-4) i gleda na jugozapad.\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (9,-4) i gleda na zapad.\nUnesi komandu: \nParametar komande nije ispravan!\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (9,-4) i gleda na zapad.\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (10,-4) i gleda na zapad.\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (7,-4) i gleda na zapad.\nUnesi komandu: \nZadan je suvisan parametar nakon komande!\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (7,-4) i gleda na jugozapad.\nUnesi komandu: \nZadan je suvisan parametar nakon komande!\nUnesi komandu: \nDovidjenja!"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "D\nD\nI\nI5\nA-\nI3\n        D\nA+\nD\nI 4\nD\nS\nIXY2\nD\nD\nI2XY\nI0\nI-1\nI3\nL2\nL\nKK\nK"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "D\nD\nI\nI5\nA-\nI3\n        D\nA+\nD\nI 4\nD\nS\nIXY2\nD\nD\nI2XY\nI0\nI-1\nI3\nL2\nL\nKK\nK"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT2 main\n_main();"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "S\nIXY2\nI0\nL2\nK\n"
+                },
+                "expect": [
+                    "Robot je aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\nUnesi komandu:\nNerazumljiva komanda!\nUnesi komandu:\nParametar komande nije ispravan!\nUnesi komandu:\nRobot je aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\nUnesi komandu:\nZadan je suvisan parametar nakon komande!\nUnesi komandu:\nDovidjenja!"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "S\nIXY2\nI0\nL2\nK"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "S\nIXY2\nI0\nL2\nK"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT3 - funkcija IspisiPoziciju\nIspisiPoziciju(0,5,Pravci::Sjever); std::cout<<std::endl;\nIspisiPoziciju(0,5,Pravci::Jug); std::cout<<std::endl;\nIspisiPoziciju(5,0,Pravci::Istok); std::cout<<std::endl;\nIspisiPoziciju(5,0,Pravci::Zapad); std::cout<<std::endl;\nIspisiPoziciju(0,0,Pravci::Jugoistok); std::cout<<std::endl;\nIspisiPoziciju(5,10,Pravci::Sjeverozapad); std::cout<<std::endl;"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Robot je aktivan, nalazi se na poziciji (0,5) i gleda na sjever.\n\nRobot je aktivan, nalazi se na poziciji (0,5) i gleda na jug.\n\nRobot je aktivan, nalazi se na poziciji (5,0) i gleda na istok.\n\nRobot je aktivan, nalazi se na poziciji (5,0) i gleda na zapad.\n\nRobot je aktivan, nalazi se na poziciji (0,0) i gleda na jugoistok.\n\nRobot je aktivan, nalazi se na poziciji (5,10) i gleda na sjeverozapad."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT4 - funkcija Rotiraj\n     Pravci orijentacija = Pravci::Sjever;\n     std::vector<std::string> orijentacije;\n     for(int i = 0; i < 8; i++)\n     {\n          if (i < 4)Rotiraj(orijentacija, Smjer::Nalijevo);\n          else Rotiraj(orijentacija, Smjer::Nadesno);\n          std::string str;\n          if (orijentacija==Pravci::Sjever) str=\"sjever\";\n          else if (orijentacija==Pravci::Istok) str=\"istok\";\n          else if (orijentacija==Pravci::Jug) str=\"jug\";\n          else if (orijentacija==Pravci::Sjeveroistok) str=\"sjeveroistok\";\n          else if (orijentacija==Pravci::Sjeverozapad) str=\"sjeverozapad\";   \n          else if (orijentacija==Pravci::Jugoistok) str=\"jugoistok\";   \n          else if (orijentacija==Pravci::Jugozapad) str=\"jugozapad\";          \n          else  str=\"zapad\";\n          orijentacije.push_back(str);\n     }\n     for(int i = 0; i < 8; i++) std::cout << orijentacije[i] << std::endl;"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "sjeverozapad\nzapad\njugozapad\njug\njugozapad\nzapad\nsjeverozapad\nsjever"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 6,
+            "name": "Test 6",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT5 - funkcija Idi  \n    int x = 0, y = 0;\n    Idi(x, y, Pravci::Sjever, 5); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Sjeverozapad, -10); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Jug, -10); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Jugoistok, 5); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Istok, 5); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Istok, -10); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Zapad, -10); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Zapad, 5); std::cout << x << \" \" << y;"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "0 5\n10 -5\n10 5\n15 0\n20 0\n10 0\n20 0\n15 0"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 7,
+            "name": "Test 7",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT6 - Funkcija PrijaviGresku\n    PrijaviGresku(KodoviGresaka::PogresnaKomanda);\n    PrijaviGresku(KodoviGresaka::NedostajeParametar);\n    PrijaviGresku(KodoviGresaka::NeispravanParametar);\n    PrijaviGresku(KodoviGresaka::SuvisanParametar);"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Nerazumljiva komanda!\nKomanda trazi parametar koji nije naveden!\nParametar komande nije ispravan!\nZadan je suvisan parametar nakon komande!"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 8,
+            "name": "Test 8",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT 7 - funkcija DeativirajRobota - ne treba da izvr\u0161ava komande\n    int x = 0, y = 0;\n    Pravci orijentacija = Pravci::Sjever;\n    AktivirajRobota();\n    IspisiPoziciju(x, y, orijentacija);\n    DeaktivirajRobota();\n    IspisiPoziciju(x, y, orijentacija);\n    Idi(x, y, Pravci::Sjever, 10);\n    Idi(x, y, Pravci::Jugozapad, 5);\n    Idi(x, y, Pravci::Zapad, 10);\n    Idi(x, y, Pravci::Istok, 5);\n    IspisiPoziciju(x, y, orijentacija);\n    Rotiraj(orijentacija, Smjer::Nadesno);\n    IspisiPoziciju(x, y, orijentacija);\n    Rotiraj(orijentacija, Smjer::Nalijevo);\n    IspisiPoziciju(x, y, orijentacija);"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Robot je aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\nRobot je neaktivan, nalazi se na poziciji (0,0) i gleda na sjever.\nRobot je neaktivan, nalazi se na poziciji (0,0) i gleda na sjever.\nRobot je neaktivan, nalazi se na poziciji (0,0) i gleda na sjever.\nRobot je neaktivan, nalazi se na poziciji (0,0) i gleda na sjever."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 9,
+            "name": "Test 9",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\n\/\/AT8 - funkcija unesi koja ne dira parametar\n    Komande komanda;\n     int parametar = 666;\n     KodoviGresaka kod_greske = KodoviGresaka::NeispravanParametar;\n    \n     bool povratna_vrijednost = UnosKomande(komanda, parametar, kod_greske);\n     if (povratna_vrijednost && komanda == Komande::Aktiviraj && parametar == 666 && kod_greske == KodoviGresaka::NeispravanParametar)\n          std::cout << \"OK\" << std::endl;\n     else std::cout << \"NOK\" << std::endl;\n     \n     povratna_vrijednost = UnosKomande(komanda, parametar, kod_greske);\n     if (povratna_vrijednost && komanda == Komande::Deaktiviraj && parametar == 666 && kod_greske == KodoviGresaka::NeispravanParametar)\n          std::cout << \"OK\" << std::endl;\n     else std::cout << \"NOK\" << std::endl;\n     \n     povratna_vrijednost = UnosKomande(komanda, parametar, kod_greske);\n     if (povratna_vrijednost && komanda == Komande::Nalijevo && parametar == 666 && kod_greske == KodoviGresaka::NeispravanParametar)\n          std::cout << \"OK\" << std::endl;\n     else std::cout << \"NOK\" << std::endl;\n\n     povratna_vrijednost = UnosKomande(komanda, parametar, kod_greske);\n     if (povratna_vrijednost && komanda == Komande::Nadesno && parametar == 666 && kod_greske == KodoviGresaka::NeispravanParametar)\n          std::cout << \"OK\" << std::endl;\n     else std::cout << \"NOK\" << std::endl;\n     \n     povratna_vrijednost = UnosKomande(komanda, parametar, kod_greske);\n     if (povratna_vrijednost && komanda == Komande::Kraj && parametar == 666 && kod_greske == KodoviGresaka::NeispravanParametar)\n          std::cout << \"OK\" << std::endl;\n     else std::cout << \"NOK\" << std::endl;\n"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "A+\nA-\nL\nD\nK\n"
+                },
+                "expect": [
+                    "OK\nOK\nOK\nOK\nOK"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "A+\nA-\nL\nD\nK"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "A+\nA-\nL\nD\nK"
+                }
+            }
+        },
+        {
+            "id": 10,
+            "name": "Test 10",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT9 - fja unesi kada mijenja parametar\n     Komande komanda;\n     int parametar = 666;\n     KodoviGresaka kod_greske = KodoviGresaka::NeispravanParametar;\n    \n     bool povratna_vrijednost = UnosKomande(komanda, parametar, kod_greske);\n     if (povratna_vrijednost && komanda == Komande::Idi && parametar == 10 && kod_greske == KodoviGresaka::NeispravanParametar)\n          std::cout << \"OK\" << std::endl;\n     else std::cout << \"NOK\" << std::endl;\n     \n     povratna_vrijednost = UnosKomande(komanda, parametar, kod_greske);\n     if (povratna_vrijednost && komanda == Komande::Idi && parametar == -10 && kod_greske == KodoviGresaka::NeispravanParametar)\n          std::cout << \"OK\" << std::endl;\n     else std::cout << \"NOK\" << std::endl;"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "I10\nI-10\n"
+                },
+                "expect": [
+                    "OK\nOK"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "I10\nI-10"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "I10\nI-10"
+                }
+            }
+        },
+        {
+            "id": 11,
+            "name": "Test 11",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/AT 10 - fja aktiviraj i deaktiviraj\n    int x = 0, y = 0;\n    Pravci orijentacija = Pravci::Sjever;\n    DeaktivirajRobota();\n    Idi(x, y, Pravci::Sjever, 10);  \/\/ovo se ne treba izvrsiti\n    Idi(x, y, Pravci::Istok, 5); \/\/ni ovo...\n    if(x != 0 || y != 0) std::cout << \"NOK\";\n    AktivirajRobota();\n    Idi(x, y, Pravci::Sjever, 10); \/\/ovo treba\n    Idi(x, y, Pravci::Istok, 5); \/\/i ovo...\n    if(x != 5 || y != 10) std::cout << \"NOK\"; else std::cout << \"OK\";\n"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "OK"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 12,
+            "name": "Test 12",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/at11 razne kombinacije ulaza\n_main();"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "        D\nD         \nI      5\n       I      10\nA++\nK\n\n\n\n\n"
+                },
+                "expect": [
+                    "Robot je aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\nUnesi komandu:\nRobot je aktivan, nalazi se na poziciji (0,0) i gleda na sjeveroistok.\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (0,0) i gleda na istok.\nUnesi komandu: \nRobot je aktivan, nalazi se na poziciji (5,0) i gleda na istok.\nUnesi komandu:\nRobot je aktivan, nalazi se na poziciji (15,0) i gleda na istok.\nUnesi komandu: \nZadan je suvisan parametar nakon komande!\nUnesi komandu: \nDovidjenja!"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "        D\nD         \nI      5\n       I      10\nA++\nK\n\n\n\n\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "        D\nD         \nI      5\n       I      10\nA++\nK\n\n\n\n\n"
+                }
+            }
+        },
+        {
+            "id": 13,
+            "name": "Test 13",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/*\n    AT 12 - Test koji pokusava skontati da li ste koristili hardkodirane granice\n    za tip int kod pomjeranja robota van tih granica.\n\n    Ovaj autotest je \"osjetljiv\", tj. moguce je da nekome bude NEUSPJESAN\n    iako je zadatak POTPUNO TACAN. To se naziva false-positive te molimo\n    studente da to prijave!\n\n    **********************************************************************\n    MOLIMO STUDENTE DA SE ODMAH JAVE TUTORU ILI PROFESORU AKO MISLE DA IM\n    JE ZADATAK TACAN A AUTOTEST PADA!\n\n    Ako ovaj autotest PADA (iz razumnog razloga), DOBIT CETE 0 POENA!\n    **********************************************************************\n\n   Sva pitanja, kritike, zalbe, sugestije saljite na mail: zjuric@etf.unsa.ba\n\n\n    O autotestu:\n    ----------------------------------------------------------------------\n    Ovaj autotest je jako zanimljiv jer ucita svoj source code te ga povrsno analizira.\n    Prvo se analizira da li je student hard-kodirao rucno neke grancie\n\n    C\/C++ podrzava pisanje numerickih literala (rucno pisanih brojeva) u tri\n    numericke baze: decimalna (defaultna), oktala (baza 8, brojevi pocinju sa 0,\n    npr. 077 je u decimalnom 511), te heksadicemalna (baza 16, brojevi pocinju\n    sa 0x, npr. 0xFF je u decimalnom 255).\n|C  Pa ovaj autotest obuhvata sve ove provjere, da student nije napisao 0x99\n|C  za broj 153 i slicno.\n\n    Od C++11 postoji i cetvrti nacin predstavljanja brojeva, a to je binarna\n    baza, npr. 0b111 je broj 7. \n\n    Ovo |C oznacava da je linija komentar i da je autotest ne pika kao korisnicku.\n\n\n|C  Dalje, analizira se da li je student koristio <climits> biblioteku (opcionalno, za sada iskljuceno)\n    To je zabranjeno, nije radjeno na predavanjima!\n\n    Jos se vrsi provjera da li su studenti hard-kodirali broj 2^31 - 1, tj. poredili\n|C  sa 2147483647 (u decimalnoj formi ili nekim analognim brojem u ostalim formama),\n|C  brojem manjim od toga, 2147483646, te brojevima -2^31 i -2^31 - 1.\n    Dodatno, rucno ce biti pregledan ovaj zadatak na trikove poput i == pow (2, 31) - 1, 1U << 32 itd\n\n\n    Svako od ovih testiranja je odobrio profesor!\n\n\n\n    Zanimljivosti (naprednije gradivo, djelimicno se radi na TP):\n    ----------------------------------------------------------------------\n    Iako smo mogli otvoriti main.cpp fajl jer se on vjerovatno nalazi gdje\n    i izvrsni fajl, ipak je koristena predefinisana makro konstanta __FILE__\n    koja oznacava lokaciju (sa imenom) trenutne datoteke koja se kompajlira.\n    Konstanta __FILE__ je definirana standardnom i svaki kompajler koji postuje\n    standard je mora podrzati!\n\n    Cijelu datoteku mozemo ucitati u string jednom linijom. Neka je 'file' objekat\n    tipa ifstream koji predstavlja datoteku, i neka je 's' string u kojeg zelimo\n    ucitati fajl. Ucitavanje vrsimo na sljedeci nacin:\n    std::string s((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());\n\n    Posto je ovdje vazno bilo da source code razbijemo tako da imamo liniju po liniju,\n    radi provjera pocetaka pojedinih linija, uradjeno je to na duzi nacin.\n\n    Ovaj autotest sadrzi i funkciju slicnu funkciji std::string::find koja pronalazi\n    podstring unutar datog stringa.\n\n\n*\/\n\n\n\n\/\/svi brojevi s kojima ljudi porede, u dec, hex i oct sistemima\n\/* ATX *\/ std::string zabranjeni_brojevi[] {\"2147483647\", \"0b1111111111111111111111111111111\", \"2147483646\",\n\/* ATX *\/                    \"0b1111111111111111111111111111110\", \"20000000000\", \"-2147483648\", \"-2147483647\",\n\/* ATX *\/                    \"80000000\", \"7FFFFFFF\", \"7FFFFFFE\", \"9999999\"};\n\/* ATX *\/ std::string zabranjene_rijeci[] {\"INT_MAX\", \"int_max\", \"climit\", \"INT_MIN\", \"int_min\"};\n\nstd::string line;\nstd::vector<std::string> vec;\nstd::ifstream source (__FILE__);\n\n\/\/ucitavamo liniju po liniju u vektor... DA, znam! Ima naredba da cijelu\n\/\/datoteku ucitamo u string, ali ovako imam svaku liniju posebno...\nwhile (source)\n    std::getline (source, line), !line.empty() && (vec.emplace_back (line), 7);\n\nsource.close();\nbool dalje = true;\n\nfor (const auto &y : vec)\n    {\n        for (const auto &x : zabranjeni_brojevi)\n            if (ePronadji(y, x) != -1 && ePronadji(y, \"\/* ATX *\/\") == -1 && ePronadji(y, \"|C\") == -1)\n                    std::cout << \"Zabranjeno je pisanje konstanti: \" << x << std::endl, dalje = false;\n        for (const auto &x : zabranjene_rijeci)\n            if (ePronadji(y, x) != -1 && ePronadji(y, \"\/* ATX *\/\") == -1 && ePronadji(y, \"|C\") == -1)\n                    std::cout << \"Zabranjeno je koristenje: \" << x << std::endl, dalje = false;\n    }\nif (dalje)\n    std::cout << \"OK\";\nelse std::cout << std::endl << \"Autotest je PAO. Vjerovatno cu dobiti 0 poena!\\nAko mislim \"\n                \"da je greska u autotestu, ODMAH cu se obratiti tutoru ili profesoru. ODMAH!\";"
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <fstream>\n#include <string>\n#include <vector>\nint ePronadji (const std::string &s, const std::string &r)\n    {\n        for (unsigned int i = 0, k = 0; i < s.length(); ++i, k = 0)\n            {\n                while (k < r.length() && i < s.length() && s.at(i) == r.at(k))\n                    i++, k++;\n                if (k == r.length())\n                    return i - k;\n                i -= k;\n            }\n        return -1;\n    }"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "OK"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}

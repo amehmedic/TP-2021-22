@@ -1,0 +1,165 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2020\/2021), Zada\u0107a 5, Zadatak 2",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 5 - Zadatak 2\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 2, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 3: Konstruktor, metode DajMinimalnuCijenu i DajMaksimalnuCijenu\n    {\n        Berza b1 = Berza(1000,4000);\n        b1.RegistrirajCijenu(3000);\n        b1.RegistrirajCijenu(1500);\n        std::cout << \"Minimalna cijena: \" << b1.DajMinimalnuCijenu() << std::endl;\n        std::cout << \"Maksimalna cijena: \" << b1.DajMaksimalnuCijenu();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Minimalna cijena: 1500\nMaksimalna cijena: 3000"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 5 - Zadatak 2\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 2, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 4: Konstruktor, metode RegistrirajCijenu, Ispisi, BrisiSve\n    {\n        Berza b1 = Berza(1000,4000);\n        b1.RegistrirajCijenu(3000);\n        b1.RegistrirajCijenu(1500);\n        b1.RegistrirajCijenu(2000);\n        std::cout << \"Broj registrovanih cijena: \" << b1.DajBrojRegistriranihCijena() << std::endl;\n        b1.Ispisi();\n        b1.BrisiSve();\n        std::cout << \"Broj registrovanih cijena: \" << b1.DajBrojRegistriranihCijena();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Broj registrovanih cijena: 3\n30.00\n20.00\n15.00\nBroj registrovanih cijena: 0"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 5 - Zadatak 2\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 2, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 6: Metode DajMaksimalnuCijenu i DajMinimalnuCijenu\n    {\n        Berza b(1000,4000);\n        b.RegistrirajCijenu(3999);\n        b.RegistrirajCijenu(1000);\n        b.RegistrirajCijenu(4000);\n        b.RegistrirajCijenu(2500);\n        std::cout << \"Maksimalna: \" << b.DajMaksimalnuCijenu() << std::endl;\n        std::cout << \"Minimalna: \" << b.DajMinimalnuCijenu();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Maksimalna: 4000\nMinimalna: 1000"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 5 - Zadatak 2\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 2, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 12: Ispisi\n    {\n        Berza b(100000);\n        b.RegistrirajCijenu(11111);\n        b.RegistrirajCijenu(0);\n        b.RegistrirajCijenu(1);\n        b.RegistrirajCijenu(10);\n        b.RegistrirajCijenu(100);\n        b.RegistrirajCijenu(1000);\n        b.Ispisi();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "111.11\n10.00\n1.00\n0.10\n0.01\n0.00\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}

@@ -1,0 +1,287 @@
+{
+    "id": 0,
+    "name": "",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 1 - Zadatak 1\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 2, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 1: Test main funkcije - postavka 1\n    {\n        \/\/ Unos:\n        \/\/ 3 5 1 2 4 3 5 7 8 1 2 5 9 4 7 .\n        \/\/ 5 7 8 1 2 5 9 4 7 3 5 1 2 4 3 .\n\n        _main();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "3 5 1 2 4 3 5 7 8 1 2 5 9 4 7 .\n5 7 8 1 2 5 9 4 7 3 5 1 2 4 3 .\n"
+                },
+                "expect": [
+                    "Prva sekvenca: Druga sekvenca: Druga sekvenca je ciklicka permutacija prve s pomakom 6."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "3 5 1 2 4 3 5 7 8 1 2 5 9 4 7 .\n5 7 8 1 2 5 9 4 7 3 5 1 2 4 3 .\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "3 5 1 2 4 3 5 7 8 1 2 5 9 4 7 .\n5 7 8 1 2 5 9 4 7 3 5 1 2 4 3 .\n"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 1 - Zadatak 1\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 2, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 2: Test main funkcije - postavka 2\n    {\n        \/\/ Unos:\n        \/\/ 1 2 3 4 5 kraj\n        \/\/ 2 3 4 5 6 7 8 kraj\n\n        _main();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "1 2 3 4 5 kraj\n2 3 4 5 6 7 8 kraj\n"
+                },
+                "expect": [
+                    "Prva sekvenca: Druga sekvenca: Druga sekvenca nije ciklicka permutacija prve."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "1 2 3 4 5 kraj\n2 3 4 5 6 7 8 kraj\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "1 2 3 4 5 kraj\n2 3 4 5 6 7 8 kraj\n"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 1 - Zadatak 1\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 2, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": " \/\/ AT 3: Test main funkcije - slucaj da su vektori isti\n    {\n        \/\/ Unos:\n        \/\/ 1 2 3 4 5 6 7 8 9 .\n        \/\/ 1 2 3 4 5 6 7 8 9 .\n\n        _main();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "1 2 3 4 5 6 7 8 9 .\n1 2 3 4 5 6 7 8 9 .\n"
+                },
+                "expect": [
+                    "Prva sekvenca: Druga sekvenca: Druga sekvenca je ciklicka permutacija prve s pomakom 0."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "1 2 3 4 5 6 7 8 9 .\n1 2 3 4 5 6 7 8 9 .\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "1 2 3 4 5 6 7 8 9 .\n1 2 3 4 5 6 7 8 9 .\n"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 1 - Zadatak 1\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 2, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 4: Test main funkcije - slucaj da su ostali elementi nakon kraja\n    {\n        \/\/ Unos:\n        \/\/ 1 2 3 4 kraj 5 6 7\n        \/\/ 3 4 1 2 .\n\n        _main();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "1 2 3 4 kraj 5 6 7\n3 4 1 2 .\n\n"
+                },
+                "expect": [
+                    "Prva sekvenca: Druga sekvenca: Druga sekvenca je ciklicka permutacija prve s pomakom 2."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "1 2 3 4 kraj 5 6 7\n3 4 1 2 .\n\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "1 2 3 4 kraj 5 6 7\n3 4 1 2 .\n\n"
+                }
+            }
+        },
+        {
+            "id": 6,
+            "name": "Test 6",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 1 - Zadatak 1\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 2, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 5: Test main funkcije - test kada se unese realan broj\n    {\n        \/\/ Unos:\n        \/\/ 1 2 3 4 5.6\n        \/\/ 3 4 5 1 2 kraj\n\n        _main();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "1 2 3 4 5.6\n3 4 5 1 2 kraj"
+                },
+                "expect": [
+                    "Prva sekvenca: Druga sekvenca: Druga sekvenca je ciklicka permutacija prve s pomakom 2."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "1 2 3 4 5.6\n3 4 5 1 2 kraj"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "1 2 3 4 5.6\n3 4 5 1 2 kraj"
+                }
+            }
+        },
+        {
+            "id": 7,
+            "name": "Test 7",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/---------------------------------------------------------------------------------------------------------------\n\/\/ Tehnike programiranja - Akademska 2021\/2022 godina\n\/\/ Zadaca 1 - Zadatak 1\n\/\/ Odgovorni asistent: Haris \u010capelj - hcapelj1@etf.unsa.ba\n\/\/ Za sva tehnicka pitanja vezana za autotestove za zadatak 2, obratite se na navedeni mail.\n\/\/---------------------------------------------------------------------------------------------------------------",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <iostream>\n#include <vector>\n#include <stdexcept>\n\nnamespace std {\n    template <class T>\n    class _vector : public std::vector<T> {\n        public:\n        using std::vector<T>::vector; \/\/naslijedi sve konstuktore iz std::vector (C++11 i dalje)\n        T &operator[](size_t pos) {\n            throw std::logic_error(\"Zabranjeno indeksiranje vektora pomocu []! 0 bodova na zadatak ukoliko se ne ispravi do roka predaje zadace!\");\n            return vector<T>::operator [](pos);\n        }\n        T operator[](size_t pos) const {\n            throw std::logic_error(\"Zabranjeno indeksiranje vektora pomocu []! 0 bodova na zadatak ukoliko se ne ispravi do roka predaje zadace!\");\n            return vector<T>::operator [](pos);\n        }\n    };\n}\n#define vector _vector",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 6: Provjera da li se koristi .at() za pristup elementima\n    {\n        \/\/ Napomena: Postavkom zadatka je navedeno da se za pristup svim elementima koristi .at().\n        \/\/ Ukoliko ovaj test padne, on moze biti eliminatoran za kompletan zadatak!\n        \/\/ Upravo radi provjeravanja vektora na nacin definisan postavkom, preporucuje se .at() za sigurnost rada programa.\n\n        \/\/ Unos:\n        \/\/ 1 2 -1 -2 .\n        \/\/ -2 1 2 -1 .\n        \n        try\n        {\n            _main();\n        }\n        catch (std::logic_error e)\n        {\n            std::cout << std::endl << std::endl << e.what() << std::endl;\n        }\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "1 2 -1 -2 .\n-2 1 2 -1 .\n"
+                },
+                "expect": [
+                    "Prva sekvenca: Druga sekvenca: Druga sekvenca je ciklicka permutacija prve s pomakom 3."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "1 2 -1 -2 .\n-2 1 2 -1 .\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "1 2 -1 -2 .\n-2 1 2 -1 .\n"
+                }
+            }
+        }
+    ]
+}
